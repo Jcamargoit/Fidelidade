@@ -20,7 +20,5 @@ class LauncheScreenViewController: UIViewController {
         
         
     }
-    
-
 
 }

@@ -7,9 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F276E574276A21D400D6A458 /* AlbunsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */; };
+		F276E575276A21D400D6A458 /* AlbunsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E560276A21D400D6A458 /* AlbunsController.swift */; };
+		F276E576276A21D400D6A458 /* AlbunsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E562276A21D400D6A458 /* AlbunsModel.swift */; };
+		F276E577276A21D400D6A458 /* AlbunsCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E564276A21D400D6A458 /* AlbunsCelula.swift */; };
+		F276E578276A21D400D6A458 /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E567276A21D400D6A458 /* TodosViewModel.swift */; };
+		F276E579276A21D400D6A458 /* TodosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E569276A21D400D6A458 /* TodosController.swift */; };
+		F276E57A276A21D400D6A458 /* TodosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E56B276A21D400D6A458 /* TodosModel.swift */; };
+		F276E57B276A21D400D6A458 /* TodosCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E56D276A21D400D6A458 /* TodosCelula.swift */; };
+		F276E57C276A21D400D6A458 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E56F276A21D400D6A458 /* APIService.swift */; };
+		F276E57E276A5EE200D6A458 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E57D276A5EE200D6A458 /* LoginViewController.swift */; };
+		F276E580276A6F2D00D6A458 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */; };
+		F276E582276A737D00D6A458 /* NewUserTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E581276A737D00D6A458 /* NewUserTwoViewController.swift */; };
 		F29A96F92768D9D1002E9C73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A96F82768D9D1002E9C73 /* AppDelegate.swift */; };
 		F29A96FB2768D9D1002E9C73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A96FA2768D9D1002E9C73 /* SceneDelegate.swift */; };
-		F29A96FD2768D9D1002E9C73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A96FC2768D9D1002E9C73 /* ViewController.swift */; };
+		F29A96FD2768D9D1002E9C73 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A96FC2768D9D1002E9C73 /* ChoiceViewController.swift */; };
 		F29A97002768D9D1002E9C73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29A96FE2768D9D1002E9C73 /* Main.storyboard */; };
 		F29A97022768D9D3002E9C73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29A97012768D9D3002E9C73 /* Assets.xcassets */; };
 		F29A97052768D9D3002E9C73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29A97032768D9D3002E9C73 /* LaunchScreen.storyboard */; };
@@ -37,10 +49,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsViewModel.swift; sourceTree = "<group>"; };
+		F276E560276A21D400D6A458 /* AlbunsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsController.swift; sourceTree = "<group>"; };
+		F276E562276A21D400D6A458 /* AlbunsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsModel.swift; sourceTree = "<group>"; };
+		F276E564276A21D400D6A458 /* AlbunsCelula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsCelula.swift; sourceTree = "<group>"; };
+		F276E567276A21D400D6A458 /* TodosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosViewModel.swift; sourceTree = "<group>"; };
+		F276E569276A21D400D6A458 /* TodosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosController.swift; sourceTree = "<group>"; };
+		F276E56B276A21D400D6A458 /* TodosModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosModel.swift; sourceTree = "<group>"; };
+		F276E56D276A21D400D6A458 /* TodosCelula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosCelula.swift; sourceTree = "<group>"; };
+		F276E56F276A21D400D6A458 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		F276E57D276A5EE200D6A458 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		F276E581276A737D00D6A458 /* NewUserTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserTwoViewController.swift; sourceTree = "<group>"; };
 		F29A96F52768D9D1002E9C73 /* Fidelidade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fidelidade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29A96F82768D9D1002E9C73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F29A96FA2768D9D1002E9C73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F29A96FC2768D9D1002E9C73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F29A96FC2768D9D1002E9C73 /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		F29A96FF2768D9D1002E9C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F29A97012768D9D3002E9C73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F29A97042768D9D3002E9C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +102,100 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F276E55C276A21D400D6A458 /* Albuns */ = {
+			isa = PBXGroup;
+			children = (
+				F276E55D276A21D400D6A458 /* ViewModel */,
+				F276E55F276A21D400D6A458 /* Controller */,
+				F276E561276A21D400D6A458 /* Model */,
+				F276E563276A21D400D6A458 /* CustomCell */,
+			);
+			path = Albuns;
+			sourceTree = "<group>";
+		};
+		F276E55D276A21D400D6A458 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F276E55F276A21D400D6A458 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F276E560276A21D400D6A458 /* AlbunsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F276E561276A21D400D6A458 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F276E562276A21D400D6A458 /* AlbunsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F276E563276A21D400D6A458 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				F276E564276A21D400D6A458 /* AlbunsCelula.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		F276E565276A21D400D6A458 /* Todos */ = {
+			isa = PBXGroup;
+			children = (
+				F276E566276A21D400D6A458 /* ViewModel */,
+				F276E568276A21D400D6A458 /* Controller */,
+				F276E56A276A21D400D6A458 /* Model */,
+				F276E56C276A21D400D6A458 /* CustomCell */,
+			);
+			path = Todos;
+			sourceTree = "<group>";
+		};
+		F276E566276A21D400D6A458 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F276E567276A21D400D6A458 /* TodosViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F276E568276A21D400D6A458 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F276E569276A21D400D6A458 /* TodosController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F276E56A276A21D400D6A458 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F276E56B276A21D400D6A458 /* TodosModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F276E56C276A21D400D6A458 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				F276E56D276A21D400D6A458 /* TodosCelula.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		F276E56E276A21D400D6A458 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				F276E56F276A21D400D6A458 /* APIService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
 		F29A96EC2768D9D1002E9C73 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +219,16 @@
 		F29A96F72768D9D1002E9C73 /* Fidelidade */ = {
 			isa = PBXGroup;
 			children = (
+				F276E55C276A21D400D6A458 /* Albuns */,
+				F276E56E276A21D400D6A458 /* APIService */,
+				F276E565276A21D400D6A458 /* Todos */,
 				F29A96F82768D9D1002E9C73 /* AppDelegate.swift */,
 				F29A96FA2768D9D1002E9C73 /* SceneDelegate.swift */,
 				F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */,
-				F29A96FC2768D9D1002E9C73 /* ViewController.swift */,
+				F29A96FC2768D9D1002E9C73 /* ChoiceViewController.swift */,
+				F276E581276A737D00D6A458 /* NewUserTwoViewController.swift */,
+				F276E57D276A5EE200D6A458 /* LoginViewController.swift */,
+				F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */,
 				F29A96FE2768D9D1002E9C73 /* Main.storyboard */,
 				F29A97012768D9D3002E9C73 /* Assets.xcassets */,
 				F29A97032768D9D3002E9C73 /* LaunchScreen.storyboard */,
@@ -261,8 +385,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F29A96FD2768D9D1002E9C73 /* ViewController.swift in Sources */,
+				F276E57E276A5EE200D6A458 /* LoginViewController.swift in Sources */,
+				F276E57C276A21D400D6A458 /* APIService.swift in Sources */,
+				F276E578276A21D400D6A458 /* TodosViewModel.swift in Sources */,
+				F276E576276A21D400D6A458 /* AlbunsModel.swift in Sources */,
+				F29A96FD2768D9D1002E9C73 /* ChoiceViewController.swift in Sources */,
+				F276E575276A21D400D6A458 /* AlbunsController.swift in Sources */,
+				F276E579276A21D400D6A458 /* TodosController.swift in Sources */,
+				F276E580276A6F2D00D6A458 /* NewUserViewController.swift in Sources */,
+				F276E574276A21D400D6A458 /* AlbunsViewModel.swift in Sources */,
 				F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */,
+				F276E57A276A21D400D6A458 /* TodosModel.swift in Sources */,
+				F276E57B276A21D400D6A458 /* TodosCelula.swift in Sources */,
+				F276E582276A737D00D6A458 /* NewUserTwoViewController.swift in Sources */,
+				F276E577276A21D400D6A458 /* AlbunsCelula.swift in Sources */,
 				F29A96F92768D9D1002E9C73 /* AppDelegate.swift in Sources */,
 				F29A96FB2768D9D1002E9C73 /* SceneDelegate.swift in Sources */,
 			);
@@ -451,6 +587,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Ligth;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -480,6 +617,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Ligth;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
