@@ -16,7 +16,6 @@ struct Resource<T: Codable> {
     let url: URL
     var httpMethod: HttpMethod = .get
     var body: Data? = nil
-    
 }
 
 extension Resource {

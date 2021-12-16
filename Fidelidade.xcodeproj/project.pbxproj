@@ -29,6 +29,7 @@
 		F29A971A2768D9D4002E9C73 /* FidelidadeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A97192768D9D4002E9C73 /* FidelidadeUITests.swift */; };
 		F29A971C2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A971B2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift */; };
 		F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */; };
+		F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		F29A97192768D9D4002E9C73 /* FidelidadeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidelidadeUITests.swift; sourceTree = "<group>"; };
 		F29A971B2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidelidadeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheScreenViewController.swift; sourceTree = "<group>"; };
+		F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,9 +228,10 @@
 				F29A96FA2768D9D1002E9C73 /* SceneDelegate.swift */,
 				F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */,
 				F29A96FC2768D9D1002E9C73 /* ChoiceViewController.swift */,
+				F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */,
 				F276E581276A737D00D6A458 /* NewUserTwoViewController.swift */,
 				F276E57D276A5EE200D6A458 /* LoginViewController.swift */,
-				F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */,
+				F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */,
 				F29A96FE2768D9D1002E9C73 /* Main.storyboard */,
 				F29A97012768D9D3002E9C73 /* Assets.xcassets */,
 				F29A97032768D9D3002E9C73 /* LaunchScreen.storyboard */,
@@ -395,6 +398,7 @@
 				F276E580276A6F2D00D6A458 /* NewUserViewController.swift in Sources */,
 				F276E574276A21D400D6A458 /* AlbunsViewModel.swift in Sources */,
 				F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */,
+				F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */,
 				F276E57A276A21D400D6A458 /* TodosModel.swift in Sources */,
 				F276E57B276A21D400D6A458 /* TodosCelula.swift in Sources */,
 				F276E582276A737D00D6A458 /* NewUserTwoViewController.swift in Sources */,
@@ -585,6 +589,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Ligth;
@@ -615,6 +620,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Ligth;
