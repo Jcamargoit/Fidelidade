@@ -5,30 +5,33 @@
 
 import UIKit
 
-class TodosController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var minhatabview: UITableView!
     
     var listAll = TodosViewModel()
     
+    var account = [String]()
+    var image = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        setup()
+
+
+        account.append("Perfil")
+        account.append("Notificações")
+        account.append("Configurações")
+        
+        image.append("profile")
+        image.append("notification")
+        image.append("settings")
+
+
+        
     }
     
     
-    func setup(){
-        APIService().load(resource: TodosModel.Get) { [weak self] result in
-            switch result {
-            case .success(let orders):
-                self?.listAll.todosViewModel = orders
-                self?.minhatabview.reloadData()
-            case .failure(let error):
-                print("Error ", error)
-            }
-        }
-    }
+
     
     
     /// Tamanhop table vcelula
@@ -42,11 +45,27 @@ class TodosController: UIViewController,UITableViewDelegate,UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
+        //POSIÇÃO DA CELULA
+        if indexPath.row == 0 {
+            self.performSegue(withIdentifier: "openProfile", sender: self)
+        }
+        
+        if indexPath.row == 1 {
+            self.performSegue(withIdentifier: "openNotification", sender: self)
+        }
+        
+        if indexPath.row == 2 {
+            
+            self.performSegue(withIdentifier: "openSettings", sender: self)
+            
+        }
+        
+        
         self.minhatabview.reloadData()
     }
     
+   
     
-    //quantidade de Setions (quantidade Categorias)
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -56,21 +75,24 @@ class TodosController: UIViewController,UITableViewDelegate,UITableViewDataSourc
     //Quantidade de celulas por categoria
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return self.listAll.todosViewModel.count
+        return account.count
         
     }
     
     
-    //Alimentar a celula com id
+    //Alimentar id
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:
                                                     indexPath) as! TodosCelula
-        let vm = self.listAll.todosViewModel(at: indexPath.row)
-        
-        cell.titulo.text = vm.title
-        cell.sw.isOn = vm.completed
+
+        cell.titulo.text = account[indexPath.row]
+        cell.imageList.image = UIImage (named: image[indexPath.row])
         
         return cell
     }
+    
 }
+
+
+
 

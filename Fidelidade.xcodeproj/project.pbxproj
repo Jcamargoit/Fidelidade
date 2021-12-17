@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2455191276D12CC00953DCC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455190276D12CC00953DCC /* ProfileViewController.swift */; };
+		F2455193276D13A200953DCC /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455192276D13A200953DCC /* NotificationViewController.swift */; };
+		F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455194276D14DD00953DCC /* SettingsViewController.swift */; };
 		F276E574276A21D400D6A458 /* AlbunsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */; };
-		F276E575276A21D400D6A458 /* AlbunsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E560276A21D400D6A458 /* AlbunsController.swift */; };
+		F276E575276A21D400D6A458 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E560276A21D400D6A458 /* HomeViewController.swift */; };
 		F276E576276A21D400D6A458 /* AlbunsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E562276A21D400D6A458 /* AlbunsModel.swift */; };
 		F276E577276A21D400D6A458 /* AlbunsCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E564276A21D400D6A458 /* AlbunsCelula.swift */; };
 		F276E578276A21D400D6A458 /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E567276A21D400D6A458 /* TodosViewModel.swift */; };
-		F276E579276A21D400D6A458 /* TodosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E569276A21D400D6A458 /* TodosController.swift */; };
+		F276E579276A21D400D6A458 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E569276A21D400D6A458 /* MyAccountViewController.swift */; };
 		F276E57A276A21D400D6A458 /* TodosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E56B276A21D400D6A458 /* TodosModel.swift */; };
 		F276E57B276A21D400D6A458 /* TodosCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E56D276A21D400D6A458 /* TodosCelula.swift */; };
 		F276E57C276A21D400D6A458 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E56F276A21D400D6A458 /* APIService.swift */; };
@@ -50,12 +53,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F2455190276D12CC00953DCC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F2455192276D13A200953DCC /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		F2455194276D14DD00953DCC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsViewModel.swift; sourceTree = "<group>"; };
-		F276E560276A21D400D6A458 /* AlbunsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsController.swift; sourceTree = "<group>"; };
+		F276E560276A21D400D6A458 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F276E562276A21D400D6A458 /* AlbunsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsModel.swift; sourceTree = "<group>"; };
 		F276E564276A21D400D6A458 /* AlbunsCelula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsCelula.swift; sourceTree = "<group>"; };
 		F276E567276A21D400D6A458 /* TodosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosViewModel.swift; sourceTree = "<group>"; };
-		F276E569276A21D400D6A458 /* TodosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosController.swift; sourceTree = "<group>"; };
+		F276E569276A21D400D6A458 /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		F276E56B276A21D400D6A458 /* TodosModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosModel.swift; sourceTree = "<group>"; };
 		F276E56D276A21D400D6A458 /* TodosCelula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosCelula.swift; sourceTree = "<group>"; };
 		F276E56F276A21D400D6A458 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -104,15 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F276E55C276A21D400D6A458 /* Albuns */ = {
+		F276E55C276A21D400D6A458 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F276E55D276A21D400D6A458 /* ViewModel */,
 				F276E55F276A21D400D6A458 /* Controller */,
+				F276E55D276A21D400D6A458 /* ViewModel */,
 				F276E561276A21D400D6A458 /* Model */,
 				F276E563276A21D400D6A458 /* CustomCell */,
 			);
-			path = Albuns;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		F276E55D276A21D400D6A458 /* ViewModel */ = {
@@ -126,7 +132,7 @@
 		F276E55F276A21D400D6A458 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F276E560276A21D400D6A458 /* AlbunsController.swift */,
+				F276E560276A21D400D6A458 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -147,15 +153,15 @@
 			path = CustomCell;
 			sourceTree = "<group>";
 		};
-		F276E565276A21D400D6A458 /* Todos */ = {
+		F276E565276A21D400D6A458 /* MyAccount */ = {
 			isa = PBXGroup;
 			children = (
+				F276E568276A21D400D6A458 /* ViewControllers */,
 				F276E566276A21D400D6A458 /* ViewModel */,
-				F276E568276A21D400D6A458 /* Controller */,
 				F276E56A276A21D400D6A458 /* Model */,
 				F276E56C276A21D400D6A458 /* CustomCell */,
 			);
-			path = Todos;
+			path = MyAccount;
 			sourceTree = "<group>";
 		};
 		F276E566276A21D400D6A458 /* ViewModel */ = {
@@ -166,12 +172,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		F276E568276A21D400D6A458 /* Controller */ = {
+		F276E568276A21D400D6A458 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F276E569276A21D400D6A458 /* TodosController.swift */,
+				F276E569276A21D400D6A458 /* MyAccountViewController.swift */,
+				F2455192276D13A200953DCC /* NotificationViewController.swift */,
+				F2455190276D12CC00953DCC /* ProfileViewController.swift */,
+				F2455194276D14DD00953DCC /* SettingsViewController.swift */,
 			);
-			path = Controller;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		F276E56A276A21D400D6A458 /* Model */ = {
@@ -221,9 +230,9 @@
 		F29A96F72768D9D1002E9C73 /* Fidelidade */ = {
 			isa = PBXGroup;
 			children = (
-				F276E55C276A21D400D6A458 /* Albuns */,
 				F276E56E276A21D400D6A458 /* APIService */,
-				F276E565276A21D400D6A458 /* Todos */,
+				F276E55C276A21D400D6A458 /* Home */,
+				F276E565276A21D400D6A458 /* MyAccount */,
 				F29A96F82768D9D1002E9C73 /* AppDelegate.swift */,
 				F29A96FA2768D9D1002E9C73 /* SceneDelegate.swift */,
 				F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */,
@@ -391,12 +400,15 @@
 				F276E57E276A5EE200D6A458 /* LoginViewController.swift in Sources */,
 				F276E57C276A21D400D6A458 /* APIService.swift in Sources */,
 				F276E578276A21D400D6A458 /* TodosViewModel.swift in Sources */,
+				F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */,
 				F276E576276A21D400D6A458 /* AlbunsModel.swift in Sources */,
 				F29A96FD2768D9D1002E9C73 /* ChoiceViewController.swift in Sources */,
-				F276E575276A21D400D6A458 /* AlbunsController.swift in Sources */,
-				F276E579276A21D400D6A458 /* TodosController.swift in Sources */,
+				F276E575276A21D400D6A458 /* HomeViewController.swift in Sources */,
+				F2455191276D12CC00953DCC /* ProfileViewController.swift in Sources */,
+				F276E579276A21D400D6A458 /* MyAccountViewController.swift in Sources */,
 				F276E580276A6F2D00D6A458 /* NewUserViewController.swift in Sources */,
 				F276E574276A21D400D6A458 /* AlbunsViewModel.swift in Sources */,
+				F2455193276D13A200953DCC /* NotificationViewController.swift in Sources */,
 				F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */,
 				F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */,
 				F276E57A276A21D400D6A458 /* TodosModel.swift in Sources */,

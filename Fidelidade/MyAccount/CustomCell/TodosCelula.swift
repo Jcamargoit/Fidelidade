@@ -3,7 +3,8 @@ import UIKit
 class TodosCelula: UITableViewCell {
     
     @IBOutlet weak var titulo: UITextView!
-    @IBOutlet weak var sw: UISwitch!
+    @IBOutlet weak var imageList: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
