@@ -33,6 +33,9 @@
 		F29A971C2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A971B2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift */; };
 		F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */; };
 		F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */; };
+		F2B117622770C5400024ECEC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B117612770C5400024ECEC /* LoginModel.swift */; };
+		F2B117642770C68E0024ECEC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B117632770C68E0024ECEC /* LoginViewModel.swift */; };
+		F2FB7AA52770F57100C3E4C9 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FB7AA42770F57100C3E4C9 /* LoginUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		F29A971B2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidelidadeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheScreenViewController.swift; sourceTree = "<group>"; };
 		F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		F2B117612770C5400024ECEC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		F2B117632770C68E0024ECEC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F2FB7AA42770F57100C3E4C9 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,95 +116,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F276E55C276A21D400D6A458 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				F276E55F276A21D400D6A458 /* Controller */,
-				F276E55D276A21D400D6A458 /* ViewModel */,
-				F276E561276A21D400D6A458 /* Model */,
-				F276E563276A21D400D6A458 /* CustomCell */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		F276E55D276A21D400D6A458 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		F276E55F276A21D400D6A458 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F276E560276A21D400D6A458 /* HomeViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F276E561276A21D400D6A458 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F276E562276A21D400D6A458 /* AlbunsModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F276E563276A21D400D6A458 /* CustomCell */ = {
-			isa = PBXGroup;
-			children = (
-				F276E564276A21D400D6A458 /* AlbunsCelula.swift */,
-			);
-			path = CustomCell;
-			sourceTree = "<group>";
-		};
-		F276E565276A21D400D6A458 /* MyAccount */ = {
-			isa = PBXGroup;
-			children = (
-				F276E568276A21D400D6A458 /* ViewControllers */,
-				F276E566276A21D400D6A458 /* ViewModel */,
-				F276E56A276A21D400D6A458 /* Model */,
-				F276E56C276A21D400D6A458 /* CustomCell */,
-			);
-			path = MyAccount;
-			sourceTree = "<group>";
-		};
-		F276E566276A21D400D6A458 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F276E567276A21D400D6A458 /* TodosViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		F276E568276A21D400D6A458 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				F276E569276A21D400D6A458 /* MyAccountViewController.swift */,
-				F2455192276D13A200953DCC /* NotificationViewController.swift */,
-				F2455190276D12CC00953DCC /* ProfileViewController.swift */,
-				F2455194276D14DD00953DCC /* SettingsViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		F276E56A276A21D400D6A458 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F276E56B276A21D400D6A458 /* TodosModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F276E56C276A21D400D6A458 /* CustomCell */ = {
-			isa = PBXGroup;
-			children = (
-				F276E56D276A21D400D6A458 /* TodosCelula.swift */,
-			);
-			path = CustomCell;
-			sourceTree = "<group>";
-		};
 		F276E56E276A21D400D6A458 /* APIService */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,17 +147,14 @@
 		F29A96F72768D9D1002E9C73 /* Fidelidade */ = {
 			isa = PBXGroup;
 			children = (
+				F2FB7AA32770F55400C3E4C9 /* UseCase */,
 				F276E56E276A21D400D6A458 /* APIService */,
-				F276E55C276A21D400D6A458 /* Home */,
-				F276E565276A21D400D6A458 /* MyAccount */,
+				F2B1175C2770C3D60024ECEC /* Coltrollers */,
+				F2B1175F2770C43C0024ECEC /* Views */,
+				F2B1175E2770C4200024ECEC /* Model */,
+				F2B1175D2770C4130024ECEC /* ViewModel */,
 				F29A96F82768D9D1002E9C73 /* AppDelegate.swift */,
 				F29A96FA2768D9D1002E9C73 /* SceneDelegate.swift */,
-				F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */,
-				F29A96FC2768D9D1002E9C73 /* ChoiceViewController.swift */,
-				F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */,
-				F276E581276A737D00D6A458 /* NewUserTwoViewController.swift */,
-				F276E57D276A5EE200D6A458 /* LoginViewController.swift */,
-				F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */,
 				F29A96FE2768D9D1002E9C73 /* Main.storyboard */,
 				F29A97012768D9D3002E9C73 /* Assets.xcassets */,
 				F29A97032768D9D3002E9C73 /* LaunchScreen.storyboard */,
@@ -264,6 +178,69 @@
 				F29A971B2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift */,
 			);
 			path = FidelidadeUITests;
+			sourceTree = "<group>";
+		};
+		F2B1175C2770C3D60024ECEC /* Coltrollers */ = {
+			isa = PBXGroup;
+			children = (
+				F276E569276A21D400D6A458 /* MyAccountViewController.swift */,
+				F2455192276D13A200953DCC /* NotificationViewController.swift */,
+				F2455190276D12CC00953DCC /* ProfileViewController.swift */,
+				F2455194276D14DD00953DCC /* SettingsViewController.swift */,
+				F276E560276A21D400D6A458 /* HomeViewController.swift */,
+				F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */,
+				F29A96FC2768D9D1002E9C73 /* ChoiceViewController.swift */,
+				F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */,
+				F276E581276A737D00D6A458 /* NewUserTwoViewController.swift */,
+				F276E57D276A5EE200D6A458 /* LoginViewController.swift */,
+				F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */,
+			);
+			path = Coltrollers;
+			sourceTree = "<group>";
+		};
+		F2B1175D2770C4130024ECEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F276E567276A21D400D6A458 /* TodosViewModel.swift */,
+				F2B117632770C68E0024ECEC /* LoginViewModel.swift */,
+				F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2B1175E2770C4200024ECEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F276E56B276A21D400D6A458 /* TodosModel.swift */,
+				F2B117612770C5400024ECEC /* LoginModel.swift */,
+				F276E562276A21D400D6A458 /* AlbunsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2B1175F2770C43C0024ECEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2B117602770C4FB0024ECEC /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2B117602770C4FB0024ECEC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F276E56D276A21D400D6A458 /* TodosCelula.swift */,
+				F276E564276A21D400D6A458 /* AlbunsCelula.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F2FB7AA32770F55400C3E4C9 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F2FB7AA42770F57100C3E4C9 /* LoginUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,8 +377,10 @@
 				F276E57E276A5EE200D6A458 /* LoginViewController.swift in Sources */,
 				F276E57C276A21D400D6A458 /* APIService.swift in Sources */,
 				F276E578276A21D400D6A458 /* TodosViewModel.swift in Sources */,
+				F2B117622770C5400024ECEC /* LoginModel.swift in Sources */,
 				F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */,
 				F276E576276A21D400D6A458 /* AlbunsModel.swift in Sources */,
+				F2B117642770C68E0024ECEC /* LoginViewModel.swift in Sources */,
 				F29A96FD2768D9D1002E9C73 /* ChoiceViewController.swift in Sources */,
 				F276E575276A21D400D6A458 /* HomeViewController.swift in Sources */,
 				F2455191276D12CC00953DCC /* ProfileViewController.swift in Sources */,
@@ -413,6 +392,7 @@
 				F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */,
 				F276E57A276A21D400D6A458 /* TodosModel.swift in Sources */,
 				F276E57B276A21D400D6A458 /* TodosCelula.swift in Sources */,
+				F2FB7AA52770F57100C3E4C9 /* LoginUseCase.swift in Sources */,
 				F276E582276A737D00D6A458 /* NewUserTwoViewController.swift in Sources */,
 				F276E577276A21D400D6A458 /* AlbunsCelula.swift in Sources */,
 				F29A96F92768D9D1002E9C73 /* AppDelegate.swift in Sources */,

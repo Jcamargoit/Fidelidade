@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var tfSenha: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     
+    var loginViewModel = LoginViewModel()
     
     
     override func viewDidLoad() {
@@ -31,5 +32,24 @@ class LoginViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-
+    @IBAction func logIn(_ sender: UIButton) {
+        
+     
+        guard let cpf = tfCPF.text else {
+             print("Erro")
+            return
+        }
+        
+        guard let password = tfSenha.text else {
+             print("Erro")
+            return
+        }
+        
+        var loginModel = LoginModel(cpf: cpf, password: password)
+       
+        
+        loginViewModel.handleLogin(loginModel: loginModel)
+        
+    }
+    
 }

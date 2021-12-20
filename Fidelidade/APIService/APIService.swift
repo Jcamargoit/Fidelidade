@@ -10,17 +10,22 @@ enum NetworkError: Error {
 
 enum HttpMethod: String {
     case get = "GET"
+    case post = "POST"
+    case delete = "DELETE"
+    case put = "PUT"
+  
 }
 
 struct Resource<T: Codable> {
     let url: URL
-    var httpMethod: HttpMethod = .get
-    var body: Data? = nil
-}
+    var httpMethod: HttpMethod
+    var body: Data?
+    
 
-extension Resource {
-    init(url: URL) {
+    init(url: URL, httpMethod: HttpMethod, body: Data? = nil) {
         self.url = url
+        self.httpMethod = httpMethod
+        self.body = body
     }
 }
 

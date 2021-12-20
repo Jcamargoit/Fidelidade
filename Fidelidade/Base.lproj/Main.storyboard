@@ -289,13 +289,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 500,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Wcf-Rj-Tnm">
-                                        <rect key="frame" x="20" y="57" width="241" height="36"/>
+                                        <rect key="frame" x="20.000000000000014" y="57" width="232.33333333333337" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                         <color key="textColor" red="1" green="0.47450980392156861" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltu-PX-YCf">
-                                        <rect key="frame" x="281" y="55.666666666666629" width="107" height="39"/>
+                                        <rect key="frame" x="272.33333333333331" y="55.666666666666629" width="115.66666666666669" height="39"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.14832776780000001" green="0.1834453046" blue="0.56083971259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
@@ -420,7 +420,7 @@
                             <constraint firstItem="jMD-ip-6gP" firstAttribute="top" secondItem="te1-ar-ns1" secondAttribute="top" id="1Db-Zm-yPU"/>
                             <constraint firstItem="tkr-pt-ljz" firstAttribute="leading" secondItem="r7A-d9-yS9" secondAttribute="leading" id="3e4-pi-tXI"/>
                             <constraint firstItem="IyM-JY-dbu" firstAttribute="height" secondItem="te1-ar-ns1" secondAttribute="height" multiplier="0.0226782" id="6uT-5u-euJ"/>
-                            <constraint firstItem="ltu-PX-YCf" firstAttribute="width" secondItem="te1-ar-ns1" secondAttribute="width" multiplier="0.25" id="C7r-eA-0I9"/>
+                            <constraint firstItem="ltu-PX-YCf" firstAttribute="width" secondItem="te1-ar-ns1" secondAttribute="width" multiplier="0.27" id="C7r-eA-0I9"/>
                             <constraint firstItem="jMD-ip-6gP" firstAttribute="trailing" secondItem="72V-bY-FHO" secondAttribute="trailing" id="DF0-ju-bga"/>
                             <constraint firstItem="72V-bY-FHO" firstAttribute="trailing" secondItem="PYr-xH-agy" secondAttribute="trailing" constant="10" id="EQn-1I-K6z"/>
                             <constraint firstItem="jMD-ip-6gP" firstAttribute="leading" secondItem="72V-bY-FHO" secondAttribute="leading" id="H1F-yF-8cN"/>
@@ -945,6 +945,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="logIn:" destination="HhB-e4-ufS" eventType="touchUpInside" id="3qW-71-nJV"/>
                                     <segue destination="YEN-fk-6hJ" kind="show" id="gZ6-aa-SPu"/>
                                 </connections>
                             </button>
