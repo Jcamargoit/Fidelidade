@@ -4,8 +4,8 @@
 import Foundation
 
 struct LoginModel: Codable {
-    private let cpf: String
-    private let password: String
+    let cpf: String
+    let password: String
     
     init(cpf: String, password: String) {
         self.cpf = cpf

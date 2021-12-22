@@ -8,6 +8,7 @@
 import UIKit
 import Observable
 
+
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var tfCPF: UITextField!
@@ -24,13 +25,13 @@ class LoginViewController: UIViewController {
         observerse()
         
 
-        // Animate loadingVC over the existing views on screen
-        loadingVC.modalPresentationStyle = .overCurrentContext
-
-        // Animate loadingVC with a fade in animation
-        loadingVC.modalTransitionStyle = .crossDissolve
-               
-        present(loadingVC, animated: true, completion: nil)
+//        // Animate loadingVC over the existing views on screen
+//        loadingVC.modalPresentationStyle = .overCurrentContext
+//
+//        // Animate loadingVC with a fade in animation
+//        loadingVC.modalTransitionStyle = .crossDissolve
+//
+//        present(loadingVC, animated: true, completion: nil)
         
         
     }
@@ -44,20 +45,20 @@ class LoginViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-//    @IBAction func logIn(_ sender: UIButton) {
-//
-//        guard let cpf = tfCPF.text else {
-//       simplePopUp(title: "Erro", mensage: "O campo CPF é obrigatório")
-//            return
-//        }
-//        guard let password = tfSenha.text else {
-//            simplePopUp(title: "Erro", mensage: "O campo Senha é obrigatório")
-//            return
-//        }
-//
-//        let loginModel = LoginModel(cpf: cpf, password: password)
-//        loginViewModel.handleLogin(loginModel: loginModel)
-//    }
+    @IBAction func logIn(_ sender: UIButton) {
+
+        guard let cpf = tfCPF.text else {
+       simplePopUp(title: "Erro", mensage: "O campo CPF é obrigatório")
+            return
+        }
+        guard let password = tfSenha.text else {
+            simplePopUp(title: "Erro", mensage: "O campo Senha é obrigatório")
+            return
+        }
+
+        let loginModel = LoginModel(cpf: cpf, password: password)
+        loginViewModel.handleLogin(loginModel: loginModel)
+    }
     
     
     
@@ -68,12 +69,13 @@ class LoginViewController: UIViewController {
     
     func observerse (){
         
-        loginViewModel.isLogged.observe() { [weak self] result, oldValue in
+        loginViewModel.isLogged.observe(DispatchQueue.main) { [weak self] result, oldValue in
             guard let result = result else{
                 return
             }
             if !result.isError {
-           //     self?.performSegue(withIdentifier: "openHome", sender: self)
+        
+                self?.performSegue(withIdentifier: "openHome", sender: self)
                 
             }else{
                 self?.simplePopUp(title: "Erro", mensage: result.error)

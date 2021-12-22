@@ -4,6 +4,8 @@
 
 
 import UIKit
+import Observable
+
 
 class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -11,21 +13,27 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     var listAll = TodosViewModel()
     
+   private lazy var myAccountViewModel = MyAccountViewModel()
+    
+    private var disposal = Disposal()
+    
     var account = [String]()
     var image = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        observerse()
 
         account.append("Perfil")
         account.append("Notificações")
         account.append("Sacar")
         account.append("Configurações")
+        account.append("Sair")
         
         image.append("profile")
         image.append("notification")
         image.append("withdraw")
+        image.append("settings")
         image.append("settings")
     }
     
@@ -67,11 +75,32 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
             
         }
         
+        if indexPath.row == 4 {
+            myAccountViewModel.handleLogout()
+        }
+        
         
         self.minhatabview.reloadData()
     }
     
    
+    
+    
+    func observerse() {
+        myAccountViewModel.logoutIsFinished.observe(DispatchQueue.main) { [weak self] result, oldValue in
+            guard let result = result else{
+                return
+            }
+            
+            if result {
+                self?.performSegue(withIdentifier: "openChoiceFromMyAccount", sender: self)
+                
+            }else {
+                self?.simplePopUp(title: "Alerta", mensage: "Não foi possível efetuar o logout")
+            }
+        }.add(to: &disposal)
+    }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections

@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class LoadingViewController: UIViewController {
     
     var loadingActivityIndicator: UIActivityIndicatorView = {

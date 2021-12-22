@@ -39,6 +39,8 @@
 		F2B117622770C5400024ECEC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B117612770C5400024ECEC /* LoginModel.swift */; };
 		F2B117642770C68E0024ECEC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B117632770C68E0024ECEC /* LoginViewModel.swift */; };
 		F2E3CC7427739F6600FE59F7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3CC7327739F6600FE59F7 /* LoadingViewController.swift */; };
+		F2E3CC762773B5FE00FE59F7 /* LauncheScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3CC752773B5FE00FE59F7 /* LauncheScreenViewModel.swift */; };
+		F2E3CC782773BCA400FE59F7 /* MyAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3CC772773BCA400FE59F7 /* MyAccountViewModel.swift */; };
 		F2FB7AA52770F57100C3E4C9 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FB7AA42770F57100C3E4C9 /* LoginUseCase.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +103,8 @@
 		F2B117612770C5400024ECEC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		F2B117632770C68E0024ECEC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F2E3CC7327739F6600FE59F7 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		F2E3CC752773B5FE00FE59F7 /* LauncheScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheScreenViewModel.swift; sourceTree = "<group>"; };
+		F2E3CC772773BCA400FE59F7 /* MyAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewModel.swift; sourceTree = "<group>"; };
 		F2FB7AA42770F57100C3E4C9 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		FE9E802865DA746E1DA8DF13 /* Pods_Fidelidade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fidelidade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -246,6 +250,8 @@
 			children = (
 				F276E567276A21D400D6A458 /* TodosViewModel.swift */,
 				F2B117632770C68E0024ECEC /* LoginViewModel.swift */,
+				F2E3CC772773BCA400FE59F7 /* MyAccountViewModel.swift */,
+				F2E3CC752773B5FE00FE59F7 /* LauncheScreenViewModel.swift */,
 				F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */,
 			);
 			path = ViewModel;
@@ -543,6 +549,7 @@
 				F29A96FD2768D9D1002E9C73 /* ChoiceViewController.swift in Sources */,
 				F276E575276A21D400D6A458 /* HomeViewController.swift in Sources */,
 				F2455191276D12CC00953DCC /* ProfileViewController.swift in Sources */,
+				F2E3CC782773BCA400FE59F7 /* MyAccountViewModel.swift in Sources */,
 				F276E579276A21D400D6A458 /* MyAccountViewController.swift in Sources */,
 				F2E3CC7427739F6600FE59F7 /* LoadingViewController.swift in Sources */,
 				F276E580276A6F2D00D6A458 /* NewUserViewController.swift in Sources */,
@@ -551,6 +558,7 @@
 				F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */,
 				F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */,
 				F276E57A276A21D400D6A458 /* TodosModel.swift in Sources */,
+				F2E3CC762773B5FE00FE59F7 /* LauncheScreenViewModel.swift in Sources */,
 				F276E57B276A21D400D6A458 /* TodosCelula.swift in Sources */,
 				F2FB7AA52770F57100C3E4C9 /* LoginUseCase.swift in Sources */,
 				F276E582276A737D00D6A458 /* NewUserTwoViewController.swift in Sources */,
