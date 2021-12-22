@@ -2,27 +2,54 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIScrollViewDelegate {
     
+    
+
+    
+    let strokeTextAttributes = [
+        NSAttributedString.Key.strokeColor : UIColor(red: (189/255), green: (255/255), blue: (0/255), alpha: 1.0),
+        NSAttributedString.Key.strokeWidth : -5.0]
+    as [NSAttributedString.Key : Any]
+    
+    @IBOutlet weak var mySv: UIScrollView!
     @IBOutlet weak var ivUser: UIImageView!
     @IBOutlet weak var lbName: UILabel!
-    @IBOutlet weak var lbExchange: UILabel!
-    @IBOutlet weak var btnExchange: UIButton!
-    @IBOutlet weak var lbGet: UILabel!
-    @IBOutlet weak var btnGet: UIButton!{
+    @IBOutlet weak var lbExchange: UILabel!{
         didSet{
-            self.btnGet.layer.borderColor = UIColor(red: (38/255), green: (47/255), blue: (143/255), alpha: 1.0).cgColor
+            lbExchange.attributedText = NSMutableAttributedString(string: "500", attributes: strokeTextAttributes)
+        }
+    }
+    @IBOutlet weak var btnExchange: UIButton!
+    @IBOutlet weak var lbConverter: UILabel!
+    @IBOutlet weak var btnConverter: UIButton!{
+        didSet{
+            self.btnConverter.layer.borderColor = UIColor(red: (38/255), green: (47/255), blue: (143/255), alpha: 1.0).cgColor
         }
     }
     @IBOutlet weak var sc: UISegmentedControl!
-
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Instanciar meu Delegate Scroll
+        mySv.isDirectionalLockEnabled = true
+        mySv.delegate = self
     }
     
     
+    
+    //Função para o Scroll não ir pro lado
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.x != 0 {
+            scrollView.contentOffset.x = 0
+        }
+    }
+    
+    
+    //remove navegation controller
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)

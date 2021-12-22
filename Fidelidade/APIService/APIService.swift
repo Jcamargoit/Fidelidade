@@ -5,7 +5,19 @@ import Foundation
 
 enum NetworkError: Error {
     case decodingError // JASON MODEL
-    case domainError //ErrO 500
+    case domainError //Erro 500
+    case loginError //
+}
+
+extension NetworkError: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .decodingError, .domainError:
+            return "Houve um erro ao conectar ao servidor"
+        case .loginError:
+            return "Houve um erro ao efetuar o log in"
+        }
+    }
 }
 
 enum HttpMethod: String {
@@ -13,8 +25,14 @@ enum HttpMethod: String {
     case post = "POST"
     case delete = "DELETE"
     case put = "PUT"
-  
 }
+
+
+enum ReturnType: String {
+    case simple
+    case object
+}
+
 
 struct Resource<T: Codable> {
     let url: URL
@@ -33,24 +51,53 @@ struct Resource<T: Codable> {
 
 class APIService {
     
-    func load<T>(resource: Resource<T>, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    func load<T>(resource: Resource<T>, returnType: ReturnType = .simple, completion: @escaping (Result<T, NetworkError>) -> Void) {
         var request = URLRequest(url: resource.url)
         request.httpMethod = resource.httpMethod.rawValue
         request.httpBody = resource.body
-        
+       
+        //Request
         URLSession.shared.dataTask(with: request) { data, response, error in
+          
+            var statusCode = 0
             
             guard let data = data, error == nil else {
                 completion(.failure(.domainError))
                 return
             }
-            let result = try? JSONDecoder().decode(T.self, from: data)
-            if let result = result {
-                DispatchQueue.main.async {
-                    completion(.success(result))
+            
+            //Get StatusCode da resposta da conexão
+            if let httpResponse = response as? HTTPURLResponse {
+                print("status response: \(httpResponse.statusCode)")
+                statusCode = httpResponse.statusCode
+            }
+            
+            if returnType == .simple {
+                
+                if let dataString = String(data: data, encoding: .utf8), statusCode == 200{
+                        completion(.success(dataString as! T))
+                }else {
+                    completion(.failure(.domainError))
                 }
-            } else {
+                
+            }else if  returnType == .object {
+                
+                let result = try? JSONDecoder().decode(T.self, from: data)
+                if let result = result {
+                    DispatchQueue.main.async {
+                        completion(.success(result))
+                    }
+               }else {
+              
+                   completion(.failure(.decodingError))
+                   
+               }
+            }
+            
+        else {
+           
                 completion(.failure(.decodingError))
+            
             }
         }.resume()
     }

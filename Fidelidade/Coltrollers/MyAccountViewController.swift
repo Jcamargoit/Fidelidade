@@ -20,18 +20,19 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
 
         account.append("Perfil")
         account.append("Notificações")
+        account.append("Sacar")
         account.append("Configurações")
         
         image.append("profile")
         image.append("notification")
+        image.append("withdraw")
         image.append("settings")
-
-
-        
     }
     
     
 
+    
+    
     
     
     /// Tamanhop table vcelula
@@ -55,6 +56,12 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
         }
         
         if indexPath.row == 2 {
+            
+            self.performSegue(withIdentifier: "openWithdraw", sender: self)
+            
+        }
+        
+        if indexPath.row == 3 {
             
             self.performSegue(withIdentifier: "openSettings", sender: self)
             
@@ -89,6 +96,13 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
         cell.imageList.image = UIImage (named: image[indexPath.row])
         
         return cell
+    }
+    
+
+    //remove navegation controller
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
 }

@@ -3,24 +3,24 @@
 
 import Foundation
 
-struct LoginModel: Encodable {
-    var cpf: String
-    var password: String
+struct LoginModel: Codable {
+    private let cpf: String
+    private let password: String
     
     init(cpf: String, password: String) {
         self.cpf = cpf
         self.password = password
     }
-
-
+    
+    func map() -> [String: Any] {
+        return ["cpf": self.cpf,
+                "password": self.password]
+    }
+    
     //Evitar os casos que retorna com as chaves em letras maiusculas
     enum CodingKeys: String, CodingKey {
-            case cpf = "cpf"
-            case password = "password"
-        }
-
+        case cpf = "cpf"
+        case password = "password"
+    }
+    
 }
-
-
-
-

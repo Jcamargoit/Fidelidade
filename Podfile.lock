@@ -1,0 +1,16 @@
+PODS:
+  - Observable (2.2.0)
+
+DEPENDENCIES:
+  - Observable
+
+SPEC REPOS:
+  trunk:
+    - Observable
+
+SPEC CHECKSUMS:
+  Observable: d5369c555eae9d022cb066867786f6b9470de33c
+
+PODFILE CHECKSUM: 3fc80a640b8464bc6651df676c5afd07174b5006
+
+COCOAPODS: 1.11.2
