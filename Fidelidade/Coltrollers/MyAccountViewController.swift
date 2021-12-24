@@ -95,8 +95,6 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
             if result {
                 self?.performSegue(withIdentifier: "openChoiceFromMyAccount", sender: self)
                 
-            }else {
-                self?.simplePopUp(title: "Alerta", mensage: "Não foi possível efetuar o logout")
             }
         }.add(to: &disposal)
     }
@@ -119,7 +117,7 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
     //Alimentar id
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:
-                                                    indexPath) as! TodosCelula
+                                                    indexPath) as! MyAccountCell
 
         cell.titulo.text = account[indexPath.row]
         cell.imageList.image = UIImage (named: image[indexPath.row])
@@ -132,7 +130,9 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.tabBarController?.tabBar.isHidden = false
     }
+
     
 }
 

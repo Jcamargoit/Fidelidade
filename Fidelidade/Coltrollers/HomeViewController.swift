@@ -22,11 +22,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     }
     @IBOutlet weak var btnExchange: UIButton!
     @IBOutlet weak var lbConverter: UILabel!
-    @IBOutlet weak var btnConverter: UIButton!{
-        didSet{
-            self.btnConverter.layer.borderColor = UIColor(red: (38/255), green: (47/255), blue: (143/255), alpha: 1.0).cgColor
-        }
-    }
+    @IBOutlet weak var btnConverter: UIButton!
     @IBOutlet weak var sc: UISegmentedControl!
     
     

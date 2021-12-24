@@ -1,9 +1,12 @@
 import UIKit
 
-class TodosCelula: UITableViewCell {
+class WithdrawPixCell: UITableViewCell {
     
-    @IBOutlet weak var titulo: UITextView!
-    @IBOutlet weak var imageList: UIImageView!
+
+    @IBOutlet weak var keyType: UILabel!
+    @IBOutlet weak var ivKey: UIImageView!
+    @IBOutlet weak var key: UILabel!
+    
     
     
     override func awakeFromNib() {
