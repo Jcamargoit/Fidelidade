@@ -24,6 +24,8 @@
 		F276E57E276A5EE200D6A458 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E57D276A5EE200D6A458 /* LoginViewController.swift */; };
 		F276E580276A6F2D00D6A458 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */; };
 		F276E582276A737D00D6A458 /* NewUserTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E581276A737D00D6A458 /* NewUserTwoViewController.swift */; };
+		F27C3CCE2775F86100C83CC1 /* AddNewBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C3CCD2775F86100C83CC1 /* AddNewBankViewController.swift */; };
+		F27C3CD0277614D700C83CC1 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C3CCF277614D700C83CC1 /* ChangePasswordViewController.swift */; };
 		F294811F2774ACE300A551C5 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F294811E2774ACE300A551C5 /* WithdrawViewController.swift */; };
 		F29481212774B6C300A551C5 /* WithdrawPixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29481202774B6C300A551C5 /* WithdrawPixViewController.swift */; };
 		F29481232774B6F800A551C5 /* WithdrawPixCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29481222774B6F700A551C5 /* WithdrawPixCell.swift */; };
@@ -88,6 +90,8 @@
 		F276E57D276A5EE200D6A458 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		F276E581276A737D00D6A458 /* NewUserTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserTwoViewController.swift; sourceTree = "<group>"; };
+		F27C3CCD2775F86100C83CC1 /* AddNewBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBankViewController.swift; sourceTree = "<group>"; };
+		F27C3CCF277614D700C83CC1 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		F294811E2774ACE300A551C5 /* WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
 		F29481202774B6C300A551C5 /* WithdrawPixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawPixViewController.swift; sourceTree = "<group>"; };
 		F29481222774B6F700A551C5 /* WithdrawPixCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawPixCell.swift; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 				F294811E2774ACE300A551C5 /* WithdrawViewController.swift */,
 				F29481202774B6C300A551C5 /* WithdrawPixViewController.swift */,
 				F29481262774CA6700A551C5 /* WithdrawPixResultViewController.swift */,
+				F27C3CCD2775F86100C83CC1 /* AddNewBankViewController.swift */,
+				F27C3CCF277614D700C83CC1 /* ChangePasswordViewController.swift */,
 			);
 			path = Coltrollers;
 			sourceTree = "<group>";
@@ -558,7 +564,9 @@
 				F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */,
 				F276E576276A21D400D6A458 /* AlbunsModel.swift in Sources */,
 				F29481252774BC6B00A551C5 /* MyAccountCell.swift in Sources */,
+				F27C3CCE2775F86100C83CC1 /* AddNewBankViewController.swift in Sources */,
 				F2B117642770C68E0024ECEC /* LoginViewModel.swift in Sources */,
+				F27C3CD0277614D700C83CC1 /* ChangePasswordViewController.swift in Sources */,
 				F29481272774CA6700A551C5 /* WithdrawPixResultViewController.swift in Sources */,
 				F29A96FD2768D9D1002E9C73 /* ChoiceViewController.swift in Sources */,
 				F276E575276A21D400D6A458 /* HomeViewController.swift in Sources */,
