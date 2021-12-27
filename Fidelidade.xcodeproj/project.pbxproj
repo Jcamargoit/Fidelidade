@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25FCDB33277A313900913E57 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */; };
+		25FCDB35277A39B800913E57 /* ApiJavaEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */; };
 		26F93B94FB06113B7BCA3220 /* Pods_Fidelidade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9E802865DA746E1DA8DF13 /* Pods_Fidelidade.framework */; };
 		7D5F00827CD89D7DD434338A /* Pods_Fidelidade_FidelidadeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120245A629A4C8D27BC4E7D3 /* Pods_Fidelidade_FidelidadeUITests.framework */; };
 		D06EFB86260BE19805F77D13 /* Pods_FidelidadeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDECD8EB36B8F1495E474EC7 /* Pods_FidelidadeTests.framework */; };
@@ -72,6 +74,8 @@
 /* Begin PBXFileReference section */
 		120245A629A4C8D27BC4E7D3 /* Pods_Fidelidade_FidelidadeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fidelidade_FidelidadeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ECA66B1491BE515864267E2 /* Pods-Fidelidade-FidelidadeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade-FidelidadeUITests.release.xcconfig"; path = "Target Support Files/Pods-Fidelidade-FidelidadeUITests/Pods-Fidelidade-FidelidadeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiJavaEndPoints.swift; sourceTree = "<group>"; };
 		27534AE9BE2A3738A738848E /* Pods-Fidelidade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade.release.xcconfig"; path = "Target Support Files/Pods-Fidelidade/Pods-Fidelidade.release.xcconfig"; sourceTree = "<group>"; };
 		4A37FC8F7FBFC4C65197C512 /* Pods-Fidelidade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade.debug.xcconfig"; path = "Target Support Files/Pods-Fidelidade/Pods-Fidelidade.debug.xcconfig"; sourceTree = "<group>"; };
 		918FD659923DD850FC464742 /* Pods-FidelidadeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FidelidadeTests.debug.xcconfig"; path = "Target Support Files/Pods-FidelidadeTests/Pods-FidelidadeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				F276E569276A21D400D6A458 /* MyAccountViewController.swift */,
+				F2455192276D13A200953DCC /* NotificationViewController.swift */,
+				F2E3CC7327739F6600FE59F7 /* LoadingViewController.swift */,
 				F2455190276D12CC00953DCC /* ProfileViewController.swift */,
 				F2455194276D14DD00953DCC /* SettingsViewController.swift */,
 				F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */,
@@ -311,7 +317,8 @@
 		F2E3CC7227739F3F00FE59F7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F2E3CC7327739F6600FE59F7 /* LoadingViewController.swift */,
+				25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */,
+				25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -573,6 +580,7 @@
 				F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */,
 				F276E576276A21D400D6A458 /* AlbunsModel.swift in Sources */,
 				F29481252774BC6B00A551C5 /* MyAccountCell.swift in Sources */,
+				25FCDB35277A39B800913E57 /* ApiJavaEndPoints.swift in Sources */,
 				F27C3CCE2775F86100C83CC1 /* AddNewBankViewController.swift in Sources */,
 				F2B117642770C68E0024ECEC /* LoginViewModel.swift in Sources */,
 				F27C3CD0277614D700C83CC1 /* ChangePasswordViewController.swift in Sources */,
@@ -588,6 +596,7 @@
 				F29481232774B6F800A551C5 /* WithdrawPixCell.swift in Sources */,
 				F294811F2774ACE300A551C5 /* WithdrawViewController.swift in Sources */,
 				F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */,
+				25FCDB33277A313900913E57 /* UserDefaultsKeys.swift in Sources */,
 				F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */,
 				F276E57A276A21D400D6A458 /* TodosModel.swift in Sources */,
 				F2E3CC762773B5FE00FE59F7 /* LauncheScreenViewModel.swift in Sources */,

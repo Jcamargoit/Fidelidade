@@ -16,7 +16,7 @@ class LauncheScreenViewModel {
     
     func validateUserIsLogged (){
 
-        guard let key = defaults.string(forKey: "UserKey") else{
+        guard let key = defaults.string(forKey: UserDefaultsKeys.userKey.rawValue) else{
             sIsLogged = false
             return
         }

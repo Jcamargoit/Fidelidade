@@ -52,8 +52,8 @@ class LoginViewModel {
                     self?.sIsLogged?.saveData(data: key)
                     
                     //gravar informações no userDefult (API LOG IN)
-                    self?.defaults.set(key, forKey: "UserKey")
-                    self?.defaults.set(loginModel.cpf, forKey: "UserCpf")
+                    self?.defaults.set(key, forKey: UserDefaultsKeys.userKey.rawValue)
+                    self?.defaults.set(loginModel.cpf, forKey: UserDefaultsKeys.userCpf.rawValue)
                     
                 case .failure(let error):
                     self?.sIsLogged = ResultModel<String>(error: error.description)

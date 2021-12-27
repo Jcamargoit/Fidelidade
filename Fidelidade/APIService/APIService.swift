@@ -27,7 +27,6 @@ enum HttpMethod: String {
     case put = "PUT"
 }
 
-
 enum ReturnType: String {
     case simple
     case object
@@ -71,33 +70,24 @@ class APIService {
                 print("status response: \(httpResponse.statusCode)")
                 statusCode = httpResponse.statusCode
             }
-            
             if returnType == .simple {
-                
                 if let dataString = String(data: data, encoding: .utf8), statusCode == 200{
                         completion(.success(dataString as! T))
                 }else {
                     completion(.failure(.domainError))
                 }
-                
             }else if  returnType == .object {
-                
                 let result = try? JSONDecoder().decode(T.self, from: data)
                 if let result = result {
                     DispatchQueue.main.async {
                         completion(.success(result))
                     }
                }else {
-              
                    completion(.failure(.decodingError))
-                   
                }
             }
-            
         else {
-           
                 completion(.failure(.decodingError))
-            
             }
         }.resume()
     }
