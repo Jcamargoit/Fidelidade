@@ -15,6 +15,10 @@ class SettingsViewController: UIViewController, UIScrollViewDelegate {
 
     }
     
+    @IBAction func back(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
     
     //  RETIRAR MENU INFERIOR
     override func viewWillAppear(_ animated: Bool) {

@@ -10,8 +10,10 @@
 		26F93B94FB06113B7BCA3220 /* Pods_Fidelidade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9E802865DA746E1DA8DF13 /* Pods_Fidelidade.framework */; };
 		7D5F00827CD89D7DD434338A /* Pods_Fidelidade_FidelidadeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120245A629A4C8D27BC4E7D3 /* Pods_Fidelidade_FidelidadeUITests.framework */; };
 		D06EFB86260BE19805F77D13 /* Pods_FidelidadeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDECD8EB36B8F1495E474EC7 /* Pods_FidelidadeTests.framework */; };
+		F213EDCF2779F44400CEBEA8 /* ExchangeValuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDCE2779F44400CEBEA8 /* ExchangeValuesViewController.swift */; };
+		F213EDD12779FF4700CEBEA8 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */; };
+		F213EDD32779FFA700CEBEA8 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDD22779FFA700CEBEA8 /* NotificationCell.swift */; };
 		F2455191276D12CC00953DCC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455190276D12CC00953DCC /* ProfileViewController.swift */; };
-		F2455193276D13A200953DCC /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455192276D13A200953DCC /* NotificationViewController.swift */; };
 		F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455194276D14DD00953DCC /* SettingsViewController.swift */; };
 		F276E574276A21D400D6A458 /* AlbunsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */; };
 		F276E575276A21D400D6A458 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E560276A21D400D6A458 /* HomeViewController.swift */; };
@@ -76,8 +78,10 @@
 		B01DD94087BA83EF25F9611C /* Pods-FidelidadeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FidelidadeTests.release.xcconfig"; path = "Target Support Files/Pods-FidelidadeTests/Pods-FidelidadeTests.release.xcconfig"; sourceTree = "<group>"; };
 		DDECD8EB36B8F1495E474EC7 /* Pods_FidelidadeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FidelidadeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB65894930A38A11A5D2A60E /* Pods-Fidelidade-FidelidadeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade-FidelidadeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fidelidade-FidelidadeUITests/Pods-Fidelidade-FidelidadeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F213EDCE2779F44400CEBEA8 /* ExchangeValuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeValuesViewController.swift; sourceTree = "<group>"; };
+		F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		F213EDD22779FFA700CEBEA8 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		F2455190276D12CC00953DCC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		F2455192276D13A200953DCC /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		F2455194276D14DD00953DCC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsViewModel.swift; sourceTree = "<group>"; };
 		F276E560276A21D400D6A458 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -243,9 +247,9 @@
 			isa = PBXGroup;
 			children = (
 				F276E569276A21D400D6A458 /* MyAccountViewController.swift */,
-				F2455192276D13A200953DCC /* NotificationViewController.swift */,
 				F2455190276D12CC00953DCC /* ProfileViewController.swift */,
 				F2455194276D14DD00953DCC /* SettingsViewController.swift */,
+				F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */,
 				F276E560276A21D400D6A458 /* HomeViewController.swift */,
 				F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */,
 				F29A96FC2768D9D1002E9C73 /* ChoiceViewController.swift */,
@@ -258,6 +262,7 @@
 				F29481262774CA6700A551C5 /* WithdrawPixResultViewController.swift */,
 				F27C3CCD2775F86100C83CC1 /* AddNewBankViewController.swift */,
 				F27C3CCF277614D700C83CC1 /* ChangePasswordViewController.swift */,
+				F213EDCE2779F44400CEBEA8 /* ExchangeValuesViewController.swift */,
 			);
 			path = Coltrollers;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 			children = (
 				F29481242774BC6B00A551C5 /* MyAccountCell.swift */,
 				F29481222774B6F700A551C5 /* WithdrawPixCell.swift */,
+				F213EDD22779FFA700CEBEA8 /* NotificationCell.swift */,
 				F276E564276A21D400D6A458 /* AlbunsCelula.swift */,
 			);
 			path = Cells;
@@ -560,6 +566,9 @@
 				F276E57E276A5EE200D6A458 /* LoginViewController.swift in Sources */,
 				F276E57C276A21D400D6A458 /* APIService.swift in Sources */,
 				F276E578276A21D400D6A458 /* TodosViewModel.swift in Sources */,
+				F213EDD32779FFA700CEBEA8 /* NotificationCell.swift in Sources */,
+				F213EDCF2779F44400CEBEA8 /* ExchangeValuesViewController.swift in Sources */,
+				F213EDD12779FF4700CEBEA8 /* NotificationViewController.swift in Sources */,
 				F2B117622770C5400024ECEC /* LoginModel.swift in Sources */,
 				F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */,
 				F276E576276A21D400D6A458 /* AlbunsModel.swift in Sources */,
@@ -577,7 +586,6 @@
 				F276E580276A6F2D00D6A458 /* NewUserViewController.swift in Sources */,
 				F276E574276A21D400D6A458 /* AlbunsViewModel.swift in Sources */,
 				F29481232774B6F800A551C5 /* WithdrawPixCell.swift in Sources */,
-				F2455193276D13A200953DCC /* NotificationViewController.swift in Sources */,
 				F294811F2774ACE300A551C5 /* WithdrawViewController.swift in Sources */,
 				F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */,
 				F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */,
