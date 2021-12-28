@@ -9,6 +9,10 @@ import UIKit
 
 class NewUserTwoViewController: UIViewController, UITextFieldDelegate {
     
+    var nomeCompleto = String()
+    var email = String()
+    var cpf = String()
+
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tfConfirmPassword: UITextField!
     @IBOutlet weak var tfAdress: UITextField!{
@@ -17,6 +21,7 @@ class NewUserTwoViewController: UIViewController, UITextFieldDelegate {
             self.tfAdress.addTarget(self, action: #selector(myTargetFunction), for: .touchDown)
         }
     }
+    
     @IBOutlet weak var lbState: UILabel!
     @IBOutlet weak var lbCity: UILabel!
     
@@ -27,23 +32,13 @@ class NewUserTwoViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-    
+        
+        
         //Função pra subir a tela com o teclado
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         self.view.addGestureRecognizer(tapGesture)
     }
     
-    
-    
-    //Função pra subir a tela com o teclado
-    @objc func myTargetFunction(textField: UITextField) {
-        self.numeros =  self.numeros + 1
-        if self.numeros == 1 {
-            self.verificacao = "sim"
-            self.view.frame.origin.y -= 150
-        }
-    }
     
     //Função pra subir a tela com o teclado
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
@@ -55,7 +50,15 @@ class NewUserTwoViewController: UIViewController, UITextFieldDelegate {
         //ID QUE QUER SUBIR A TELA
         self.tfAdress.resignFirstResponder()
     }
-    
+
+    //Função pra descer a tela com o teclado
+    @objc func myTargetFunction(textField: UITextField) {
+        self.numeros =  self.numeros + 1
+        if self.numeros == 1 {
+            self.verificacao = "sim"
+            self.view.frame.origin.y -= 150
+        }
+    }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -71,6 +74,24 @@ class NewUserTwoViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func register(_ sender: UIButton) {
+        
+        
+        if tfPassword.text!.isEmpty{
+            simplePopUp(title: "", mensage: "É necessário digitar a senha")
+        }else  if tfConfirmPassword.text!.isEmpty{
+            simplePopUp(title: "", mensage: "É necessário confirmar a senha")
+        }else  if tfAdress.text!.isEmpty{
+            simplePopUp(title: "", mensage: "Necessário digitar o cpf")
+        }else{
+            if self.tfPassword.text == self.tfConfirmPassword.text {
+                simplePopUp(title: "", mensage: "Cadastro efetuado com sucesso")
+                self.performSegue(withIdentifier: "openHomeFromNewUser", sender: self)
+            }else{
+                simplePopUp(title: "Atenção", mensage: "Senhas não conferem")
+            }
+        }
+        
+        
         
     }
     

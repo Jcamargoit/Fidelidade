@@ -75,7 +75,7 @@ class LoginViewController: UIViewController {
 
 extension UIViewController {
     func simplePopUp(title:String, mensage:String) {
-        let alert = UIAlertController(title: "Erro", message: "Erro ao logar", preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: mensage, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
         })
         alert.addAction(ok)

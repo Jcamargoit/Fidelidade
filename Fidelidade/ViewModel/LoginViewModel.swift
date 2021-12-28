@@ -35,7 +35,6 @@ class LoginViewModel {
     
     let loginUseCase = LoginUseCase()
     
-  
     //gravar informações no userDefult (API LOG IN)
     let defaults = UserDefaults.standard
 
