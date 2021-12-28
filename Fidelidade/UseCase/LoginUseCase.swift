@@ -10,11 +10,11 @@ import Foundation
 class LoginUseCase {
     
     var service = APIService()
-    var url = ApiJavaEndPoints.login.baseURL()
+    var url = ApiJavaEndPoints.login
     var body: Data?
     
     func handleLogin(loginModel: LoginModel, completion: @escaping (Result<String, NetworkError>) -> Void)  {
-        guard let url = url else {
+        guard let url = url.baseURL() else {
             fatalError("URL is incorrect!")
         }
         do {

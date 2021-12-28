@@ -13,7 +13,7 @@ enum ApiJavaEndPoints {
     case login
     
     func baseURL() -> URL? {
-        return URL(string: "http://localhost:8081/\(String(describing: route))")
+        return URL(string: "http://localhost:8081/\(String(describing: route()))")
     }
     
     private func route() -> String {
