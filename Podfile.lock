@@ -1,16 +1,22 @@
 PODS:
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
   - Observable (2.2.0)
 
 DEPENDENCIES:
+  - Charts
   - Observable
 
 SPEC REPOS:
   trunk:
+    - Charts
     - Observable
 
 SPEC CHECKSUMS:
+  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
   Observable: d5369c555eae9d022cb066867786f6b9470de33c
 
-PODFILE CHECKSUM: 3fc80a640b8464bc6651df676c5afd07174b5006
+PODFILE CHECKSUM: 1da1f302abb27c5e3886eff5a99b28fe30ac92a7
 
 COCOAPODS: 1.11.2

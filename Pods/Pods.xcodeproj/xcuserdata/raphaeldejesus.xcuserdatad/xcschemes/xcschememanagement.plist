@@ -5,6 +5,7 @@
 	<key>SchemeUserState</key>
 	<dict>
 		<key>Charts.xcscheme</key>
+<<<<<<< Updated upstream
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -15,18 +16,22 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
-		</dict>
-		<key>Pods-Fidelidade-FidelidadeUITests.xcscheme</key>
+=======
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
+>>>>>>> Stashed changes
+		</dict>
+		<key>Observable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Fidelidade.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+<<<<<<< Updated upstream
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
@@ -36,6 +41,8 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
+=======
+>>>>>>> Stashed changes
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

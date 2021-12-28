@@ -2019,10 +2019,18 @@
                                                         </segments>
                                                         <color key="selectedSegmentTintColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </segmentedControl>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFT-mV-5tb" customClass="BarChartView" customModule="Charts">
+                                                        <rect key="frame" x="8" y="60" width="346" height="240"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.90588235289999997" green="0.90980392160000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
+                                                    <constraint firstItem="OFT-mV-5tb" firstAttribute="leading" secondItem="hga-XN-Ks1" secondAttribute="leadingMargin" id="Enn-06-Deu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OFT-mV-5tb" secondAttribute="trailing" id="Rz9-CT-W8E"/>
                                                     <constraint firstItem="hQg-Hm-rdn" firstAttribute="leading" secondItem="hga-XN-Ks1" secondAttribute="leading" constant="5" id="UvJ-93-5Nj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="OFT-mV-5tb" secondAttribute="bottom" id="Z7x-sy-wev"/>
+                                                    <constraint firstItem="OFT-mV-5tb" firstAttribute="top" secondItem="hQg-Hm-rdn" secondAttribute="bottom" constant="19" id="mOO-YA-YLt"/>
                                                     <constraint firstAttribute="trailing" secondItem="hQg-Hm-rdn" secondAttribute="trailing" constant="5" id="q2h-FH-9lw"/>
                                                     <constraint firstItem="hQg-Hm-rdn" firstAttribute="top" secondItem="hga-XN-Ks1" secondAttribute="top" constant="10" id="qQI-HT-Ri4"/>
                                                     <constraint firstAttribute="height" constant="300" id="zfa-LL-H0P"/>
@@ -2089,13 +2097,14 @@
                         <outlet property="lbConverter" destination="0Ri-G6-wzM" id="FWH-Ah-ghG"/>
                         <outlet property="lbExchange" destination="dGJ-1k-9Rl" id="w0z-Oi-iuQ"/>
                         <outlet property="lbName" destination="dYk-aI-fFv" id="hlK-1m-Jvh"/>
+                        <outlet property="mainChart" destination="OFT-mV-5tb" id="Nb2-8R-Cpi"/>
                         <outlet property="mySv" destination="nuj-EU-Iot" id="eel-Pr-LkC"/>
                         <outlet property="sc" destination="hQg-Hm-rdn" id="nhp-iW-Tl6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OII-lU-Ixh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="883"/>
+            <point key="canvasLocation" x="755.60747663551399" y="882.50539956803459"/>
         </scene>
         <!--Withdraw View Controller-->
         <scene sceneID="CMS-uH-vPn">
@@ -4247,8 +4256,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wxV-2c-dfT"/>
-        <segue reference="IEV-kQ-Ou3"/>
+        <segue reference="9gN-Nu-49v"/>
+        <segue reference="atO-7Q-EI2"/>
         <segue reference="NFJ-Lv-vi8"/>
     </inferredMetricsTieBreakers>
     <resources>

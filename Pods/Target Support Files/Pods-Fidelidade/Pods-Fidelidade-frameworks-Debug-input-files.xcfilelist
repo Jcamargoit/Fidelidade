@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Fidelidade/Pods-Fidelidade-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
 ${BUILT_PRODUCTS_DIR}/Observable/Observable.framework

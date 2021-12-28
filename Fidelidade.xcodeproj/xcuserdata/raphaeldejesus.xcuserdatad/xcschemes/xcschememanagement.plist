@@ -7,7 +7,29 @@
 		<key>Fidelidade.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< Updated upstream
 			<integer>3</integer>
+=======
+			<integer>8</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F29A96F42768D9D1002E9C73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F29A970A2768D9D3002E9C73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F29A97142768D9D3002E9C73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+>>>>>>> Stashed changes
 		</dict>
 	</dict>
 </dict>

@@ -7,17 +7,7 @@ target 'Fidelidade' do
 
   # Pods for Fidelidade 
 
-pod 'Observable'
-
-  target 'FidelidadeTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'FidelidadeUITests' do
-    # Pods for testing
-
-
-  end
+	pod 'Observable'
+	pod 'Charts'
 
 end

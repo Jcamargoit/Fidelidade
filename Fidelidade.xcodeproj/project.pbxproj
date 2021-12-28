@@ -10,8 +10,6 @@
 		25FCDB33277A313900913E57 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */; };
 		25FCDB35277A39B800913E57 /* ApiJavaEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */; };
 		26F93B94FB06113B7BCA3220 /* Pods_Fidelidade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9E802865DA746E1DA8DF13 /* Pods_Fidelidade.framework */; };
-		7D5F00827CD89D7DD434338A /* Pods_Fidelidade_FidelidadeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120245A629A4C8D27BC4E7D3 /* Pods_Fidelidade_FidelidadeUITests.framework */; };
-		D06EFB86260BE19805F77D13 /* Pods_FidelidadeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDECD8EB36B8F1495E474EC7 /* Pods_FidelidadeTests.framework */; };
 		F213EDCF2779F44400CEBEA8 /* ExchangeValuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDCE2779F44400CEBEA8 /* ExchangeValuesViewController.swift */; };
 		F213EDD12779FF4700CEBEA8 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */; };
 		F213EDD32779FFA700CEBEA8 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDD22779FFA700CEBEA8 /* NotificationCell.swift */; };
@@ -72,16 +70,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		120245A629A4C8D27BC4E7D3 /* Pods_Fidelidade_FidelidadeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fidelidade_FidelidadeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1ECA66B1491BE515864267E2 /* Pods-Fidelidade-FidelidadeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade-FidelidadeUITests.release.xcconfig"; path = "Target Support Files/Pods-Fidelidade-FidelidadeUITests/Pods-Fidelidade-FidelidadeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiJavaEndPoints.swift; sourceTree = "<group>"; };
 		27534AE9BE2A3738A738848E /* Pods-Fidelidade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade.release.xcconfig"; path = "Target Support Files/Pods-Fidelidade/Pods-Fidelidade.release.xcconfig"; sourceTree = "<group>"; };
 		4A37FC8F7FBFC4C65197C512 /* Pods-Fidelidade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade.debug.xcconfig"; path = "Target Support Files/Pods-Fidelidade/Pods-Fidelidade.debug.xcconfig"; sourceTree = "<group>"; };
-		918FD659923DD850FC464742 /* Pods-FidelidadeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FidelidadeTests.debug.xcconfig"; path = "Target Support Files/Pods-FidelidadeTests/Pods-FidelidadeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B01DD94087BA83EF25F9611C /* Pods-FidelidadeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FidelidadeTests.release.xcconfig"; path = "Target Support Files/Pods-FidelidadeTests/Pods-FidelidadeTests.release.xcconfig"; sourceTree = "<group>"; };
-		DDECD8EB36B8F1495E474EC7 /* Pods_FidelidadeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FidelidadeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB65894930A38A11A5D2A60E /* Pods-Fidelidade-FidelidadeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade-FidelidadeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fidelidade-FidelidadeUITests/Pods-Fidelidade-FidelidadeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F213EDCE2779F44400CEBEA8 /* ExchangeValuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeValuesViewController.swift; sourceTree = "<group>"; };
 		F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		F213EDD22779FFA700CEBEA8 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
@@ -142,7 +134,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D06EFB86260BE19805F77D13 /* Pods_FidelidadeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +141,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D5F00827CD89D7DD434338A /* Pods_Fidelidade_FidelidadeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,10 +152,6 @@
 			children = (
 				4A37FC8F7FBFC4C65197C512 /* Pods-Fidelidade.debug.xcconfig */,
 				27534AE9BE2A3738A738848E /* Pods-Fidelidade.release.xcconfig */,
-				EB65894930A38A11A5D2A60E /* Pods-Fidelidade-FidelidadeUITests.debug.xcconfig */,
-				1ECA66B1491BE515864267E2 /* Pods-Fidelidade-FidelidadeUITests.release.xcconfig */,
-				918FD659923DD850FC464742 /* Pods-FidelidadeTests.debug.xcconfig */,
-				B01DD94087BA83EF25F9611C /* Pods-FidelidadeTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -174,8 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				FE9E802865DA746E1DA8DF13 /* Pods_Fidelidade.framework */,
-				120245A629A4C8D27BC4E7D3 /* Pods_Fidelidade_FidelidadeUITests.framework */,
-				DDECD8EB36B8F1495E474EC7 /* Pods_FidelidadeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -250,25 +234,24 @@
 		F2B1175C2770C3D60024ECEC /* Coltrollers */ = {
 			isa = PBXGroup;
 			children = (
-				F276E569276A21D400D6A458 /* MyAccountViewController.swift */,
-				F2455192276D13A200953DCC /* NotificationViewController.swift */,
-				F2E3CC7327739F6600FE59F7 /* LoadingViewController.swift */,
-				F2455190276D12CC00953DCC /* ProfileViewController.swift */,
-				F2455194276D14DD00953DCC /* SettingsViewController.swift */,
-				F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */,
-				F276E560276A21D400D6A458 /* HomeViewController.swift */,
-				F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */,
-				F29A96FC2768D9D1002E9C73 /* ChoiceViewController.swift */,
-				F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */,
-				F276E581276A737D00D6A458 /* NewUserTwoViewController.swift */,
-				F276E57D276A5EE200D6A458 /* LoginViewController.swift */,
-				F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */,
-				F294811E2774ACE300A551C5 /* WithdrawViewController.swift */,
-				F29481202774B6C300A551C5 /* WithdrawPixViewController.swift */,
-				F29481262774CA6700A551C5 /* WithdrawPixResultViewController.swift */,
 				F27C3CCD2775F86100C83CC1 /* AddNewBankViewController.swift */,
 				F27C3CCF277614D700C83CC1 /* ChangePasswordViewController.swift */,
+				F29A96FC2768D9D1002E9C73 /* ChoiceViewController.swift */,
 				F213EDCE2779F44400CEBEA8 /* ExchangeValuesViewController.swift */,
+				F276E560276A21D400D6A458 /* HomeViewController.swift */,
+				F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */,
+				F2E3CC7327739F6600FE59F7 /* LoadingViewController.swift */,
+				F276E57D276A5EE200D6A458 /* LoginViewController.swift */,
+				F276E569276A21D400D6A458 /* MyAccountViewController.swift */,
+				F276E581276A737D00D6A458 /* NewUserTwoViewController.swift */,
+				F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */,
+				F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */,
+				F2455190276D12CC00953DCC /* ProfileViewController.swift */,
+				F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */,
+				F2455194276D14DD00953DCC /* SettingsViewController.swift */,
+				F29481262774CA6700A551C5 /* WithdrawPixResultViewController.swift */,
+				F29481202774B6C300A551C5 /* WithdrawPixViewController.swift */,
+				F294811E2774ACE300A551C5 /* WithdrawViewController.swift */,
 			);
 			path = Coltrollers;
 			sourceTree = "<group>";
@@ -357,7 +340,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F29A97222768D9D4002E9C73 /* Build configuration list for PBXNativeTarget "FidelidadeTests" */;
 			buildPhases = (
-				76870DA11C82BF1E9813086A /* [CP] Check Pods Manifest.lock */,
 				F29A97072768D9D3002E9C73 /* Sources */,
 				F29A97082768D9D3002E9C73 /* Frameworks */,
 				F29A97092768D9D3002E9C73 /* Resources */,
@@ -376,11 +358,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F29A97252768D9D4002E9C73 /* Build configuration list for PBXNativeTarget "FidelidadeUITests" */;
 			buildPhases = (
-				62AB826EF6CA45CB5D795874 /* [CP] Check Pods Manifest.lock */,
 				F29A97112768D9D3002E9C73 /* Sources */,
 				F29A97122768D9D3002E9C73 /* Frameworks */,
 				F29A97132768D9D3002E9C73 /* Resources */,
-				88291C8CE0483F2AB85E952B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -463,67 +443,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		62AB826EF6CA45CB5D795874 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Fidelidade-FidelidadeUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		76870DA11C82BF1E9813086A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FidelidadeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		88291C8CE0483F2AB85E952B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Fidelidade-FidelidadeUITests/Pods-Fidelidade-FidelidadeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Fidelidade-FidelidadeUITests/Pods-Fidelidade-FidelidadeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fidelidade-FidelidadeUITests/Pods-Fidelidade-FidelidadeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9974ABF054011F950FD12133 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -770,6 +689,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -801,6 +721,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.framework.Fidelidade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -833,6 +754,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.framework.Fidelidade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -843,7 +765,6 @@
 		};
 		F29A97232768D9D4002E9C73 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 918FD659923DD850FC464742 /* Pods-FidelidadeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -858,6 +779,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.framework.FidelidadeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -869,7 +791,6 @@
 		};
 		F29A97242768D9D4002E9C73 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B01DD94087BA83EF25F9611C /* Pods-FidelidadeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -895,7 +816,6 @@
 		};
 		F29A97262768D9D4002E9C73 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB65894930A38A11A5D2A60E /* Pods-Fidelidade-FidelidadeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -908,6 +828,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.framework.FidelidadeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -919,7 +840,6 @@
 		};
 		F29A97272768D9D4002E9C73 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ECA66B1491BE515864267E2 /* Pods-Fidelidade-FidelidadeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -20,14 +20,14 @@ class MyAccountViewModel {
     
     func handleLogout() {
         
-        if let key = defaults.string(forKey: UserDefaultsKeys.userKey.rawValue), let cpf = defaults.string(forKey: UserDefaultsKeys.userCpf.rawValue) {
-            defaults.removeObject(forKey: UserDefaultsKeys.userKey.rawValue)
-            defaults.removeObject(forKey: UserDefaultsKeys.userCpf.rawValue)
-            sLogoutIsFinished = true
-            
+        guard let _ = defaults.string(forKey: UserDefaultsKeys.userKey.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userCpf.rawValue) else {
+            sLogoutIsFinished = false
+            return
         }
         
-        sLogoutIsFinished = false
+        defaults.removeObject(forKey: UserDefaultsKeys.userKey.rawValue)
+        defaults.removeObject(forKey: UserDefaultsKeys.userCpf.rawValue)
+        sLogoutIsFinished = true
     }
     
     
