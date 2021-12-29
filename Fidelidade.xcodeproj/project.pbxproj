@@ -77,6 +77,7 @@
 		F213EDCE2779F44400CEBEA8 /* ExchangeValuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeValuesViewController.swift; sourceTree = "<group>"; };
 		F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		F213EDD22779FFA700CEBEA8 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		F21A911B277C8D7F00C1A695 /* Fidelidade.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fidelidade.entitlements; sourceTree = "<group>"; };
 		F2455190276D12CC00953DCC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F2455194276D14DD00953DCC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsViewModel.swift; sourceTree = "<group>"; };
@@ -197,6 +198,7 @@
 		F29A96F72768D9D1002E9C73 /* Fidelidade */ = {
 			isa = PBXGroup;
 			children = (
+				F21A911B277C8D7F00C1A695 /* Fidelidade.entitlements */,
 				F2E3CC7227739F3F00FE59F7 /* Utils */,
 				F2FB7AA32770F55400C3E4C9 /* UseCase */,
 				F276E56E276A21D400D6A458 /* APIService */,
@@ -703,6 +705,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Fidelidade/Fidelidade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UJ394G4MSU;
@@ -736,6 +739,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Fidelidade/Fidelidade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UJ394G4MSU;
