@@ -7,12 +7,13 @@
 
 import UIKit
 
-class NewUserTwoViewController: UIViewController, UITextFieldDelegate {
+class NewUserTwoViewController: UIViewController {
     
     var nomeCompleto = String()
     var email = String()
     var cpf = String()
-
+    
+    
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tfConfirmPassword: UITextField!
     @IBOutlet weak var tfAdress: UITextField!{
@@ -50,7 +51,7 @@ class NewUserTwoViewController: UIViewController, UITextFieldDelegate {
         //ID QUE QUER SUBIR A TELA
         self.tfAdress.resignFirstResponder()
     }
-
+    
     //Função pra descer a tela com o teclado
     @objc func myTargetFunction(textField: UITextField) {
         self.numeros =  self.numeros + 1
@@ -65,8 +66,7 @@ class NewUserTwoViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    
-    
+   
     @IBAction func back(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
@@ -74,14 +74,17 @@ class NewUserTwoViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func register(_ sender: UIButton) {
-        
-        
+        verificationTextField()
+    }
+    
+    
+    func verificationTextField(){
         if tfPassword.text!.isEmpty{
             simplePopUp(title: "", mensage: "É necessário digitar a senha")
         }else  if tfConfirmPassword.text!.isEmpty{
             simplePopUp(title: "", mensage: "É necessário confirmar a senha")
         }else  if tfAdress.text!.isEmpty{
-            simplePopUp(title: "", mensage: "Necessário digitar o cpf")
+            simplePopUp(title: "", mensage: "Necessário digitar o endereço")
         }else{
             if self.tfPassword.text == self.tfConfirmPassword.text {
                 simplePopUp(title: "", mensage: "Cadastro efetuado com sucesso")
@@ -90,9 +93,6 @@ class NewUserTwoViewController: UIViewController, UITextFieldDelegate {
                 simplePopUp(title: "Atenção", mensage: "Senhas não conferem")
             }
         }
-        
-        
-        
     }
     
     
@@ -105,5 +105,15 @@ class NewUserTwoViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
+}
+
+extension NewUserTwoViewController: UITextFieldDelegate {
+
+    //Return do teclado
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        verificationTextField()
+           return false
+       }
     
 }

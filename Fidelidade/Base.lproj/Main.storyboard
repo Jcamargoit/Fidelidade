@@ -1200,7 +1200,7 @@
                                 <rect key="frame" x="40" y="516.66666666666663" width="348" height="19"/>
                                 <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dO6-Tt-9mQ">
                                 <rect key="frame" x="40" y="540.66666666666663" width="348" height="1"/>
@@ -2747,41 +2747,41 @@
                                         <rect key="frame" x="25.666666666666657" y="127.3333333333333" width="291.33333333333337" height="18.333333333333329"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nova Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="C95-f7-dxu">
-                                        <rect key="frame" x="25.666666666666657" y="181.66666666666669" width="291.33333333333337" height="19"/>
+                                        <rect key="frame" x="25.666666666666657" y="181.66666666666669" width="291.33333333333337" height="14.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Entre com a nova senha" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yqz-A2-Ksb">
-                                        <rect key="frame" x="25.666666666666657" y="205.66666666666669" width="291.33333333333337" height="18.333333333333343"/>
+                                        <rect key="frame" x="25.666666666666657" y="200.99999999999994" width="291.33333333333337" height="18.333333333333343"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmar Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="DXp-lr-jjy">
-                                        <rect key="frame" x="25.666666666666657" y="259.99999999999994" width="291.33333333333337" height="19.666666666666686"/>
+                                        <rect key="frame" x="25.666666666666657" y="255.33333333333331" width="291.33333333333337" height="14"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Redigite a nova senha" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CjK-wB-hIO">
-                                        <rect key="frame" x="25.666666666666657" y="284.66666666666669" width="291.33333333333337" height="18.333333333333314"/>
+                                        <rect key="frame" x="25.666666666666657" y="274.33333333333331" width="291.33333333333337" height="18.333333333333314"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCa-sx-zHw">
-                                        <rect key="frame" x="25.666666666666657" y="307.99999999999994" width="291.33333333333337" height="1"/>
+                                        <rect key="frame" x="25.666666666666657" y="297.66666666666669" width="291.33333333333337" height="1"/>
                                         <color key="backgroundColor" red="0.14832776780000001" green="0.1834453046" blue="0.56083971259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="gHK-5U-Dew"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pb-5z-vGx">
-                                        <rect key="frame" x="25.666666666666657" y="228.99999999999994" width="291.33333333333337" height="1"/>
+                                        <rect key="frame" x="25.666666666666657" y="224.33333333333331" width="291.33333333333337" height="1"/>
                                         <color key="backgroundColor" red="0.14832776780000001" green="0.1834453046" blue="0.56083971259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="akt-aY-nns"/>
@@ -2828,6 +2828,7 @@
                                     <constraint firstItem="AtP-8e-39G" firstAttribute="centerX" secondItem="5m6-EN-ptA" secondAttribute="centerX" id="m5c-Lm-QOt"/>
                                     <constraint firstItem="940-jx-XQU" firstAttribute="centerX" secondItem="5m6-EN-ptA" secondAttribute="centerX" id="p4m-OB-CJN"/>
                                     <constraint firstItem="yqz-A2-Ksb" firstAttribute="top" secondItem="C95-f7-dxu" secondAttribute="bottom" constant="5" id="peN-Ir-upo"/>
+                                    <constraint firstItem="DXp-lr-jjy" firstAttribute="height" secondItem="5m6-EN-ptA" secondAttribute="height" multiplier="0.0272021" id="qhx-xS-sE2"/>
                                     <constraint firstItem="1pb-5z-vGx" firstAttribute="trailing" secondItem="yqz-A2-Ksb" secondAttribute="trailing" id="rQS-og-Hkt"/>
                                     <constraint firstItem="yqz-A2-Ksb" firstAttribute="leading" secondItem="C95-f7-dxu" secondAttribute="leading" id="sdH-dB-Dpa"/>
                                     <constraint firstItem="CjK-wB-hIO" firstAttribute="leading" secondItem="DXp-lr-jjy" secondAttribute="leading" id="uD3-xB-oAS"/>
@@ -2836,6 +2837,7 @@
                                     <constraint firstItem="CjK-wB-hIO" firstAttribute="height" secondItem="5m6-EN-ptA" secondAttribute="height" multiplier="0.035" id="xxM-eI-sTx"/>
                                     <constraint firstItem="AtP-8e-39G" firstAttribute="width" secondItem="5m6-EN-ptA" secondAttribute="width" multiplier="0.85" id="yzq-Ze-rPX"/>
                                     <constraint firstItem="AtP-8e-39G" firstAttribute="height" secondItem="5m6-EN-ptA" secondAttribute="height" multiplier="0.0272021" id="zCM-cZ-DEy"/>
+                                    <constraint firstItem="C95-f7-dxu" firstAttribute="height" secondItem="5m6-EN-ptA" secondAttribute="height" multiplier="0.0272021" id="zv2-hk-vgC"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
@@ -2858,7 +2860,8 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="5Ty-BG-vaC"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="confirmPasswor" destination="CjK-wB-hIO" id="h4z-97-8pX"/>
+                        <outlet property="btnChangePassword" destination="940-jx-XQU" id="ReS-AK-QeT"/>
+                        <outlet property="tfConfirmPasswor" destination="CjK-wB-hIO" id="h4z-97-8pX"/>
                         <outlet property="tfNewPassword" destination="yqz-A2-Ksb" id="RNw-LY-Vmu"/>
                         <outlet property="tfPassword" destination="yLX-Bw-gFI" id="VdM-Uf-NH7"/>
                     </connections>

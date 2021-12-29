@@ -7,34 +7,21 @@
 
 import UIKit
 
-class NewUserViewController: UIViewController, UITextFieldDelegate {
+class NewUserViewController: UIViewController {
     
     @IBOutlet weak var tfNomeCompleto: UITextField!
     @IBOutlet weak var tfEmail: UITextField!
-    @IBOutlet weak var tfCpf: UITextField!
+    @IBOutlet weak var tfCpf: UITextField!{
+        didSet{
+            self.tfCpf.delegate = self
+        }
+    }
     @IBOutlet weak var viewNext: UIView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        self.tfCpf.delegate = self
-        
     }
-    
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let newLength = (textField.text ?? "").count + string.count - range.length
-        
-        
-        if(textField == self.tfCpf) {
-            return newLength <= 11
-        }
-        return true
-    }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
@@ -45,10 +32,12 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
     @IBAction func next(_ sender: UIButton) {
-        
-        
+        verificationTextField()
+    }
+    
+    
+    func verificationTextField(){
         if tfNomeCompleto.text!.isEmpty{
             simplePopUp(title: "", mensage: "É necessário digitar o nome completo")
         }else  if tfEmail.text!.isEmpty{
@@ -64,22 +53,20 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "openNewUserTowFromNewUser":
             let vc = segue.destination as! NewUserTwoViewController
-
+            
             vc.nomeCompleto = self.tfNomeCompleto.text ?? ""
             vc.email = self.tfEmail.text ?? ""
             vc.cpf = self.tfCpf.text ?? ""
-
+            
         default:
             break;
         }
     }
 }
-
 
 extension Collection where Element == Int {
     var digitoCPF: Int {
@@ -92,7 +79,6 @@ extension Collection where Element == Int {
     }
 }
 
-
 extension StringProtocol {
     var isValidCPF: Bool {
         let numbers = compactMap(\.wholeNumberValue)
@@ -102,8 +88,22 @@ extension StringProtocol {
     }
 }
 
+extension NewUserViewController: UITextFieldDelegate {
+    
+    //Quantidade de caracter
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let newLength = (textField.text ?? "").count + string.count - range.length
+        if(textField == self.tfCpf) {
+            return newLength <= 11
+        }
+        return true
+    }
+    
+    // Clicar em qualquer lugar da tela e excultar a ação
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        verificationTextField()
+    }
+    
 
-//extension NewUserViewController: UITextFieldDelegate {
-//
-//
-//}
+    
+}
