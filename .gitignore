@@ -1,4 +1,2 @@
-
-Fidelidade.xcodeproj/project.pbxproj
-Fidelidade.xcodeproj/project.pbxproj
-Fidelidade.xcodeproj/project.pbxproj
+*.pbxproj
+.DS_Store

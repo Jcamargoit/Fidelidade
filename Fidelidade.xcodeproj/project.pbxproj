@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		25FCDB33277A313900913E57 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */; };
 		25FCDB35277A39B800913E57 /* ApiJavaEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */; };
+		25FCDB3F277CF4C000913E57 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25FCDB3E277CF4C000913E57 /* Colors.xcassets */; };
 		26F93B94FB06113B7BCA3220 /* Pods_Fidelidade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9E802865DA746E1DA8DF13 /* Pods_Fidelidade.framework */; };
 		F213EDCF2779F44400CEBEA8 /* ExchangeValuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDCE2779F44400CEBEA8 /* ExchangeValuesViewController.swift */; };
 		F213EDD12779FF4700CEBEA8 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiJavaEndPoints.swift; sourceTree = "<group>"; };
+		25FCDB3E277CF4C000913E57 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		27534AE9BE2A3738A738848E /* Pods-Fidelidade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade.release.xcconfig"; path = "Target Support Files/Pods-Fidelidade/Pods-Fidelidade.release.xcconfig"; sourceTree = "<group>"; };
 		4A37FC8F7FBFC4C65197C512 /* Pods-Fidelidade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade.debug.xcconfig"; path = "Target Support Files/Pods-Fidelidade/Pods-Fidelidade.debug.xcconfig"; sourceTree = "<group>"; };
 		F213EDCE2779F44400CEBEA8 /* ExchangeValuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeValuesViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				F29A97012768D9D3002E9C73 /* Assets.xcassets */,
 				F29A97032768D9D3002E9C73 /* LaunchScreen.storyboard */,
 				F29A97062768D9D3002E9C73 /* Info.plist */,
+				25FCDB3E277CF4C000913E57 /* Colors.xcassets */,
 			);
 			path = Fidelidade;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F29A97052768D9D3002E9C73 /* LaunchScreen.storyboard in Resources */,
+				25FCDB3F277CF4C000913E57 /* Colors.xcassets in Resources */,
 				F29A97022768D9D3002E9C73 /* Assets.xcassets in Resources */,
 				F29A97002768D9D1002E9C73 /* Main.storyboard in Resources */,
 			);
@@ -708,7 +712,7 @@
 				CODE_SIGN_ENTITLEMENTS = Fidelidade/Fidelidade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UJ394G4MSU;
+				DEVELOPMENT_TEAM = SPMYNXX796;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fidelidade/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

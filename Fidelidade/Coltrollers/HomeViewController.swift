@@ -4,7 +4,7 @@ import UIKit
 import Charts
 
 class HomeViewController: UIViewController, UIScrollViewDelegate {
-    let dataPoints = ["Dez", "Dez", "Dez", "Dez", "Dez", "Dez", "Dez", "Dez", "Dez", "Dez"]
+    let dataPoints = ["1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez"]
     let values = [15.0, 25.0, 12.0, 12.0, 25.0, 25.0, 5.0, 27.0, 4.0, 12.0]
     
     let strokeTextAttributes = [
@@ -57,7 +57,20 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         mainChart.pinchZoomEnabled = false
         mainChart.drawBarShadowEnabled = false
         mainChart.legend.enabled = false
-        mainChart.backgroundColor = UIColor(displayP3Red: 61, green: 89, blue: 171, alpha: 0.25)
+        mainChart.chartDescription?.enabled = false
+        mainChart.isUserInteractionEnabled = false
+        let color = UIColor(red: 61/255, green: 89/255, blue: 171/255, alpha: 0.25)
+        mainChart.backgroundColor = color
+        let xAxis = mainChart.xAxis
+        xAxis.valueFormatter = IndexAxisValueFormatter(values: dataPoints)
+        xAxis.labelPosition = .bottom
+        xAxis.drawGridLinesEnabled = false
+        let rightAxis = mainChart.rightAxis
+        rightAxis.enabled = false
+        let leftAxis = mainChart.leftAxis
+        leftAxis.axisMinimum = 0.0
+        leftAxis.axisMaximum = 40.0
+        
         
         var dataEntries: [BarChartDataEntry] = []
         
@@ -66,9 +79,17 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
             dataEntries.append(dataEntry)
         }
         
+        var barColours = [UIColor]()
+        barColours.append(.white)
+        barColours.append(.blue)
+        
         let chartDataSet = BarChartDataSet(entries: dataEntries, label: nil)
+        chartDataSet.colors = barColours
+        chartDataSet.barBorderColor = .black
+        chartDataSet.barBorderWidth = 1
         let chartData = BarChartData(dataSet: chartDataSet)
         mainChart.data = chartData
+        mainChart.animate(yAxisDuration: 1.5)
     }
     
 }
