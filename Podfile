@@ -11,8 +11,9 @@ target 'Fidelidade' do
 	pod 'Charts'
 	pod 'Firebase/Messaging'
 	pod 'Firebase/Analytics'
-  	pod 'Firebase/Auth'
+  pod 'Firebase/Auth'
 	pod 'Firebase/Database'
 	pod 'Firebase/Storage'
+	pod 'MockoloFramework', '~>1.1.2'
 
 end
