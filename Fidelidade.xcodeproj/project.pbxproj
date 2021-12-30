@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25037727277E44EB00A347EE /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037726277E44EB00A347EE /* LoginViewModelTest.swift */; };
+		25B03CFE277E31B500B7D0A5 /* LoginUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B03CFD277E31B500B7D0A5 /* LoginUseCaseMock.swift */; };
 		25FCDB33277A313900913E57 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */; };
 		25FCDB35277A39B800913E57 /* ApiJavaEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */; };
 		25FCDB3F277CF4C000913E57 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25FCDB3E277CF4C000913E57 /* Colors.xcassets */; };
@@ -40,7 +42,6 @@
 		F29A97002768D9D1002E9C73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29A96FE2768D9D1002E9C73 /* Main.storyboard */; };
 		F29A97022768D9D3002E9C73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29A97012768D9D3002E9C73 /* Assets.xcassets */; };
 		F29A97052768D9D3002E9C73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29A97032768D9D3002E9C73 /* LaunchScreen.storyboard */; };
-		F29A97102768D9D3002E9C73 /* FidelidadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A970F2768D9D3002E9C73 /* FidelidadeTests.swift */; };
 		F29A971A2768D9D4002E9C73 /* FidelidadeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A97192768D9D4002E9C73 /* FidelidadeUITests.swift */; };
 		F29A971C2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A971B2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift */; };
 		F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */; };
@@ -71,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25037726277E44EB00A347EE /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
+		25B03CFD277E31B500B7D0A5 /* LoginUseCaseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUseCaseMock.swift; sourceTree = "<group>"; };
 		25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiJavaEndPoints.swift; sourceTree = "<group>"; };
 		25FCDB3E277CF4C000913E57 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -109,7 +112,6 @@
 		F29A97042768D9D3002E9C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F29A97062768D9D3002E9C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F29A970B2768D9D3002E9C73 /* FidelidadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FidelidadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F29A970F2768D9D3002E9C73 /* FidelidadeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidelidadeTests.swift; sourceTree = "<group>"; };
 		F29A97152768D9D4002E9C73 /* FidelidadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FidelidadeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29A97192768D9D4002E9C73 /* FidelidadeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidelidadeUITests.swift; sourceTree = "<group>"; };
 		F29A971B2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidelidadeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -150,6 +152,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25037725277E44C900A347EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				25037726277E44EB00A347EE /* LoginViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		25B03CFC277E31A200B7D0A5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				25B03CFD277E31B500B7D0A5 /* LoginUseCaseMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		36476A4F9C89480D8D2D7D28 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +222,7 @@
 				F2E3CC7227739F3F00FE59F7 /* Utils */,
 				F2FB7AA32770F55400C3E4C9 /* UseCase */,
 				F276E56E276A21D400D6A458 /* APIService */,
-				F2B1175C2770C3D60024ECEC /* Coltrollers */,
+				F2B1175C2770C3D60024ECEC /* Controllers */,
 				F2B1175F2770C43C0024ECEC /* Views */,
 				F2B1175E2770C4200024ECEC /* Model */,
 				F2B1175D2770C4130024ECEC /* ViewModel */,
@@ -222,7 +240,8 @@
 		F29A970E2768D9D3002E9C73 /* FidelidadeTests */ = {
 			isa = PBXGroup;
 			children = (
-				F29A970F2768D9D3002E9C73 /* FidelidadeTests.swift */,
+				25037725277E44C900A347EE /* ViewModel */,
+				25B03CFC277E31A200B7D0A5 /* Mocks */,
 			);
 			path = FidelidadeTests;
 			sourceTree = "<group>";
@@ -236,7 +255,7 @@
 			path = FidelidadeUITests;
 			sourceTree = "<group>";
 		};
-		F2B1175C2770C3D60024ECEC /* Coltrollers */ = {
+		F2B1175C2770C3D60024ECEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				F27C3CCD2775F86100C83CC1 /* AddNewBankViewController.swift */,
@@ -258,7 +277,7 @@
 				F29481202774B6C300A551C5 /* WithdrawPixViewController.swift */,
 				F294811E2774ACE300A551C5 /* WithdrawViewController.swift */,
 			);
-			path = Coltrollers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F2B1175D2770C4130024ECEC /* ViewModel */ = {
@@ -392,6 +411,7 @@
 					};
 					F29A970A2768D9D3002E9C73 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 						TestTargetID = F29A96F42768D9D1002E9C73;
 					};
 					F29A97142768D9D3002E9C73 = {
@@ -538,7 +558,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F29A97102768D9D3002E9C73 /* FidelidadeTests.swift in Sources */,
+				25037727277E44EB00A347EE /* LoginViewModelTest.swift in Sources */,
+				25B03CFE277E31B500B7D0A5 /* LoginUseCaseMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,6 +797,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UJ394G4MSU;
@@ -791,6 +813,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.framework.FidelidadeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "FidelidadeTests/Controllers/FidelidadeTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fidelidade.app/Fidelidade";
@@ -802,6 +826,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UJ394G4MSU;
@@ -816,6 +841,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.framework.FidelidadeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "FidelidadeTests/Controllers/FidelidadeTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fidelidade.app/Fidelidade";

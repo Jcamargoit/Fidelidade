@@ -9,5 +9,6 @@ target 'Fidelidade' do
 
 	pod 'Observable'
 	pod 'Charts'
+	pod 'MockoloFramework', '~>1.1.2' 
 
 end

@@ -8,7 +8,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     let values = [15.0, 25.0, 12.0, 12.0, 25.0, 25.0, 5.0, 27.0, 4.0, 12.0]
     
     let strokeTextAttributes = [
-        NSAttributedString.Key.strokeColor : UIColor(red: (189/255), green: (255/255), blue: (0/255), alpha: 1.0),
+        NSAttributedString.Key.strokeColor : UIColor(named: "Main Blue") ?? .blue,
         NSAttributedString.Key.strokeWidth : -5.0]
     as [NSAttributedString.Key : Any]
     
@@ -29,10 +29,11 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        sc.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
         //Instanciar meu Delegate Scroll
         mySv.isDirectionalLockEnabled = true
         mySv.delegate = self
+        styleElements()
         customizeChart(dataPoints: dataPoints, values: values)
     }
     
@@ -52,6 +53,23 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    private func styleElements() {
+        sc.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor(named: "Main Blue") ?? .blue], for: .normal)
+        sc.layer.borderWidth = 1
+            sc.layer.borderColor = UIColor(named: "Main Blue")?.cgColor
+        sc.setTitleTextAttributes( [NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
+    }
+    
+    @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            print("Select 0")
+        } else if sender.selectedSegmentIndex == 1 {
+            print("Select 1")
+        } else if sender.selectedSegmentIndex == 2 {
+            print("Select 2")
+        }
+    }
+    
     private func customizeChart(dataPoints: [String], values: [Double]) {
         mainChart.chartDescription?.enabled = false
         mainChart.pinchZoomEnabled = false
@@ -59,7 +77,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         mainChart.legend.enabled = false
         mainChart.chartDescription?.enabled = false
         mainChart.isUserInteractionEnabled = false
-        let color = UIColor(red: 61/255, green: 89/255, blue: 171/255, alpha: 0.25)
+        let color = UIColor(named: "Blue charts lite")
         mainChart.backgroundColor = color
         let xAxis = mainChart.xAxis
         xAxis.valueFormatter = IndexAxisValueFormatter(values: dataPoints)
@@ -69,7 +87,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         rightAxis.enabled = false
         let leftAxis = mainChart.leftAxis
         leftAxis.axisMinimum = 0.0
-        leftAxis.axisMaximum = 40.0
         
         
         var dataEntries: [BarChartDataEntry] = []
@@ -80,12 +97,12 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         }
         
         var barColours = [UIColor]()
+        barColours.append(UIColor(named: "Main Blue") ?? .blue)
         barColours.append(.white)
-        barColours.append(.blue)
         
         let chartDataSet = BarChartDataSet(entries: dataEntries, label: nil)
         chartDataSet.colors = barColours
-        chartDataSet.barBorderColor = .black
+        chartDataSet.barBorderColor = UIColor(named: "Main Blue") ?? .blue
         chartDataSet.barBorderWidth = 1
         let chartData = BarChartData(dataSet: chartDataSet)
         mainChart.data = chartData

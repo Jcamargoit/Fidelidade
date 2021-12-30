@@ -8,8 +8,7 @@
 import Foundation
 
 
-enum ApiJavaEndPoints {
-    
+public enum ApiJavaEndPoints {
     case login
     
     func baseURL() -> URL? {

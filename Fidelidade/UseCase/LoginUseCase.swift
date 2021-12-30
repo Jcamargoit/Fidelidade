@@ -5,9 +5,16 @@
 //  Created by Juninho on 20/12/21.
 //
 
-import Foundation
+import UIKit
 
-class LoginUseCase {
+/// @mockable
+public protocol LoginUseCaseProtocol {
+    var url: ApiJavaEndPoints { get set }
+    var body: Data? { get set }
+    func handleLogin(loginModel: LoginModel, completion: @escaping (Result<String, NetworkError>) -> Void)
+}
+
+class LoginUseCase : LoginUseCaseProtocol {
     
     var service = APIService()
     var url = ApiJavaEndPoints.login
