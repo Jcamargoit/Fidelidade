@@ -3,7 +3,7 @@
 
 import Foundation
 
-struct LoginModel: Codable {
+public struct LoginModel: Codable {
     let cpf: String
     let password: String
     

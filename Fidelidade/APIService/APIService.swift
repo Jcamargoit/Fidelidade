@@ -3,14 +3,14 @@
 
 import Foundation
 
-enum NetworkError: Error {
+public enum NetworkError: Error {
     case decodingError // JASON MODEL
     case domainError //Erro 500
     case loginError //
 }
 
 extension NetworkError: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         switch self {
         case .decodingError, .domainError:
             return "Houve um erro ao conectar ao servidor"
