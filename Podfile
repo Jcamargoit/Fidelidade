@@ -9,5 +9,10 @@ target 'Fidelidade' do
 
 	pod 'Observable'
 	pod 'Charts'
+	pod 'Firebase/Messaging'
+	pod 'Firebase/Analytics'
+  	pod 'Firebase/Auth'
+	pod 'Firebase/Database'
+	pod 'Firebase/Storage'
 
 end

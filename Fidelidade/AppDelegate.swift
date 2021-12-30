@@ -8,96 +8,39 @@
 import UIKit
 //Push notification Perrmissão (AppDelegate)
 import UserNotifications
+import Firebase
+import FirebaseMessaging
 
-//complemento da função de abrir tela especifica
-//enum Identifiers {
-//  static let viewAction = "VIEW_IDENTIFIER"
-//  static let newsCategory = "NEWS_CATEGORY"
-//}
 
 @available(iOS 13.0, *)
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
-    
+    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-       
-        //Push notification Perrmissão (AppDelegate)
-        func registerForPushNotifications() {
-          UNUserNotificationCenter.current()
-            .requestAuthorization(options: [.alert, .sound, .badge]) { [weak self] granted, error in
-              print("Permission granted: \(granted)")
-              guard granted else { return }
-                
-                //Função para abrir notificação em uma tela especifica.
-//              let viewAction = UNNotificationAction(
-//                identifier: Identifiers.viewAction,
-//                title: "View",
-//                options: [.foreground])
-//              let newsCategory = UNNotificationCategory(
-//                identifier: Identifiers.newsCategory,
-//                actions: [viewAction],
-//                intentIdentifiers: [],
-//                options: []
-//              )
-//              UNUserNotificationCenter.current().setNotificationCategories([newsCategory])
-             // self?.getNotificationSettings()
-            }
-        }
         
-        //Push notification Perrmissão (AppDelegate)
-        func getNotificationSettings() {
-            UNUserNotificationCenter.current().getNotificationSettings {settings in
-                print ("Configurações de notificação: \(settings)")
-                guard settings.authorizationStatus == .authorized else { return }
-                DispatchQueue.main.async {
-                    UIApplication.shared.registerForRemoteNotifications()
-                }
-                
-            }
-        }
-        
+        if #available(iOS 10.0, *) {
+                 // For iOS 10 display notification (sent via APNS)
+                   UNUserNotificationCenter.current().delegate = self
 
-        //Push notification Perrmissão (AppDelegate) Final de tudo
-        //Em caso positivo estamos guardando o token do aparelho
-        func application(
-            _ application: UIApplication,
-            didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
-        ) {
-            let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
-            let token = tokenParts.joined()
-            print("Device Token: \(token)")
-        }
+                 let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+                 UNUserNotificationCenter.current().requestAuthorization(
+                   options: authOptions,
+                   completionHandler: {_, _ in })
+               } else {
+                 let settings: UIUserNotificationSettings =
+                 UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+                 application.registerUserNotificationSettings(settings)
+               }
+               
+               
+             
+               application.registerForRemoteNotifications()
         
-        //Push notification Perrmissão (AppDelegate) Final de tudo
-        //quando o metodo registerForPushNotifications() falha
-        func application(
-            _ application: UIApplication,
-            didFailToRegisterForRemoteNotificationsWithError error: Error
-        ) {
-            print("Failed to register: \(error)")
-        }
-        
-//
-//        // Check if launched from notification
-//        let notificationOption = launchOptions?[.remoteNotification]
-//
-//        // 1
-//        if let notification = notificationOption as? [String: AnyObject],
-//         let aps = notification["aps"] as? [String: AnyObject] {
-//
-//         ​NewsItem.makeNewsItem(aps)
-//
-//         ​(window?.rootViewController as? UITabBarController)?.selectedIndex = 1
-//        }
-        
-        
-        //Push notification Perrmissão (AppDelegate) Antes do return
-        registerForPushNotifications()
-        
+        FirebaseApp.configure()
         return true
         
     }
@@ -115,6 +58,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    
+    //Notification FireBase
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+           print(response.notification.request.content.userInfo)
+           let dic = response.notification.request.content.userInfo as NSDictionary
+           if let aps = dic["aps"] as? [String: Any] {
+              // print(aps)
+               
+                 print("recebi 2 \(aps)")
+           }
+       }
+       func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+           completionHandler([.alert, .badge, .sound])
+           print(notification.request.content.userInfo)
+           let dic = notification.request.content.userInfo as NSDictionary
+           if let aps = dic["aps"] as? [String: Any] {
+          
+
+           }
+       }
     
     
 }
