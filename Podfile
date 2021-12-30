@@ -15,5 +15,6 @@ target 'Fidelidade' do
 	pod 'Firebase/Database'
 	pod 'Firebase/Storage'
 	pod 'MockoloFramework', '~>1.1.2'
+	pod 'MockoloFramework', '~>1.1.2' 
 
 end
