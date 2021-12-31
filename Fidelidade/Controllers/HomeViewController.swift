@@ -6,6 +6,7 @@ import Charts
 class HomeViewController: UIViewController, UIScrollViewDelegate {
     let dataPoints = ["1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez"]
     let values = [15.0, 25.0, 12.0, 12.0, 25.0, 25.0, 5.0, 27.0, 4.0, 12.0]
+    private var maxValueChart = 5
     
     let strokeTextAttributes = [
         NSAttributedString.Key.strokeColor : UIColor(named: "Main Blue") ?? .blue,
@@ -62,11 +63,14 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            print("Select 0")
+            maxValueChart = 5
+            customizeChart(dataPoints: dataPoints, values: values)
         } else if sender.selectedSegmentIndex == 1 {
-            print("Select 1")
+            maxValueChart = 10
+            customizeChart(dataPoints: dataPoints, values: values)
         } else if sender.selectedSegmentIndex == 2 {
-            print("Select 2")
+            maxValueChart = 30
+            customizeChart(dataPoints: dataPoints, values: values)
         }
     }
     
@@ -90,8 +94,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         
         
         var dataEntries: [BarChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
+        let comparator = maxValueChart < dataPoints.count ? maxValueChart : dataPoints.count
+        for i in 0..<comparator{
             let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
             dataEntries.append(dataEntry)
         }
