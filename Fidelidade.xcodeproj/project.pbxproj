@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25037727277E44EB00A347EE /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037726277E44EB00A347EE /* LoginViewModelTest.swift */; };
 		25037778277F273300A347EE /* ExchangeValuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037774277F273300A347EE /* ExchangeValuesViewController.swift */; };
 		25037779277F273300A347EE /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037775277F273300A347EE /* ChangePasswordViewController.swift */; };
 		2503777A277F273300A347EE /* AddNewBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037776277F273300A347EE /* AddNewBankViewController.swift */; };
 		2503777B277F273300A347EE /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037777277F273300A347EE /* ChoiceViewController.swift */; };
-		25B03CFE277E31B500B7D0A5 /* LoginUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B03CFD277E31B500B7D0A5 /* LoginUseCaseMock.swift */; };
+		25AAD962277F3EAB00B4770F /* LoginUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AAD961277F3EAB00B4770F /* LoginUseCaseMock.swift */; };
+		25AAD965277F3F4200B4770F /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AAD964277F3F4200B4770F /* LoginViewModelTest.swift */; };
 		25FCDB33277A313900913E57 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */; };
 		25FCDB35277A39B800913E57 /* ApiJavaEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */; };
 		25FCDB3F277CF4C000913E57 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25FCDB3E277CF4C000913E57 /* Colors.xcassets */; };
@@ -55,14 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F29A970C2768D9D3002E9C73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F29A96ED2768D9D1002E9C73 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F29A96F42768D9D1002E9C73;
-			remoteInfo = Fidelidade;
-		};
-		F29A97162768D9D4002E9C73 /* PBXContainerItemProxy */ = {
+		25AAD95B277F3E5F00B4770F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F29A96ED2768D9D1002E9C73 /* Project object */;
 			proxyType = 1;
@@ -72,12 +65,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		25037726277E44EB00A347EE /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		25037774277F273300A347EE /* ExchangeValuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeValuesViewController.swift; sourceTree = "<group>"; };
 		25037775277F273300A347EE /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		25037776277F273300A347EE /* AddNewBankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewBankViewController.swift; sourceTree = "<group>"; };
 		25037777277F273300A347EE /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
-		25B03CFD277E31B500B7D0A5 /* LoginUseCaseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUseCaseMock.swift; sourceTree = "<group>"; };
+		25AAD957277F3E5F00B4770F /* FidelidadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FidelidadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25AAD961277F3EAB00B4770F /* LoginUseCaseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUseCaseMock.swift; sourceTree = "<group>"; };
+		25AAD964277F3F4200B4770F /* LoginViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiJavaEndPoints.swift; sourceTree = "<group>"; };
 		25FCDB3E277CF4C000913E57 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -113,8 +107,6 @@
 		F29A97012768D9D3002E9C73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F29A97042768D9D3002E9C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F29A97062768D9D3002E9C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F29A970B2768D9D3002E9C73 /* FidelidadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FidelidadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F29A97152768D9D4002E9C73 /* FidelidadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FidelidadeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheScreenViewController.swift; sourceTree = "<group>"; };
 		F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		F2B117612770C5400024ECEC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -127,6 +119,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		25AAD954277F3E5F00B4770F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F29A96F22768D9D1002E9C73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,37 +134,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F29A97082768D9D3002E9C73 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F29A97122768D9D3002E9C73 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25037725277E44C900A347EE /* ViewModel */ = {
+		25AAD958277F3E5F00B4770F /* FidelidadeTests */ = {
 			isa = PBXGroup;
 			children = (
-				25037726277E44EB00A347EE /* LoginViewModelTest.swift */,
+				25AAD963277F3F2A00B4770F /* ViewModel */,
+				25AAD960277F3E9800B4770F /* Mock */,
 			);
-			path = ViewModel;
+			path = FidelidadeTests;
 			sourceTree = "<group>";
 		};
-		25B03CFC277E31A200B7D0A5 /* Mocks */ = {
+		25AAD960277F3E9800B4770F /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				25B03CFD277E31B500B7D0A5 /* LoginUseCaseMock.swift */,
+				25AAD961277F3EAB00B4770F /* LoginUseCaseMock.swift */,
 			);
-			path = Mocks;
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		25AAD963277F3F2A00B4770F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				25AAD964277F3F4200B4770F /* LoginViewModelTest.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		36476A4F9C89480D8D2D7D28 /* Pods */ = {
@@ -205,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				F29A96F72768D9D1002E9C73 /* Fidelidade */,
-				F29A970E2768D9D3002E9C73 /* FidelidadeTests */,
+				25AAD958277F3E5F00B4770F /* FidelidadeTests */,
 				F29A96F62768D9D1002E9C73 /* Products */,
 				36476A4F9C89480D8D2D7D28 /* Pods */,
 				E18EB50A246358EA1CF04665 /* Frameworks */,
@@ -216,8 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				F29A96F52768D9D1002E9C73 /* Fidelidade.app */,
-				F29A970B2768D9D3002E9C73 /* FidelidadeTests.xctest */,
-				F29A97152768D9D4002E9C73 /* FidelidadeUITests.xctest */,
+				25AAD957277F3E5F00B4770F /* FidelidadeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,15 +236,6 @@
 				25FCDB3E277CF4C000913E57 /* Colors.xcassets */,
 			);
 			path = Fidelidade;
-			sourceTree = "<group>";
-		};
-		F29A970E2768D9D3002E9C73 /* FidelidadeTests */ = {
-			isa = PBXGroup;
-			children = (
-				25037725277E44C900A347EE /* ViewModel */,
-				25B03CFC277E31A200B7D0A5 /* Mocks */,
-			);
-			path = FidelidadeTests;
 			sourceTree = "<group>";
 		};
 		F2B1175C2770C3D60024ECEC /* Controllers */ = {
@@ -341,6 +325,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		25AAD956277F3E5F00B4770F /* FidelidadeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25AAD95D277F3E5F00B4770F /* Build configuration list for PBXNativeTarget "FidelidadeTests" */;
+			buildPhases = (
+				25AAD953277F3E5F00B4770F /* Sources */,
+				25AAD954277F3E5F00B4770F /* Frameworks */,
+				25AAD955277F3E5F00B4770F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25AAD95C277F3E5F00B4770F /* PBXTargetDependency */,
+			);
+			name = FidelidadeTests;
+			productName = FidelidadeTests;
+			productReference = 25AAD957277F3E5F00B4770F /* FidelidadeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F29A96F42768D9D1002E9C73 /* Fidelidade */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F29A971F2768D9D4002E9C73 /* Build configuration list for PBXNativeTarget "Fidelidade" */;
@@ -360,42 +362,6 @@
 			productReference = F29A96F52768D9D1002E9C73 /* Fidelidade.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F29A970A2768D9D3002E9C73 /* FidelidadeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F29A97222768D9D4002E9C73 /* Build configuration list for PBXNativeTarget "FidelidadeTests" */;
-			buildPhases = (
-				F29A97072768D9D3002E9C73 /* Sources */,
-				F29A97082768D9D3002E9C73 /* Frameworks */,
-				F29A97092768D9D3002E9C73 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F29A970D2768D9D3002E9C73 /* PBXTargetDependency */,
-			);
-			name = FidelidadeTests;
-			productName = FidelidadeTests;
-			productReference = F29A970B2768D9D3002E9C73 /* FidelidadeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F29A97142768D9D3002E9C73 /* FidelidadeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F29A97252768D9D4002E9C73 /* Build configuration list for PBXNativeTarget "FidelidadeUITests" */;
-			buildPhases = (
-				F29A97112768D9D3002E9C73 /* Sources */,
-				F29A97122768D9D3002E9C73 /* Frameworks */,
-				F29A97132768D9D3002E9C73 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F29A97172768D9D4002E9C73 /* PBXTargetDependency */,
-			);
-			name = FidelidadeUITests;
-			productName = FidelidadeUITests;
-			productReference = F29A97152768D9D4002E9C73 /* FidelidadeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -406,17 +372,12 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					25AAD956277F3E5F00B4770F = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = F29A96F42768D9D1002E9C73;
+					};
 					F29A96F42768D9D1002E9C73 = {
 						CreatedOnToolsVersion = 13.0;
-					};
-					F29A970A2768D9D3002E9C73 = {
-						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1300;
-						TestTargetID = F29A96F42768D9D1002E9C73;
-					};
-					F29A97142768D9D3002E9C73 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = F29A96F42768D9D1002E9C73;
 					};
 				};
 			};
@@ -434,13 +395,19 @@
 			projectRoot = "";
 			targets = (
 				F29A96F42768D9D1002E9C73 /* Fidelidade */,
-				F29A970A2768D9D3002E9C73 /* FidelidadeTests */,
-				F29A97142768D9D3002E9C73 /* FidelidadeUITests */,
+				25AAD956277F3E5F00B4770F /* FidelidadeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		25AAD955277F3E5F00B4770F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F29A96F32768D9D1002E9C73 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,20 +417,6 @@
 				F20084BA277DE55200438022 /* GoogleService-Info.plist in Resources */,
 				F29A97022768D9D3002E9C73 /* Assets.xcassets in Resources */,
 				F29A97002768D9D1002E9C73 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F29A97092768D9D3002E9C73 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F29A97132768D9D3002E9C73 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +465,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		25AAD953277F3E5F00B4770F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25AAD965277F3F4200B4770F /* LoginViewModelTest.swift in Sources */,
+				25AAD962277F3EAB00B4770F /* LoginUseCaseMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F29A96F12768D9D1002E9C73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -556,34 +518,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F29A97072768D9D3002E9C73 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				25037727277E44EB00A347EE /* LoginViewModelTest.swift in Sources */,
-				25B03CFE277E31B500B7D0A5 /* LoginUseCaseMock.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F29A97112768D9D3002E9C73 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F29A970D2768D9D3002E9C73 /* PBXTargetDependency */ = {
+		25AAD95C277F3E5F00B4770F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F29A96F42768D9D1002E9C73 /* Fidelidade */;
-			targetProxy = F29A970C2768D9D3002E9C73 /* PBXContainerItemProxy */;
-		};
-		F29A97172768D9D4002E9C73 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F29A96F42768D9D1002E9C73 /* Fidelidade */;
-			targetProxy = F29A97162768D9D4002E9C73 /* PBXContainerItemProxy */;
+			targetProxy = 25AAD95B277F3E5F00B4770F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -607,6 +548,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		25AAD95E277F3E5F00B4770F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					HEADER_SEARCH_PATHS,
+					"=",
+					"\"${SRCROOT}/Pods/Firebase/CoreOnly/Sources\"",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphaeljesus.FidelidadeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fidelidade.app/Fidelidade";
+			};
+			name = Debug;
+		};
+		25AAD95F277F3E5F00B4770F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphaeljesus.FidelidadeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fidelidade.app/Fidelidade";
+			};
+			name = Release;
+		};
 		F29A971D2768D9D4002E9C73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -792,112 +782,18 @@
 			};
 			name = Release;
 		};
-		F29A97232768D9D4002E9C73 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UJ394G4MSU;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.framework.FidelidadeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "FidelidadeTests/Controllers/FidelidadeTests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fidelidade.app/Fidelidade";
-			};
-			name = Debug;
-		};
-		F29A97242768D9D4002E9C73 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UJ394G4MSU;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.framework.FidelidadeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "FidelidadeTests/Controllers/FidelidadeTests-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fidelidade.app/Fidelidade";
-			};
-			name = Release;
-		};
-		F29A97262768D9D4002E9C73 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UJ394G4MSU;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.framework.FidelidadeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Fidelidade;
-			};
-			name = Debug;
-		};
-		F29A97272768D9D4002E9C73 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UJ394G4MSU;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.framework.FidelidadeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Fidelidade;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		25AAD95D277F3E5F00B4770F /* Build configuration list for PBXNativeTarget "FidelidadeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AAD95E277F3E5F00B4770F /* Debug */,
+				25AAD95F277F3E5F00B4770F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F29A96F02768D9D1002E9C73 /* Build configuration list for PBXProject "Fidelidade" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -912,24 +808,6 @@
 			buildConfigurations = (
 				F29A97202768D9D4002E9C73 /* Debug */,
 				F29A97212768D9D4002E9C73 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F29A97222768D9D4002E9C73 /* Build configuration list for PBXNativeTarget "FidelidadeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F29A97232768D9D4002E9C73 /* Debug */,
-				F29A97242768D9D4002E9C73 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F29A97252768D9D4002E9C73 /* Build configuration list for PBXNativeTarget "FidelidadeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F29A97262768D9D4002E9C73 /* Debug */,
-				F29A97272768D9D4002E9C73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
