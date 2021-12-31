@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		25037727277E44EB00A347EE /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037726277E44EB00A347EE /* LoginViewModelTest.swift */; };
+		25037778277F273300A347EE /* ExchangeValuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037774277F273300A347EE /* ExchangeValuesViewController.swift */; };
+		25037779277F273300A347EE /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037775277F273300A347EE /* ChangePasswordViewController.swift */; };
+		2503777A277F273300A347EE /* AddNewBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037776277F273300A347EE /* AddNewBankViewController.swift */; };
+		2503777B277F273300A347EE /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037777277F273300A347EE /* ChoiceViewController.swift */; };
 		25B03CFE277E31B500B7D0A5 /* LoginUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B03CFD277E31B500B7D0A5 /* LoginUseCaseMock.swift */; };
 		25FCDB33277A313900913E57 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */; };
 		25FCDB35277A39B800913E57 /* ApiJavaEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */; };
 		25FCDB3F277CF4C000913E57 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25FCDB3E277CF4C000913E57 /* Colors.xcassets */; };
 		26F93B94FB06113B7BCA3220 /* Pods_Fidelidade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9E802865DA746E1DA8DF13 /* Pods_Fidelidade.framework */; };
 		F20084BA277DE55200438022 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F20084B9277DE55200438022 /* GoogleService-Info.plist */; };
-		F213EDCF2779F44400CEBEA8 /* ExchangeValuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDCE2779F44400CEBEA8 /* ExchangeValuesViewController.swift */; };
 		F213EDD12779FF4700CEBEA8 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */; };
 		F213EDD32779FFA700CEBEA8 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDD22779FFA700CEBEA8 /* NotificationCell.swift */; };
 		F2455191276D12CC00953DCC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455190276D12CC00953DCC /* ProfileViewController.swift */; };
@@ -30,8 +33,6 @@
 		F276E57E276A5EE200D6A458 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E57D276A5EE200D6A458 /* LoginViewController.swift */; };
 		F276E580276A6F2D00D6A458 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */; };
 		F276E582276A737D00D6A458 /* NewUserTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E581276A737D00D6A458 /* NewUserTwoViewController.swift */; };
-		F27C3CCE2775F86100C83CC1 /* AddNewBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C3CCD2775F86100C83CC1 /* AddNewBankViewController.swift */; };
-		F27C3CD0277614D700C83CC1 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C3CCF277614D700C83CC1 /* ChangePasswordViewController.swift */; };
 		F28094DD277B7A9100628930 /* NewUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28094DC277B7A9100628930 /* NewUserViewModel.swift */; };
 		F294811F2774ACE300A551C5 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F294811E2774ACE300A551C5 /* WithdrawViewController.swift */; };
 		F29481212774B6C300A551C5 /* WithdrawPixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29481202774B6C300A551C5 /* WithdrawPixViewController.swift */; };
@@ -40,12 +41,9 @@
 		F29481272774CA6700A551C5 /* WithdrawPixResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29481262774CA6700A551C5 /* WithdrawPixResultViewController.swift */; };
 		F29A96F92768D9D1002E9C73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A96F82768D9D1002E9C73 /* AppDelegate.swift */; };
 		F29A96FB2768D9D1002E9C73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A96FA2768D9D1002E9C73 /* SceneDelegate.swift */; };
-		F29A96FD2768D9D1002E9C73 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A96FC2768D9D1002E9C73 /* ChoiceViewController.swift */; };
 		F29A97002768D9D1002E9C73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29A96FE2768D9D1002E9C73 /* Main.storyboard */; };
 		F29A97022768D9D3002E9C73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29A97012768D9D3002E9C73 /* Assets.xcassets */; };
 		F29A97052768D9D3002E9C73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29A97032768D9D3002E9C73 /* LaunchScreen.storyboard */; };
-		F29A971A2768D9D4002E9C73 /* FidelidadeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A97192768D9D4002E9C73 /* FidelidadeUITests.swift */; };
-		F29A971C2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A971B2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift */; };
 		F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */; };
 		F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */; };
 		F2B117622770C5400024ECEC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B117612770C5400024ECEC /* LoginModel.swift */; };
@@ -75,6 +73,10 @@
 
 /* Begin PBXFileReference section */
 		25037726277E44EB00A347EE /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
+		25037774277F273300A347EE /* ExchangeValuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeValuesViewController.swift; sourceTree = "<group>"; };
+		25037775277F273300A347EE /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		25037776277F273300A347EE /* AddNewBankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewBankViewController.swift; sourceTree = "<group>"; };
+		25037777277F273300A347EE /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		25B03CFD277E31B500B7D0A5 /* LoginUseCaseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUseCaseMock.swift; sourceTree = "<group>"; };
 		25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiJavaEndPoints.swift; sourceTree = "<group>"; };
@@ -82,7 +84,6 @@
 		27534AE9BE2A3738A738848E /* Pods-Fidelidade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade.release.xcconfig"; path = "Target Support Files/Pods-Fidelidade/Pods-Fidelidade.release.xcconfig"; sourceTree = "<group>"; };
 		4A37FC8F7FBFC4C65197C512 /* Pods-Fidelidade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade.debug.xcconfig"; path = "Target Support Files/Pods-Fidelidade/Pods-Fidelidade.debug.xcconfig"; sourceTree = "<group>"; };
 		F20084B9277DE55200438022 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F213EDCE2779F44400CEBEA8 /* ExchangeValuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeValuesViewController.swift; sourceTree = "<group>"; };
 		F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		F213EDD22779FFA700CEBEA8 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		F21A911B277C8D7F00C1A695 /* Fidelidade.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fidelidade.entitlements; sourceTree = "<group>"; };
@@ -99,8 +100,6 @@
 		F276E57D276A5EE200D6A458 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F276E57F276A6F2D00D6A458 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		F276E581276A737D00D6A458 /* NewUserTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserTwoViewController.swift; sourceTree = "<group>"; };
-		F27C3CCD2775F86100C83CC1 /* AddNewBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBankViewController.swift; sourceTree = "<group>"; };
-		F27C3CCF277614D700C83CC1 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		F28094DC277B7A9100628930 /* NewUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewModel.swift; sourceTree = "<group>"; };
 		F294811E2774ACE300A551C5 /* WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
 		F29481202774B6C300A551C5 /* WithdrawPixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawPixViewController.swift; sourceTree = "<group>"; };
@@ -110,15 +109,12 @@
 		F29A96F52768D9D1002E9C73 /* Fidelidade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fidelidade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29A96F82768D9D1002E9C73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F29A96FA2768D9D1002E9C73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F29A96FC2768D9D1002E9C73 /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		F29A96FF2768D9D1002E9C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F29A97012768D9D3002E9C73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F29A97042768D9D3002E9C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F29A97062768D9D3002E9C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F29A970B2768D9D3002E9C73 /* FidelidadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FidelidadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29A97152768D9D4002E9C73 /* FidelidadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FidelidadeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F29A97192768D9D4002E9C73 /* FidelidadeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidelidadeUITests.swift; sourceTree = "<group>"; };
-		F29A971B2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidelidadeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheScreenViewController.swift; sourceTree = "<group>"; };
 		F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		F2B117612770C5400024ECEC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -210,7 +206,6 @@
 			children = (
 				F29A96F72768D9D1002E9C73 /* Fidelidade */,
 				F29A970E2768D9D3002E9C73 /* FidelidadeTests */,
-				F29A97182768D9D4002E9C73 /* FidelidadeUITests */,
 				F29A96F62768D9D1002E9C73 /* Products */,
 				36476A4F9C89480D8D2D7D28 /* Pods */,
 				E18EB50A246358EA1CF04665 /* Frameworks */,
@@ -259,23 +254,13 @@
 			path = FidelidadeTests;
 			sourceTree = "<group>";
 		};
-		F29A97182768D9D4002E9C73 /* FidelidadeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F29A97192768D9D4002E9C73 /* FidelidadeUITests.swift */,
-				F29A971B2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift */,
-			);
-			path = FidelidadeUITests;
-			sourceTree = "<group>";
-		};
 		F2B1175C2770C3D60024ECEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F276E569276A21D400D6A458 /* MyAccountViewController.swift */,
-				F2E3CC7327739F6600FE59F7 /* LoadingViewController.swift */,
-				F2455190276D12CC00953DCC /* ProfileViewController.swift */,
-				F2455194276D14DD00953DCC /* SettingsViewController.swift */,
-				F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */,
+				25037776277F273300A347EE /* AddNewBankViewController.swift */,
+				25037775277F273300A347EE /* ChangePasswordViewController.swift */,
+				25037777277F273300A347EE /* ChoiceViewController.swift */,
+				25037774277F273300A347EE /* ExchangeValuesViewController.swift */,
 				F276E560276A21D400D6A458 /* HomeViewController.swift */,
 				F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */,
 				F2E3CC7327739F6600FE59F7 /* LoadingViewController.swift */,
@@ -535,21 +520,19 @@
 				F276E57C276A21D400D6A458 /* APIService.swift in Sources */,
 				F276E578276A21D400D6A458 /* TodosViewModel.swift in Sources */,
 				F213EDD32779FFA700CEBEA8 /* NotificationCell.swift in Sources */,
-				F213EDCF2779F44400CEBEA8 /* ExchangeValuesViewController.swift in Sources */,
 				F213EDD12779FF4700CEBEA8 /* NotificationViewController.swift in Sources */,
+				25037779277F273300A347EE /* ChangePasswordViewController.swift in Sources */,
 				F2B117622770C5400024ECEC /* LoginModel.swift in Sources */,
 				F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */,
 				F276E576276A21D400D6A458 /* AlbunsModel.swift in Sources */,
 				F29481252774BC6B00A551C5 /* MyAccountCell.swift in Sources */,
 				25FCDB35277A39B800913E57 /* ApiJavaEndPoints.swift in Sources */,
-				F27C3CCE2775F86100C83CC1 /* AddNewBankViewController.swift in Sources */,
 				F2B117642770C68E0024ECEC /* LoginViewModel.swift in Sources */,
-				F27C3CD0277614D700C83CC1 /* ChangePasswordViewController.swift in Sources */,
 				F29481272774CA6700A551C5 /* WithdrawPixResultViewController.swift in Sources */,
-				F29A96FD2768D9D1002E9C73 /* ChoiceViewController.swift in Sources */,
 				F276E575276A21D400D6A458 /* HomeViewController.swift in Sources */,
 				F2455191276D12CC00953DCC /* ProfileViewController.swift in Sources */,
 				F2E3CC782773BCA400FE59F7 /* MyAccountViewModel.swift in Sources */,
+				25037778277F273300A347EE /* ExchangeValuesViewController.swift in Sources */,
 				F276E579276A21D400D6A458 /* MyAccountViewController.swift in Sources */,
 				F2E3CC7427739F6600FE59F7 /* LoadingViewController.swift in Sources */,
 				F276E580276A6F2D00D6A458 /* NewUserViewController.swift in Sources */,
@@ -564,10 +547,12 @@
 				F2E3CC762773B5FE00FE59F7 /* LauncheScreenViewModel.swift in Sources */,
 				F2FB7AA52770F57100C3E4C9 /* LoginUseCase.swift in Sources */,
 				F276E582276A737D00D6A458 /* NewUserTwoViewController.swift in Sources */,
+				2503777B277F273300A347EE /* ChoiceViewController.swift in Sources */,
 				F29481212774B6C300A551C5 /* WithdrawPixViewController.swift in Sources */,
 				F276E577276A21D400D6A458 /* AlbunsCelula.swift in Sources */,
 				F29A96F92768D9D1002E9C73 /* AppDelegate.swift in Sources */,
 				F29A96FB2768D9D1002E9C73 /* SceneDelegate.swift in Sources */,
+				2503777A277F273300A347EE /* AddNewBankViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,8 +569,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F29A971A2768D9D4002E9C73 /* FidelidadeUITests.swift in Sources */,
-				F29A971C2768D9D4002E9C73 /* FidelidadeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
