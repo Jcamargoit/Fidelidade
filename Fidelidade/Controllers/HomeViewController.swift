@@ -4,15 +4,10 @@ import UIKit
 import Charts
 
 class HomeViewController: UIViewController, UIScrollViewDelegate {
-    let dataPoints = ["1 Dez", "2 Dez", "3 Dez", "4 Dez", "5 Dez"]
-    let values = [15.0, 25.0, 12.0, 12.0, 25.0]
-    
-    
-    let dataPoints1 = ["1 Dez", "2 Dez", "3 Dez", "4 Dez", "5 Dez", "6 Dez", "7 Dez", "8 Dez", "9 Dez", "10 Dez"]
-    let values1 = [10.0, 15.0, 22.0, 2.0, 20.0, 18.0, 9.0, 19.0, 10.0, 20.0]
-    
-    let dataPoints2 = ["1 Dez", "2 Dez", "3 Dez", "4 Dez", "5 Dez", "6 Dez", "7 Dez", "8 Dez", "9 Dez", "10 Dez", "11 Dez", "12 Dez", "13 Dez", "14 Dez", "15 Dez", "16 Dez", "17 Dez", "18 Dez", "19 Dez", "20 Dez", "21 Dez", "22 Dez", "23 Dez", "24 Dez", "25 Dez", "26 Dez", "27 Dez", "28 Dez", "29 Dez", "30 Dez"]
-    let values2 = [15.0, 25.0, 12.0, 12.0, 25.0, 25.0, 5.0, 27.0, 4.0, 12.0, 15.0, 25.0, 12.0, 12.0, 25.0, 25.0, 5.0, 27.0, 4.0, 12.0, 15.0, 25.0, 12.0, 12.0, 25.0, 25.0, 5.0, 27.0, 4.0, 12.0]
+
+    let dataPoints = ["1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez"]
+    let values = [15.0, 25.0, 12.0, 12.0, 25.0, 25.0, 5.0, 27.0, 4.0, 12.0]
+    private var maxValueChart = 5
     
     let strokeTextAttributes = [
         NSAttributedString.Key.strokeColor : UIColor(red: (189/255), green: (255/255), blue: (0/255), alpha: 1.0),
@@ -69,14 +64,14 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            print("Select 0")
+            maxValueChart = 5
             customizeChart(dataPoints: dataPoints, values: values)
         } else if sender.selectedSegmentIndex == 1 {
-            print("Select 1")
-            customizeChart(dataPoints: dataPoints1, values: values1)
+            maxValueChart = 10
+            customizeChart(dataPoints: dataPoints, values: values)
         } else if sender.selectedSegmentIndex == 2 {
-            print("Select 2")
-            customizeChart(dataPoints: dataPoints2, values: values2)
+            maxValueChart = 30
+            customizeChart(dataPoints: dataPoints, values: values)
         }
     }
     
@@ -100,8 +95,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         
         
         var dataEntries: [BarChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
+        let comparator = maxValueChart < dataPoints.count ? maxValueChart : dataPoints.count
+        for i in 0..<comparator{
             let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
             dataEntries.append(dataEntry)
         }
