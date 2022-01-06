@@ -22,8 +22,8 @@ struct ResultModel<T: Any> {
         self.data = data
         self.isError = false
     }
-    
 }
+
 
 class LoginViewModel {
     

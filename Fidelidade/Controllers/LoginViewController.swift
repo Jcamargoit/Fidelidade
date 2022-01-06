@@ -62,9 +62,7 @@ class LoginViewController: UIViewController {
             }
             self?.showLoading(enable: false)
             if !result.isError {
-                
                 self?.performSegue(withIdentifier: "openHome", sender: self)
-                
             }else{
                 self?.simplePopUp(title: "Erro", mensage: result.error)
             }

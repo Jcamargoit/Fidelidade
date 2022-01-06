@@ -22,6 +22,8 @@
 		F213EDD32779FFA700CEBEA8 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDD22779FFA700CEBEA8 /* NotificationCell.swift */; };
 		F2455191276D12CC00953DCC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455190276D12CC00953DCC /* ProfileViewController.swift */; };
 		F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455194276D14DD00953DCC /* SettingsViewController.swift */; };
+		F26E8D902784CD91005B5156 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E8D8F2784CD91005B5156 /* ProfileViewModel.swift */; };
+		F26E8D922784CE44005B5156 /* UIImageView+setRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E8D912784CE44005B5156 /* UIImageView+setRounded.swift */; };
 		F276E574276A21D400D6A458 /* AlbunsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */; };
 		F276E575276A21D400D6A458 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E560276A21D400D6A458 /* HomeViewController.swift */; };
 		F276E576276A21D400D6A458 /* AlbunsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E562276A21D400D6A458 /* AlbunsModel.swift */; };
@@ -89,6 +91,8 @@
 		F21A911B277C8D7F00C1A695 /* Fidelidade.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fidelidade.entitlements; sourceTree = "<group>"; };
 		F2455190276D12CC00953DCC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F2455194276D14DD00953DCC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F26E8D8F2784CD91005B5156 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		F26E8D912784CE44005B5156 /* UIImageView+setRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setRounded.swift"; sourceTree = "<group>"; };
 		F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsViewModel.swift; sourceTree = "<group>"; };
 		F276E560276A21D400D6A458 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F276E562276A21D400D6A458 /* AlbunsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsModel.swift; sourceTree = "<group>"; };
@@ -284,6 +288,7 @@
 			children = (
 				F276E567276A21D400D6A458 /* TodosViewModel.swift */,
 				F2B117632770C68E0024ECEC /* LoginViewModel.swift */,
+				F26E8D8F2784CD91005B5156 /* ProfileViewModel.swift */,
 				F28094DC277B7A9100628930 /* NewUserViewModel.swift */,
 				F2E3CC772773BCA400FE59F7 /* MyAccountViewModel.swift */,
 				F2E3CC752773B5FE00FE59F7 /* LauncheScreenViewModel.swift */,
@@ -326,6 +331,7 @@
 			children = (
 				25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */,
 				25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */,
+				F26E8D912784CE44005B5156 /* UIImageView+setRounded.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -525,11 +531,13 @@
 				F2B117622770C5400024ECEC /* LoginModel.swift in Sources */,
 				F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */,
 				F276E576276A21D400D6A458 /* AlbunsModel.swift in Sources */,
+				F26E8D922784CE44005B5156 /* UIImageView+setRounded.swift in Sources */,
 				F29481252774BC6B00A551C5 /* MyAccountCell.swift in Sources */,
 				25FCDB35277A39B800913E57 /* ApiJavaEndPoints.swift in Sources */,
 				F2B117642770C68E0024ECEC /* LoginViewModel.swift in Sources */,
 				F29481272774CA6700A551C5 /* WithdrawPixResultViewController.swift in Sources */,
 				F276E575276A21D400D6A458 /* HomeViewController.swift in Sources */,
+				F26E8D902784CD91005B5156 /* ProfileViewModel.swift in Sources */,
 				F2455191276D12CC00953DCC /* ProfileViewController.swift in Sources */,
 				F2E3CC782773BCA400FE59F7 /* MyAccountViewModel.swift in Sources */,
 				25037778277F273300A347EE /* ExchangeValuesViewController.swift in Sources */,

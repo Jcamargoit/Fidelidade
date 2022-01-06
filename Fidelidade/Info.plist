@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Você pode selecionar fotos para anexar aos relatórios.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Permita o acesso para salvar fotos na sua biblioteca de fotos</string>
+	<key>NSCameraUsageDescription</key>
+	<string>permitir acesso à câmera para ler o código qrcode</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
