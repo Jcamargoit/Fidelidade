@@ -30,7 +30,6 @@ class LoginUseCase : LoginUseCaseProtocol {
         } catch {
             completion(.failure(.decodingError))
         }
-        let body = try? JSONEncoder().encode(loginModel)
         let resource = Resource<String>(url: url, httpMethod: .post, body: body)
 
         service.load(resource: resource) { result in

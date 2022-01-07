@@ -2,9 +2,10 @@
 
 import UIKit
 import Charts
+import Observable
 
 class HomeViewController: UIViewController, UIScrollViewDelegate {
-
+    
     let dataPoints = ["1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez"]
     let values = [15.0, 25.0, 12.0, 12.0, 25.0, 25.0, 5.0, 27.0, 4.0, 12.0]
     private var maxValueChart = 5
@@ -17,26 +18,64 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var mySv: UIScrollView!
     @IBOutlet weak var ivUser: UIImageView!
     @IBOutlet weak var lbName: UILabel!
-    @IBOutlet weak var lbExchange: UILabel!{
+    @IBOutlet weak var lbBalancePoints: UILabel!{
         didSet{
-            lbExchange.attributedText = NSMutableAttributedString(string: "500", attributes: strokeTextAttributes)
+            lbBalancePoints.attributedText = NSMutableAttributedString(string: "500", attributes: strokeTextAttributes)
         }
     }
     @IBOutlet weak var btnExchange: UIButton!
-    @IBOutlet weak var lbConverter: UILabel!
+    @IBOutlet weak var lbBalanceMoney: UILabel!
     @IBOutlet weak var btnConverter: UIButton!
     @IBOutlet weak var sc: UISegmentedControl!
     @IBOutlet weak var mainChart: BarChartView!
     
+    lazy var walletViewModel = WalletViewModel()
+    private var disposal = Disposal()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        observerse()
         sc.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
         //Instanciar meu Delegate Scroll
         mySv.isDirectionalLockEnabled = true
         mySv.delegate = self
         styleElements()
         customizeChart(dataPoints: dataPoints, values: values)
+        walletViewModel.fetchWallets()
+
+    }
+    
+    
+    func observerse(){
+        
+        walletViewModel.moneyWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
+            
+            guard let result = result else{
+                return
+            }
+      
+            if !result.isError {
+                self?.lbBalanceMoney.text = "R$ " + String(describing: result.data?.amount ?? 0)
+            }else{
+                self?.simplePopUp(title: "Erro", mensage: result.error)
+            }
+            
+        }.add(to: &disposal)
+        
+        walletViewModel.pointsWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
+
+            guard let result = result else{
+                return
+            }
+        
+            if !result.isError {
+                self?.lbBalancePoints.text = String(describing: result.data?.amount ?? 0)
+            }else{
+                self?.simplePopUp(title: "Erro", mensage: result.error)
+            }
+        }.add(to: &disposal)
+        
     }
     
     //remove navegation controller
@@ -58,7 +97,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     private func styleElements() {
         sc.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor(named: "Main Blue") ?? .blue], for: .normal)
         sc.layer.borderWidth = 1
-            sc.layer.borderColor = UIColor(named: "Main Blue")?.cgColor
+        sc.layer.borderColor = UIColor(named: "Main Blue")?.cgColor
         sc.setTitleTextAttributes( [NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
     }
     
@@ -115,4 +154,3 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     }
     
 }
-

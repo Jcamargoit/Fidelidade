@@ -1895,9 +1895,9 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="dGJ-1k-9Rl">
-                                                        <rect key="frame" x="85" y="44" width="109" height="48"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="dGJ-1k-9Rl">
+                                                        <rect key="frame" x="85" y="68" width="109" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                         <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1948,14 +1948,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-qS-xeg">
                                                 <rect key="frame" x="10" y="149" width="354" height="120"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo - Moeda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0E-Fo-mbT">
-                                                        <rect key="frame" x="20" y="26" width="314" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo - Carteira" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0E-Fo-mbT">
+                                                        <rect key="frame" x="20" y="44" width="314" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 500,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="0Ri-G6-wzM">
-                                                        <rect key="frame" x="20" y="57" width="174" height="36"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="0Ri-G6-wzM">
+                                                        <rect key="frame" x="20" y="75" width="174" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                         <color key="textColor" red="0.74117647060000003" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
@@ -2145,8 +2145,8 @@
                         <outlet property="btnConverter" destination="u9L-EQ-51G" id="wNo-zT-JYo"/>
                         <outlet property="btnExchange" destination="J8l-0u-xNj" id="ebt-kf-eYW"/>
                         <outlet property="ivUser" destination="Mof-Fr-XYL" id="RDx-g5-UHR"/>
-                        <outlet property="lbConverter" destination="0Ri-G6-wzM" id="FWH-Ah-ghG"/>
-                        <outlet property="lbExchange" destination="dGJ-1k-9Rl" id="w0z-Oi-iuQ"/>
+                        <outlet property="lbBalanceMoney" destination="0Ri-G6-wzM" id="IVH-P8-TyM"/>
+                        <outlet property="lbBalancePoints" destination="dGJ-1k-9Rl" id="PXj-On-JjS"/>
                         <outlet property="lbName" destination="dYk-aI-fFv" id="hlK-1m-Jvh"/>
                         <outlet property="mainChart" destination="OFT-mV-5tb" id="Nb2-8R-Cpi"/>
                         <outlet property="mySv" destination="nuj-EU-Iot" id="eel-Pr-LkC"/>
@@ -2155,7 +2155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OII-lU-Ixh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="755.60747663551399" y="882.50539956803459"/>
+            <point key="canvasLocation" x="1099" y="962"/>
         </scene>
         <!--Withdraw View Controller-->
         <scene sceneID="CMS-uH-vPn">
@@ -4303,7 +4303,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wxV-2c-dfT"/>
+        <segue reference="9gN-Nu-49v"/>
         <segue reference="atO-7Q-EI2"/>
         <segue reference="NFJ-Lv-vi8"/>
     </inferredMetricsTieBreakers>

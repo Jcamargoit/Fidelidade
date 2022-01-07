@@ -11,4 +11,5 @@ import Foundation
 enum UserDefaultsKeys: String {
     case userKey = "UserKey"
     case userCpf = "UserCpf"
+    case userId = "userId"
 }
