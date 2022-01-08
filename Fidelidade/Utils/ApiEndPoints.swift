@@ -16,7 +16,7 @@ public enum ApiEndPoints {
     case transferWallet
     
     func baseURL() -> URL? {
-        return URL(string: "http://localhost:8001/" + (String(describing: route())))
+        return URL(string: String(describing: defaultStringUrl()) + (String(describing: route())))
     }
     
     private func route() -> String {
@@ -33,5 +33,12 @@ public enum ApiEndPoints {
             return "Wallet/Transfer"
         }
 
+    }
+    
+    private func defaultStringUrl() -> String {
+        switch self {
+        case .getWallets ,.getWalletById ,.saveWallet ,.updateWallet, .transferWallet:
+            return "http://localhost:8001/"
+        }
     }
 }
