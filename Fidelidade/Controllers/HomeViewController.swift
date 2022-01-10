@@ -86,6 +86,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
+    @IBAction func tappedExchangeButton(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "openExchangeFromHome", sender: self)
+    }
     
     //Função para o Scroll não ir pro lado
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

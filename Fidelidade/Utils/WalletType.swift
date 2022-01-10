@@ -9,6 +9,6 @@ import Foundation
 
 
 public enum WalletType: Int {
-    case Pontos = 1
-    case Dinheiro = 2
+    case Points = 1
+    case Money = 2
 }

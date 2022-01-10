@@ -17,6 +17,7 @@ class WalletViewModel {
         return _sPointsWallet
     }
     
+
     public var walletUseCase: WalletUseCaseProtocol
     
     init(walletUseCase: WalletUseCaseProtocol = WalletUseCase()){
@@ -31,7 +32,6 @@ class WalletViewModel {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {
                 return
-                
             }
             
             let id = self.defaults.integer(forKey: UserDefaultsKeys.userId.rawValue)
@@ -40,7 +40,7 @@ class WalletViewModel {
                 case .success(let results):
                     
                     for result in results {
-                        if result.walletTypeId == WalletType.Dinheiro.rawValue {
+                        if result.walletTypeId == WalletType.Money.rawValue {
                             self.sMoneyWallet = ResultModel<WalletModel>()
                             self.sMoneyWallet?.saveData(data: result)
                         }else {
@@ -48,14 +48,43 @@ class WalletViewModel {
                             self.sPointsWallet?.saveData(data: result)
                         }
                     }
-                    
-                    
-                    
+
                 case .failure(let error):
                     self.sMoneyWallet = ResultModel<WalletModel>(error: error.description)
                 }
             }
         }
     }
+    
+    
+    func fetchWalletsById (walletType: WalletType){
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            
+            let id = self.defaults.integer(forKey: UserDefaultsKeys.userId.rawValue)
+            self.walletUseCase.getWalletsById(userId: id, walletType: walletType) { results in
+                switch results {
+                case .success(let results):
+       
+                    for result in results {
+                        if result.walletTypeId == WalletType.Money.rawValue {
+                            self.sMoneyWallet = ResultModel<WalletModel>()
+                            self.sMoneyWallet?.saveData(data: result)
+                        }else {
+                            self.sPointsWallet = ResultModel<WalletModel>()
+                            self.sPointsWallet?.saveData(data: result)
+                        }
+                    }
+
+                case .failure(let error):
+                    self.sMoneyWallet = ResultModel<WalletModel>(error: error.description)
+                }
+            }
+        }
+    }
+    
+    
 }
 

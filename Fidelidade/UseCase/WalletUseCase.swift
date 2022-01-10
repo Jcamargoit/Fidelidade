@@ -11,17 +11,16 @@ import UIKit
 public protocol WalletUseCaseProtocol {
     var body: Data? { get set }
     func getAllWallets(userId: Int, completion: @escaping (Result<[WalletModel], NetworkError>) -> Void)
-    func getWalletsById(userId: Int, walletType: WalletType, completion: @escaping (Result<WalletModel, NetworkError>) -> Void)
+    func getWalletsById(userId: Int, walletType: WalletType, completion: @escaping (Result<[WalletModel], NetworkError>) -> Void)
     func saveWallet(wallet: WalletModel, completion: @escaping (Result<WalletModel, NetworkError>) -> Void)
     func upDateWallet(wallet: WalletModel, completion: @escaping (Result<WalletModel, NetworkError>) -> Void)
-  //  func walletTransfer(walletTransfer: WalletTransferModel, completion: @escaping (Result<WalletTransferModel, NetworkError>) -> Void)
 }
 
 class WalletUseCase : WalletUseCaseProtocol {
     
     var service = APIService()
     var body: Data?
-    
+    //GET
     func getAllWallets(userId: Int, completion: @escaping (Result<[WalletModel], NetworkError>) -> Void) {
         //Todas carteiras
         let url = ApiEndPoints.getWallets(userId: userId)
@@ -36,8 +35,8 @@ class WalletUseCase : WalletUseCaseProtocol {
             completion(result)
         }
     }
-    
-    func getWalletsById(userId: Int, walletType: WalletType, completion: @escaping (Result<WalletModel, NetworkError>) -> Void) {
+    //GET
+    func getWalletsById(userId: Int, walletType: WalletType, completion: @escaping (Result<[WalletModel], NetworkError>) -> Void) {
         //Carteiras tipo pontos
         let url = ApiEndPoints.getWalletById(userId: userId, walletId: walletType.rawValue)
         
@@ -45,13 +44,13 @@ class WalletUseCase : WalletUseCaseProtocol {
         guard let url = url.baseURL() else {
             fatalError("URL is incorrect!")
         }
-        let resource = Resource<WalletModel>(url: url, httpMethod: .get)
+        let resource = Resource<[WalletModel]>(url: url, httpMethod: .get)
         
         service.load(resource: resource, returnType: .object) { result in
             completion(result)
         }
     }
-    
+    //POST
     func saveWallet(wallet: WalletModel, completion: @escaping (Result<WalletModel, NetworkError>) -> Void) {
         
         
@@ -73,7 +72,7 @@ class WalletUseCase : WalletUseCaseProtocol {
         }
         
     }
-    
+    //PUT
     func upDateWallet(wallet: WalletModel, completion: @escaping (Result<WalletModel, NetworkError>) -> Void) {
         let url = ApiEndPoints.updateWallet
         guard let url = url.baseURL() else {
