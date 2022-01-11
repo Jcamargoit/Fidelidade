@@ -6,7 +6,6 @@ target 'Fidelidade' do
   use_frameworks!
 
   # Pods for Fidelidade 
-
 	pod 'Observable'
 	pod 'Charts'
 	pod 'Firebase/Messaging'
@@ -14,7 +13,10 @@ target 'Fidelidade' do
 	pod 'Firebase/Auth'
 	pod 'Firebase/Database'
 	pod 'Firebase/Storage'
-	pod 'MockoloFramework', '~>1.1.2'
-	pod 'MockoloFramework', '~>1.1.2' 
 
+  target 'FidelidadeTests' do
+    inherit! :search_paths
+    # Pods for testing
+	pod 'Observable'
+  end
 end

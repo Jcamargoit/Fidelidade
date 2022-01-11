@@ -17,6 +17,7 @@
 		25FCDB35277A39B800913E57 /* ApiJavaEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB34277A39B800913E57 /* ApiJavaEndPoints.swift */; };
 		25FCDB3F277CF4C000913E57 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25FCDB3E277CF4C000913E57 /* Colors.xcassets */; };
 		26F93B94FB06113B7BCA3220 /* Pods_Fidelidade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9E802865DA746E1DA8DF13 /* Pods_Fidelidade.framework */; };
+		E7AB0ECF913AD7A966E911D9 /* Pods_FidelidadeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9724B6FC60DCC0CD2C1EAB /* Pods_FidelidadeTests.framework */; };
 		F20084BA277DE55200438022 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F20084B9277DE55200438022 /* GoogleService-Info.plist */; };
 		F20B51FD27872F5E000DB092 /* ApiEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B51FC27872F5E000DB092 /* ApiEndPoints.swift */; };
 		F20B51FF278730B0000DB092 /* WalletUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B51FE278730B0000DB092 /* WalletUseCase.swift */; };
@@ -77,10 +78,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03F0ADA952DCEC363291B9ED /* Pods-FidelidadeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FidelidadeTests.release.xcconfig"; path = "Target Support Files/Pods-FidelidadeTests/Pods-FidelidadeTests.release.xcconfig"; sourceTree = "<group>"; };
+		0EB626B797A124ED0DC310FA /* Pods-FidelidadeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FidelidadeTests.debug.xcconfig"; path = "Target Support Files/Pods-FidelidadeTests/Pods-FidelidadeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		25037774277F273300A347EE /* ExchangeValuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeValuesViewController.swift; sourceTree = "<group>"; };
 		25037775277F273300A347EE /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		25037776277F273300A347EE /* AddNewBankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewBankViewController.swift; sourceTree = "<group>"; };
 		25037777277F273300A347EE /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
+		255980C8278C9D16004FF790 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		255980CC278C9D1D004FF790 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		255980CF278C9D23004FF790 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AAD957277F3E5F00B4770F /* FidelidadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FidelidadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AAD961277F3EAB00B4770F /* LoginUseCaseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUseCaseMock.swift; sourceTree = "<group>"; };
 		25AAD964277F3F4200B4770F /* LoginViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 		25FCDB3E277CF4C000913E57 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		27534AE9BE2A3738A738848E /* Pods-Fidelidade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade.release.xcconfig"; path = "Target Support Files/Pods-Fidelidade/Pods-Fidelidade.release.xcconfig"; sourceTree = "<group>"; };
 		4A37FC8F7FBFC4C65197C512 /* Pods-Fidelidade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fidelidade.debug.xcconfig"; path = "Target Support Files/Pods-Fidelidade/Pods-Fidelidade.debug.xcconfig"; sourceTree = "<group>"; };
+		DA9724B6FC60DCC0CD2C1EAB /* Pods_FidelidadeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FidelidadeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20084B9277DE55200438022 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F20B51FC27872F5E000DB092 /* ApiEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndPoints.swift; sourceTree = "<group>"; };
 		F20B51FE278730B0000DB092 /* WalletUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletUseCase.swift; sourceTree = "<group>"; };
@@ -147,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7AB0ECF913AD7A966E911D9 /* Pods_FidelidadeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +199,8 @@
 			children = (
 				4A37FC8F7FBFC4C65197C512 /* Pods-Fidelidade.debug.xcconfig */,
 				27534AE9BE2A3738A738848E /* Pods-Fidelidade.release.xcconfig */,
+				0EB626B797A124ED0DC310FA /* Pods-FidelidadeTests.debug.xcconfig */,
+				03F0ADA952DCEC363291B9ED /* Pods-FidelidadeTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -198,7 +208,11 @@
 		E18EB50A246358EA1CF04665 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				255980CF278C9D23004FF790 /* RxRelay.framework */,
+				255980CC278C9D1D004FF790 /* RxSwift.framework */,
+				255980C8278C9D16004FF790 /* RxCocoa.framework */,
 				FE9E802865DA746E1DA8DF13 /* Pods_Fidelidade.framework */,
+				DA9724B6FC60DCC0CD2C1EAB /* Pods_FidelidadeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -365,9 +379,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25AAD95D277F3E5F00B4770F /* Build configuration list for PBXNativeTarget "FidelidadeTests" */;
 			buildPhases = (
+				DDFCA50202012E93525766E6 /* [CP] Check Pods Manifest.lock */,
 				25AAD953277F3E5F00B4770F /* Sources */,
 				25AAD954277F3E5F00B4770F /* Frameworks */,
 				25AAD955277F3E5F00B4770F /* Resources */,
+				5851D0BA8CC656FFB266FF15 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -387,7 +403,7 @@
 				F29A96F12768D9D1002E9C73 /* Sources */,
 				F29A96F22768D9D1002E9C73 /* Frameworks */,
 				F29A96F32768D9D1002E9C73 /* Resources */,
-				9974ABF054011F950FD12133 /* [CP] Embed Pods Frameworks */,
+				186EF6112980AE29BFA3B0D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -459,7 +475,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9974ABF054011F950FD12133 /* [CP] Embed Pods Frameworks */ = {
+		186EF6112980AE29BFA3B0D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -474,6 +490,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fidelidade/Pods-Fidelidade-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5851D0BA8CC656FFB266FF15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FidelidadeTests/Pods-FidelidadeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FidelidadeTests/Pods-FidelidadeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FidelidadeTests/Pods-FidelidadeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D8F3C4227A5B1C0E0894F0F1 /* [CP] Check Pods Manifest.lock */ = {
@@ -492,6 +525,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Fidelidade-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDFCA50202012E93525766E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FidelidadeTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -598,6 +653,7 @@
 /* Begin XCBuildConfiguration section */
 		25AAD95E277F3E5F00B4770F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB626B797A124ED0DC310FA /* Pods-FidelidadeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -625,6 +681,7 @@
 		};
 		25AAD95F277F3E5F00B4770F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03F0ADA952DCEC363291B9ED /* Pods-FidelidadeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -785,7 +842,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Ligth;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -823,7 +880,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Ligth;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//Push notification Perrmissão (AppDelegate)
 import UserNotifications
 import Firebase
 import FirebaseMessaging

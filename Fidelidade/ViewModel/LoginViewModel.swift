@@ -10,17 +10,14 @@ struct ResultModel<T: Any> {
     var isError: Bool = false
     var data: T?
     
-    init (error: String? = nil){
+    init (data: T? = nil, error: String? = nil){
         if let error = error {
             self.error = error
             self.isError = true
-       
+        } else {
+            self.data = data
+            self.isError = false
         }
-    }
-
-    mutating func saveData(data: T){
-        self.data = data
-        self.isError = false
     }
 }
 
@@ -32,7 +29,7 @@ class LoginViewModel {
         return _sIsLogged
     }
     
-    public var loginUseCase: LoginUseCaseProtocol
+    public var loginUseCase: LoginUseCaseProtocol?
     
     init(loginUseCase: LoginUseCaseProtocol = LoginUseCase()){
         self.loginUseCase = loginUseCase
@@ -42,24 +39,22 @@ class LoginViewModel {
     let defaults = UserDefaults.standard
     
     //handleLogin Lidar com alguma coisa
-    func handleLogin (loginModel: LoginModel){
+    func  handleLogin (loginModel: LoginModel){
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {
                 return
             }
-            self.loginUseCase.handleLogin(loginModel: loginModel) { result in
+            self.loginUseCase?.handleLogin(loginModel: loginModel) { [weak self] result in
                 switch result {
                 case .success(let key):
-                    self.sIsLogged = ResultModel<String>()
-                    self.sIsLogged?.saveData(data: key)
-                    
                     //gravar informações no userDefult (API LOG IN)
-                    self.defaults.set(key, forKey: UserDefaultsKeys.userKey.rawValue)
-                    self.defaults.set(loginModel.cpf, forKey: UserDefaultsKeys.userCpf.rawValue)
-                    self.defaults.set(1, forKey: UserDefaultsKeys.userId.rawValue)
-        
+                    self?.defaults.set(key, forKey: UserDefaultsKeys.userKey.rawValue)
+                    self?.defaults.set(loginModel.cpf, forKey: UserDefaultsKeys.userCpf.rawValue)
+                    self?.defaults.set(1, forKey: UserDefaultsKeys.userId.rawValue)
+                    
+                    self?.sIsLogged = ResultModel<String>(data: key)
                 case .failure(let error):
-                    self.sIsLogged = ResultModel<String>(error: error.description)
+                    self?.sIsLogged = ResultModel<String>(error: error.description)
                 }
             }
         }
