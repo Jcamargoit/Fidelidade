@@ -55,6 +55,7 @@
 		F29A97052768D9D3002E9C73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29A97032768D9D3002E9C73 /* LaunchScreen.storyboard */; };
 		F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */; };
 		F29DF348278DB1C3004DA2EE /* ConvertValuesToCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29DF347278DB1C3004DA2EE /* ConvertValuesToCurrency.swift */; };
+		F29DF34A278DD29C004DA2EE /* ImagBase64.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29DF349278DD29C004DA2EE /* ImagBase64.swift */; };
 		F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */; };
 		F2B117622770C5400024ECEC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B117612770C5400024ECEC /* LoginModel.swift */; };
 		F2B117642770C68E0024ECEC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B117632770C68E0024ECEC /* LoginViewModel.swift */; };
@@ -129,6 +130,7 @@
 		F29A97062768D9D3002E9C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheScreenViewController.swift; sourceTree = "<group>"; };
 		F29DF347278DB1C3004DA2EE /* ConvertValuesToCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertValuesToCurrency.swift; sourceTree = "<group>"; };
+		F29DF349278DD29C004DA2EE /* ImagBase64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagBase64.swift; sourceTree = "<group>"; };
 		F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		F2B117612770C5400024ECEC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		F2B117632770C68E0024ECEC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */,
 				F20B5202278734D9000DB092 /* WalletType.swift */,
 				F29DF347278DB1C3004DA2EE /* ConvertValuesToCurrency.swift */,
+				F29DF349278DD29C004DA2EE /* ImagBase64.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				F276E579276A21D400D6A458 /* MyAccountViewController.swift in Sources */,
 				F2E3CC7427739F6600FE59F7 /* LoadingViewController.swift in Sources */,
 				F276E580276A6F2D00D6A458 /* NewUserViewController.swift in Sources */,
+				F29DF34A278DD29C004DA2EE /* ImagBase64.swift in Sources */,
 				F22DB3B3278C6090001D34A9 /* WalletTransferUseCase.swift in Sources */,
 				F276E574276A21D400D6A458 /* AlbunsViewModel.swift in Sources */,
 				F2E9900A27886279007550F7 /* WalletViewModel.swift in Sources */,

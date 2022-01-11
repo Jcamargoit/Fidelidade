@@ -15,13 +15,14 @@ class ProfileViewModel {
     }
     
     func handleLogout() {
-        guard let _ = defaults.string(forKey: UserDefaultsKeys.userKey.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userCpf.rawValue) else {
+        guard let _ = defaults.string(forKey: UserDefaultsKeys.userKey.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userCpf.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userId.rawValue) else {
             sLogoutIsFinished = false
             return
         }
         
         defaults.removeObject(forKey: UserDefaultsKeys.userKey.rawValue)
         defaults.removeObject(forKey: UserDefaultsKeys.userCpf.rawValue)
+        defaults.removeObject(forKey: UserDefaultsKeys.userId.rawValue)
         sLogoutIsFinished = true
     }
     

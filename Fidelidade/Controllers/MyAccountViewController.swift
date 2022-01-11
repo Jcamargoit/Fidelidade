@@ -113,7 +113,3 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
 
     
 }
-
-
-
-

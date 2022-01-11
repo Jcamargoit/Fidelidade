@@ -7,8 +7,6 @@ import Observable
 
 class HomeViewController: UIViewController, UIScrollViewDelegate {
     
-    
-    
     let dataPoints = ["1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez"]
     let values = [15.0, 25.0, 12.0, 12.0, 25.0, 25.0, 5.0, 27.0, 4.0, 12.0]
     private var maxValueChart = 5
@@ -36,8 +34,15 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     private var disposal = Disposal()
     var refreshControl: UIRefreshControl!
     
-    var converterValueToCurrency = ConvertValuesToCurrency()
+    //Metodo para mudar a cor do relógio
+    var statusBarLightStyle = true {
+        didSet(newValue) {
+            setNeedsStatusBarAppearanceUpdate()
+        }
+    }
     
+    var converterValueToCurrency = ConvertValuesToCurrency()
+    var imagBase64 = ImagBase64()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,8 +59,18 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         refreshControl.tintColor = UIColor(red: 25/255, green: 25/255, blue: 112/255, alpha: 1.0)
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         mySv.addSubview(refreshControl)
+        
+        //Relógio - True Branco / False Preto
+        self.statusBarLightStyle = true
     }
     
+    //Metodo para mudar a cor do relógio
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return self.statusBarLightStyle ? .lightContent : .default
+    }
+    
+    @IBAction func tappedToProfile(_ sender: UIButton) {
+    }
     
     func observerse(){
         walletViewModel.moneyWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
@@ -67,12 +82,9 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
             }
             
             if !result.isError {
-           
                 self?.lbBalanceMoney.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0))
-                
             }else{
                 self?.simplePopUp(title: "Erro", mensage: result.error)
-                
             }
             
         }.add(to: &disposal)
@@ -99,6 +111,13 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         self.tabBarController?.tabBar.isHidden = false
+        
+        DispatchQueue.main.async {
+            if let imagem = UserDefaults.standard.string(forKey: "imagem"){
+                self.ivUser.image =  self.imagBase64.convertBase64ToImage(imageString: imagem)
+                self.ivUser.setRounded()
+            }
+        }
     }
     
     @IBAction func tappedExchangeButton(_ sender: UIButton) {
@@ -108,12 +127,19 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        guard let navC = segue.destination as? UINavigationController,
-              let addCoffeeOrderVC = navC.viewControllers.first as? ExchangeValuesViewController else{
-                  fatalError("Error performing segue!")
-              }
-        
-        addCoffeeOrderVC.delegate = self
+        if segue.identifier == "openExchangeFromHome" {
+            prepareSegueForExchangeValuesViewController(segue: segue)
+        }
+    }
+    
+    private func prepareSegueForExchangeValuesViewController(segue: UIStoryboardSegue) {
+        guard let nav = segue.destination as? UINavigationController else {
+            fatalError("NavigationController not found")
+        }
+        guard let update = nav.viewControllers.first as? ExchangeValuesViewController else {
+            fatalError("AddWeatherCityController not found")
+        }
+        update.delegate = self
     }
     
     //Função para o Scroll não ir pro lado
@@ -195,3 +221,5 @@ extension HomeViewController: UpdateValuesDelegate {
         self.simplePopUp(title: "", mensage: "Conversão efetuada com sucesso!")
     }
 }
+
+

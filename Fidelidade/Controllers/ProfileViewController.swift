@@ -1,9 +1,7 @@
-//
 //  ProfileViewController.swift
 //  Fidelidade
 //
 //  Created by Juninho on 17/12/21.
-//
 
 import UIKit
 import Observable
@@ -13,7 +11,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var viewTop: UIView!
     @IBOutlet weak var ivBackground: UIImageView!
     @IBOutlet weak var ivProfile: UIImageView!
-    
     @IBOutlet weak var btnNewBank: UIButton!{
         didSet{
             self.btnNewBank.layer.borderColor = UIColor(red: (38/255), green: (47/255), blue: (143/255), alpha: 1.0).cgColor
@@ -22,34 +19,51 @@ class ProfileViewController: UIViewController {
     
     private var disposal = Disposal()
     
-  private lazy var profileViewModel = ProfileViewModel()
+    private lazy var profileViewModel = ProfileViewModel()
+    
+    //mudar a cor do relógio
+    var statusBarLightStyle = true {
+        didSet(newValue) {
+            setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    var imagBase64 = ImagBase64()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let imagem = UserDefaults.standard.string(forKey: "imagem"){
+            self.ivProfile.image = imagBase64.convertBase64ToImage(imageString: imagem)
+            self.ivBackground.image = imagBase64.convertBase64ToImage(imageString: imagem)
+            self.profileViewModel.blurImageView(image: self.ivBackground)
+            self.ivProfile.setRounded()
+        }
         
-       // self.ivProfile.image =  UserDefaults.standard.(forKey: "TokenAcesso") ?? ""
+        //True Branco False Preto DidLoad
+        self.statusBarLightStyle = true
     }
     
-  
-        func observerse() {
-            profileViewModel.logoutIsFinished.observe(DispatchQueue.main) { [weak self] result, oldValue in
-                guard let result = result else{
-                    return
-                }
+    //Metodo para mudar a cor do relógio - Fora do DidLoad
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return self.statusBarLightStyle ? .lightContent : .default
+    }
     
-                if result {
-                    self?.performSegue(withIdentifier: "openChoiseFromMyAccount", sender: self)
-    
-                }
-            }.add(to: &disposal)
-        }
+    func observerse() {
+        profileViewModel.logoutIsFinished.observe(DispatchQueue.main) { [weak self] result, oldValue in
+            guard let result = result else{
+                return
+            }
+            if result {
+                self?.performSegue(withIdentifier: "openChoiseFromMyAccount", sender: self)
+            }else{
+                self?.simplePopUp(title: "Atenção", mensage: "Não foi possível deslogar")
+            }
+        }.add(to: &disposal)
+    }
     
     @IBAction func upImage(_ sender: UIButton) {
         metodoFoto()
     }
-    
-    
     
     
     @IBAction func back(_ sender: UIButton) {
@@ -57,14 +71,11 @@ class ProfileViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    
     @IBAction func edit(_ sender: UIButton) {
     }
     
     @IBAction func tappedLogout(_ sender: UIButton) {
         profileViewModel.handleLogout()
-        
     }
     
     //  RETIRAR MENU INFERIOR
@@ -101,7 +112,6 @@ class ProfileViewController: UIViewController {
         self.present(alert, animated: true, completion: {
         })
     }
-    
 }
 
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -117,7 +127,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
             self.viewTop.backgroundColor = .white
             self.ivProfile.setRounded()
             
-            // UserDefaults.standard.set(selectedImage, forKey: "imagem")
+            UserDefaults.standard.set(imagBase64.convertImageToBase64(image: selectedImage), forKey: "imagem")
             
             self.profileViewModel.blurImageView(image: self.ivBackground)
         }
@@ -130,4 +140,3 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
     
 }
-

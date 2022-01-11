@@ -26,22 +26,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
         if #available(iOS 10.0, *) {
-                 // For iOS 10 display notification (sent via APNS)
-                   UNUserNotificationCenter.current().delegate = self
-
-                 let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-                 UNUserNotificationCenter.current().requestAuthorization(
-                   options: authOptions,
-                   completionHandler: {_, _ in })
-               } else {
-                 let settings: UIUserNotificationSettings =
-                 UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-                 application.registerUserNotificationSettings(settings)
-               }
-               
-               
-             
-               application.registerForRemoteNotifications()
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = self
+            
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+            UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+        
+        
+        
+        application.registerForRemoteNotifications()
         
         FirebaseApp.configure()
         return true
@@ -65,23 +65,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     //Notification FireBase
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-           print(response.notification.request.content.userInfo)
-           let dic = response.notification.request.content.userInfo as NSDictionary
-           if let aps = dic["aps"] as? [String: Any] {
-              // print(aps)
-               
-                 print("recebi 2 \(aps)")
-           }
-       }
-       func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-           completionHandler([.alert, .badge, .sound])
-           print(notification.request.content.userInfo)
-           let dic = notification.request.content.userInfo as NSDictionary
-           if let aps = dic["aps"] as? [String: Any] {
-          
-
-           }
-       }
+        print(response.notification.request.content.userInfo)
+        let dic = response.notification.request.content.userInfo as NSDictionary
+        if let aps = dic["aps"] as? [String: Any] {
+            // print(aps)
+            
+            print("recebi 2 \(aps)")
+        }
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
+        print(notification.request.content.userInfo)
+        let dic = notification.request.content.userInfo as NSDictionary
+        if let aps = dic["aps"] as? [String: Any] {
+            
+            
+        }
+    }
     
     
 }
