@@ -37,8 +37,7 @@ class WalletTransferViewModel {
                 case .success(let result):
 
                     print("resultado chamada  \(result)")
-                    self?.sTransferWallet = ResultModel<WalletTransferModel>()
-                    self?.sTransferWallet?.saveData(data: result)
+                    self?.sTransferWallet = ResultModel<WalletTransferModel>(data: result)
                    
                 case .failure(let error):
                     self?.sTransferWallet = ResultModel<WalletTransferModel>(error: error.description)

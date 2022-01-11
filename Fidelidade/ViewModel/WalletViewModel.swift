@@ -68,11 +68,9 @@ class WalletViewModel {
        
                     for result in results {
                         if result.walletTypeId == WalletType.Money.rawValue {
-                            self.sMoneyWallet = ResultModel<WalletModel>()
-                            self.sMoneyWallet?.saveData(data: result)
+                            self.sMoneyWallet = ResultModel<WalletModel>(data: result)
                         }else {
-                            self.sPointsWallet = ResultModel<WalletModel>()
-                            self.sPointsWallet?.saveData(data: result)
+                            self.sPointsWallet = ResultModel<WalletModel>(data: result)
                         }
                     }
 
