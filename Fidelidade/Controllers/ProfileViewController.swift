@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        observes()
         if let imagem = UserDefaults.standard.string(forKey: "imagem"){
             self.ivProfile.image = imagBase64.convertBase64ToImage(imageString: imagem)
             self.ivBackground.image = imagBase64.convertBase64ToImage(imageString: imagem)
@@ -48,7 +48,7 @@ class ProfileViewController: UIViewController {
         return self.statusBarLightStyle ? .lightContent : .default
     }
     
-    func observerse() {
+    func observes() {
         profileViewModel.logoutIsFinished.observe(DispatchQueue.main) { [weak self] result, oldValue in
             guard let result = result else{
                 return

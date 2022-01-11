@@ -74,12 +74,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     func observerse(){
         walletViewModel.moneyWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
-            
-            self!.refreshControl.endRefreshing()
-            
             guard let result = result else{
                 return
             }
+            self!.refreshControl.endRefreshing()
             
             if !result.isError {
                 self?.lbBalanceMoney.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0))
@@ -92,7 +90,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         walletViewModel.pointsWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
             
             guard let result = result else{
-                
                 return
             }
             

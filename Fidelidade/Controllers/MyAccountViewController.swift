@@ -36,6 +36,13 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
   
     }
     
+    //remove navegation controller
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     
 
     
@@ -101,14 +108,6 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
         cell.imageList.image = UIImage (named: image[indexPath.row])
         
         return cell
-    }
-    
-
-    //remove navegation controller
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-        self.tabBarController?.tabBar.isHidden = false
     }
 
     
