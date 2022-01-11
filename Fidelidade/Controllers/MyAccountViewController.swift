@@ -22,26 +22,22 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        observerse()
+       // observerse()
 
         account.append("Perfil")
         account.append("Notificações")
         account.append("Sacar")
         account.append("Configurações")
-        account.append("Sair")
-        
+ 
         image.append("profile")
         image.append("notification")
         image.append("withdraw")
         image.append("settings")
-        image.append("settings")
+  
     }
     
     
 
-    
-    
-    
     
     /// Tamanhop table vcelula
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -75,28 +71,10 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
             
         }
         
-        if indexPath.row == 4 {
-            myAccountViewModel.handleLogout()
-        }
+   
         
         
         self.minhatabview.reloadData()
-    }
-    
-   
-    
-    
-    func observerse() {
-        myAccountViewModel.logoutIsFinished.observe(DispatchQueue.main) { [weak self] result, oldValue in
-            guard let result = result else{
-                return
-            }
-            
-            if result {
-                self?.performSegue(withIdentifier: "openChoiceFromMyAccount", sender: self)
-                
-            }
-        }.add(to: &disposal)
     }
     
     

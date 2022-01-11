@@ -1,10 +1,8 @@
-//
 //  LoginUseCase.swift
 //  Fidelidade
 //
 //  Created by Juninho on 20/12/21.
 //
-
 import UIKit
 
 /// @mockable

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Observable
 
 class ProfileViewController: UIViewController {
     
@@ -19,7 +20,9 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    var profileViewModel = ProfileViewModel()
+    private var disposal = Disposal()
+    
+  private lazy var profileViewModel = ProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +31,26 @@ class ProfileViewController: UIViewController {
        // self.ivProfile.image =  UserDefaults.standard.(forKey: "TokenAcesso") ?? ""
     }
     
+  
+        func observerse() {
+            profileViewModel.logoutIsFinished.observe(DispatchQueue.main) { [weak self] result, oldValue in
+                guard let result = result else{
+                    return
+                }
+    
+                if result {
+                    self?.performSegue(withIdentifier: "openChoiseFromMyAccount", sender: self)
+    
+                }
+            }.add(to: &disposal)
+        }
+    
     @IBAction func upImage(_ sender: UIButton) {
         metodoFoto()
     }
+    
+    
+    
     
     @IBAction func back(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -42,6 +62,10 @@ class ProfileViewController: UIViewController {
     @IBAction func edit(_ sender: UIButton) {
     }
     
+    @IBAction func tappedLogout(_ sender: UIButton) {
+        profileViewModel.handleLogout()
+        
+    }
     
     //  RETIRAR MENU INFERIOR
     override func viewWillAppear(_ animated: Bool) {

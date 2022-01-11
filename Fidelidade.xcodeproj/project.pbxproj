@@ -25,6 +25,8 @@
 		F20B5205278736AF000DB092 /* WalletTransferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B5204278736AF000DB092 /* WalletTransferModel.swift */; };
 		F213EDD12779FF4700CEBEA8 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */; };
 		F213EDD32779FFA700CEBEA8 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F213EDD22779FFA700CEBEA8 /* NotificationCell.swift */; };
+		F22DB3B1278C5FEA001D34A9 /* WalletTransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22DB3B0278C5FEA001D34A9 /* WalletTransferViewModel.swift */; };
+		F22DB3B3278C6090001D34A9 /* WalletTransferUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22DB3B2278C6090001D34A9 /* WalletTransferUseCase.swift */; };
 		F2455191276D12CC00953DCC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455190276D12CC00953DCC /* ProfileViewController.swift */; };
 		F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455194276D14DD00953DCC /* SettingsViewController.swift */; };
 		F26E8D902784CD91005B5156 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E8D8F2784CD91005B5156 /* ProfileViewModel.swift */; };
@@ -52,6 +54,7 @@
 		F29A97022768D9D3002E9C73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29A97012768D9D3002E9C73 /* Assets.xcassets */; };
 		F29A97052768D9D3002E9C73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29A97032768D9D3002E9C73 /* LaunchScreen.storyboard */; };
 		F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */; };
+		F29DF348278DB1C3004DA2EE /* ConvertValuesToCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29DF347278DB1C3004DA2EE /* ConvertValuesToCurrency.swift */; };
 		F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */; };
 		F2B117622770C5400024ECEC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B117612770C5400024ECEC /* LoginModel.swift */; };
 		F2B117642770C68E0024ECEC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B117632770C68E0024ECEC /* LoginViewModel.swift */; };
@@ -94,6 +97,8 @@
 		F213EDD02779FF4700CEBEA8 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		F213EDD22779FFA700CEBEA8 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		F21A911B277C8D7F00C1A695 /* Fidelidade.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fidelidade.entitlements; sourceTree = "<group>"; };
+		F22DB3B0278C5FEA001D34A9 /* WalletTransferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTransferViewModel.swift; sourceTree = "<group>"; };
+		F22DB3B2278C6090001D34A9 /* WalletTransferUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTransferUseCase.swift; sourceTree = "<group>"; };
 		F2455190276D12CC00953DCC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F2455194276D14DD00953DCC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F26E8D8F2784CD91005B5156 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -123,6 +128,7 @@
 		F29A97042768D9D3002E9C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F29A97062768D9D3002E9C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheScreenViewController.swift; sourceTree = "<group>"; };
+		F29DF347278DB1C3004DA2EE /* ConvertValuesToCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertValuesToCurrency.swift; sourceTree = "<group>"; };
 		F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		F2B117612770C5400024ECEC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		F2B117632770C68E0024ECEC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -289,6 +295,7 @@
 				F28094DC277B7A9100628930 /* NewUserViewModel.swift */,
 				F26E8D8F2784CD91005B5156 /* ProfileViewModel.swift */,
 				F276E567276A21D400D6A458 /* TodosViewModel.swift */,
+				F22DB3B0278C5FEA001D34A9 /* WalletTransferViewModel.swift */,
 				F2E9900927886279007550F7 /* WalletViewModel.swift */,
 			);
 			path = ViewModel;
@@ -333,6 +340,7 @@
 				F26E8D912784CE44005B5156 /* UIImageView+setRounded.swift */,
 				25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */,
 				F20B5202278734D9000DB092 /* WalletType.swift */,
+				F29DF347278DB1C3004DA2EE /* ConvertValuesToCurrency.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -341,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				F2FB7AA42770F57100C3E4C9 /* LoginUseCase.swift */,
+				F22DB3B2278C6090001D34A9 /* WalletTransferUseCase.swift */,
 				F20B51FE278730B0000DB092 /* WalletUseCase.swift */,
 			);
 			path = UseCase;
@@ -509,6 +518,7 @@
 				F213EDD12779FF4700CEBEA8 /* NotificationViewController.swift in Sources */,
 				25037779277F273300A347EE /* ChangePasswordViewController.swift in Sources */,
 				F2B117622770C5400024ECEC /* LoginModel.swift in Sources */,
+				F29DF348278DB1C3004DA2EE /* ConvertValuesToCurrency.swift in Sources */,
 				F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */,
 				F276E576276A21D400D6A458 /* AlbunsModel.swift in Sources */,
 				F26E8D922784CE44005B5156 /* UIImageView+setRounded.swift in Sources */,
@@ -524,6 +534,7 @@
 				F276E579276A21D400D6A458 /* MyAccountViewController.swift in Sources */,
 				F2E3CC7427739F6600FE59F7 /* LoadingViewController.swift in Sources */,
 				F276E580276A6F2D00D6A458 /* NewUserViewController.swift in Sources */,
+				F22DB3B3278C6090001D34A9 /* WalletTransferUseCase.swift in Sources */,
 				F276E574276A21D400D6A458 /* AlbunsViewModel.swift in Sources */,
 				F2E9900A27886279007550F7 /* WalletViewModel.swift in Sources */,
 				F29481232774B6F800A551C5 /* WithdrawPixCell.swift in Sources */,
@@ -531,6 +542,7 @@
 				F20B51FD27872F5E000DB092 /* ApiEndPoints.swift in Sources */,
 				F294811F2774ACE300A551C5 /* WithdrawViewController.swift in Sources */,
 				F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */,
+				F22DB3B1278C5FEA001D34A9 /* WalletTransferViewModel.swift in Sources */,
 				25FCDB33277A313900913E57 /* UserDefaultsKeys.swift in Sources */,
 				F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */,
 				F276E57A276A21D400D6A458 /* TodosModel.swift in Sources */,
@@ -758,6 +770,10 @@
 				DEVELOPMENT_TEAM = SPMYNXX796;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fidelidade/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "+Fidelidade";
+				INFOPLIST_KEY_NSCameraUsageDescription = "permitir acesso à câmera para ler o código qrcode";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Permita o acesso para salvar fotos na sua biblioteca de fotos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Você pode selecionar fotos para anexar aos relatórios.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -792,6 +808,10 @@
 				DEVELOPMENT_TEAM = UJ394G4MSU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fidelidade/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "+Fidelidade";
+				INFOPLIST_KEY_NSCameraUsageDescription = "permitir acesso à câmera para ler o código qrcode";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Permita o acesso para salvar fotos na sua biblioteca de fotos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Você pode selecionar fotos para anexar aos relatórios.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

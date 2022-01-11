@@ -51,9 +51,12 @@ struct Resource<T: Codable> {
 class APIService {
     
     func load<T>(resource: Resource<T>, returnType: ReturnType = .simple, completion: @escaping (Result<T, NetworkError>) -> Void) {
+        
         var request = URLRequest(url: resource.url)
         request.httpMethod = resource.httpMethod.rawValue
         request.httpBody = resource.body
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")  // the request is JSON
+        //request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")      // the expected response is also JSON
        
         //Request
         URLSession.shared.dataTask(with: request) { data, response, error in

@@ -8,7 +8,15 @@
 import UIKit
 import Observable
 
+
+protocol UpdateValuesDelegate{
+    func updateValue()
+}
+
+
 class ExchangeValuesViewController: UIViewController {
+    
+    var delegate: UpdateValuesDelegate?
     
     @IBOutlet weak var btnExchange: UIButton!
     
@@ -18,7 +26,7 @@ class ExchangeValuesViewController: UIViewController {
     as [NSAttributedString.Key : Any]
     
     lazy var walletViewModel = WalletViewModel()
-    lazy var walletTransferViewModel = WalletTransferViewModel()
+    private var walletTransferViewModel = WalletTransferViewModel()
     
     
     @IBOutlet weak var btnCancelExchange: UIButton!{
@@ -28,14 +36,17 @@ class ExchangeValuesViewController: UIViewController {
     }
     @IBOutlet weak var lbBalanceInCoins: UILabel!
     
-    @IBOutlet weak var tfNumberOfCoins: UITextField!
+    @IBOutlet weak var tfNumberOfCoins: UITextField!{
+        didSet{
+            self.tfNumberOfCoins.delegate = self
+        }
+    }
     @IBOutlet weak var lbBalanceInReal: UILabel!
     
     private var disposal = Disposal()
     
-    
-    var test = 100000
-    
+   
+
     override func viewDidLoad() {
         super.viewDidLoad()
         observerse()
@@ -55,6 +66,7 @@ class ExchangeValuesViewController: UIViewController {
             
             if !result.isError {
                 self?.lbBalanceInCoins.attributedText = NSMutableAttributedString(string: String(describing: result.data?.amount ?? 0), attributes: self?.strokeTextAttributes)
+                
             }else{
                 self?.simplePopUp(title: "Erro", mensage: result.error)
             }
@@ -73,17 +85,21 @@ class ExchangeValuesViewController: UIViewController {
     
     
     func converterPointsToReal(){
-        
-        let numberOfCoins = Int(tfNumberOfCoins.text ?? "") ?? 0
-        
-        if numberOfCoins > Int(lbBalanceInCoins.text ?? "") ?? 0 {
-            simplePopUp(title: "Atenção", mensage: "Você não pode converter um saldo maior do que está disponível em sua conta")
-        }else{
-         //   var resultConverter: Int
-            let resultConverter = numberOfCoins/100
-            let  balanceInReal = String(resultConverter)
-            lbBalanceInReal.text = "R$\(balanceInReal),00"
-
+        //iniciar alguma ação com um pouco de atraso
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            let numberOfCoins = Int(self.tfNumberOfCoins.text ?? "") ?? 0
+            
+            print("meu texto ", self.tfNumberOfCoins.text ?? "")
+            
+            if numberOfCoins > Int(self.lbBalanceInCoins.text ?? "") ?? 0 {
+                self.simplePopUp(title: "Atenção", mensage: "Você não pode converter um saldo maior do que está disponível em sua conta")
+            }else{
+                let resultConverter = numberOfCoins/100
+                let  balanceInReal = String(resultConverter)
+                self.lbBalanceInReal.text = "R$\(balanceInReal),00"
+                self.btnExchange.backgroundColor = UIColor(red: (25/255), green: (25/255), blue: (112/255), alpha: 1.0)
+                self.btnExchange.isUserInteractionEnabled = true
+            }
         }
     }
     
@@ -96,13 +112,27 @@ class ExchangeValuesViewController: UIViewController {
     
     @IBAction func toExchange(_ sender: UIButton) {
          print("Modelo")
-    }
-    
-    
-    
-    func exchangePoints(){
         
+        let walletTransferModel = WalletTransferModel(walletOriginId: WalletType.Points.rawValue, walletTargetId: WalletType.Money.rawValue, quantity: Int(tfNumberOfCoins.text ?? "") ?? 0)
+        walletTransferViewModel.transferWallets(walletTransfer: walletTransferModel)
         
+        walletTransferViewModel.transferWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
+         
+            guard let result = result else{
+                return
+            }
+      
+            if !result.isError {
+                if let delegate = self?.delegate {
+                    delegate.updateValue()
+                    self?.dismiss(animated: true, completion: nil)
+                }
+                
+            }else{
+                self?.simplePopUp(title: "Atenção", mensage: "Não foi possível fazer sua conversão, tente novamente")
+            }
+        }.add(to: &disposal)
+    
     }
     
     
@@ -114,4 +144,20 @@ class ExchangeValuesViewController: UIViewController {
     
     
     
+}
+
+
+extension ExchangeValuesViewController: UITextFieldDelegate {
+ 
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let newLength = (textField.text ?? "").count + string.count - range.length
+        if newLength <= 0 {
+            btnExchange.isUserInteractionEnabled = false
+        btnExchange.backgroundColor = UIColor(red: (231/255), green: (232/255), blue: (243/255), alpha: 1.0)
+        }else{
+            converterPointsToReal()
+        }
+      
+        return true
+    }
 }

@@ -1,12 +1,14 @@
-//  FrameworkTest
-//  Created by Juninho on 26/11/21.
-
 import UIKit
 import Observable
 
 
+
+
+
 class WalletTransferViewModel {
     
+    
+
     
     //Enviar para api
     @MutableObservable private var sTransferWallet: ResultModel<WalletTransferModel>?
@@ -29,12 +31,12 @@ class WalletTransferViewModel {
             guard let self = self else {
                 return
             }
-        
-            
+
             self.transferUseCase.walletTransfer(walletTransfer: walletTransfer) {[weak self] result in
                 switch result {
                 case .success(let result):
 
+                    print("resultado chamada  \(result)")
                     self?.sTransferWallet = ResultModel<WalletTransferModel>()
                     self?.sTransferWallet?.saveData(data: result)
                    
@@ -45,4 +47,3 @@ class WalletTransferViewModel {
         }
     }
 }
-

@@ -2,12 +2,30 @@
 //  Created by Juninho on 26/11/21.
 
 import UIKit
+import Observable
 
 
 class ProfileViewModel {
     
-    func blurImageView(image: UIImageView) {
+    let defaults = UserDefaults.standard
+    
+    @MutableObservable private var sLogoutIsFinished: Bool?
+    var logoutIsFinished: Observable<Bool?>{
+        return _sLogoutIsFinished
+    }
+    
+    func handleLogout() {
+        guard let _ = defaults.string(forKey: UserDefaultsKeys.userKey.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userCpf.rawValue) else {
+            sLogoutIsFinished = false
+            return
+        }
         
+        defaults.removeObject(forKey: UserDefaultsKeys.userKey.rawValue)
+        defaults.removeObject(forKey: UserDefaultsKeys.userCpf.rawValue)
+        sLogoutIsFinished = true
+    }
+    
+    func blurImageView(image: UIImageView) {
         //Borrão na imagem
         let inputImage = CIImage(cgImage: (image.image?.cgImage)!)
         let filter = CIFilter(name: "CIGaussianBlur")
@@ -25,10 +43,6 @@ class ProfileViewModel {
         let cgimg: CGImage = context.createCGImage(resultImage, from: newImageSize)!
         let blurredImage: UIImage = UIImage.init(cgImage: cgimg)
         image.image = blurredImage
-        
     }
-    
-
-    
 }
 

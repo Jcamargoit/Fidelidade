@@ -4,7 +4,10 @@ import UIKit
 import Charts
 import Observable
 
+
 class HomeViewController: UIViewController, UIScrollViewDelegate {
+    
+    
     
     let dataPoints = ["1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez"]
     let values = [15.0, 25.0, 12.0, 12.0, 25.0, 25.0, 5.0, 27.0, 4.0, 12.0]
@@ -20,7 +23,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbBalancePoints: UILabel!{
         didSet{
-            lbBalancePoints.attributedText = NSMutableAttributedString(string: "500", attributes: strokeTextAttributes)
+            lbBalancePoints.attributedText = NSMutableAttributedString(string: " ", attributes: strokeTextAttributes)
         }
     }
     @IBOutlet weak var btnExchange: UIButton!
@@ -31,6 +34,9 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     lazy var walletViewModel = WalletViewModel()
     private var disposal = Disposal()
+    var refreshControl: UIRefreshControl!
+    
+    var converterValueToCurrency = ConvertValuesToCurrency()
     
     
     override func viewDidLoad() {
@@ -43,39 +49,49 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         styleElements()
         customizeChart(dataPoints: dataPoints, values: values)
         walletViewModel.fetchWallets()
-
+        //refresh Scrool/ tableView
+        refreshControl = UIRefreshControl()
+        refreshControl.tintColor = UIColor(red: 25/255, green: 25/255, blue: 112/255, alpha: 1.0)
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        mySv.addSubview(refreshControl)
     }
     
     
     func observerse(){
-        
         walletViewModel.moneyWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
+            
+            self!.refreshControl.endRefreshing()
             
             guard let result = result else{
                 return
             }
-      
+            
             if !result.isError {
-                self?.lbBalanceMoney.text = "R$ " + String(describing: result.data?.amount ?? 0)
+           
+                self?.lbBalanceMoney.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0))
+                
             }else{
                 self?.simplePopUp(title: "Erro", mensage: result.error)
+                
             }
             
         }.add(to: &disposal)
         
         walletViewModel.pointsWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
-
+            
             guard let result = result else{
+                
                 return
             }
-        
+            
             if !result.isError {
-                self?.lbBalancePoints.text = String(describing: result.data?.amount ?? 0)
+                
+                self?.lbBalancePoints.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0))
+                
             }else{
                 self?.simplePopUp(title: "Erro", mensage: result.error)
             }
         }.add(to: &disposal)
-        
     }
     
     //remove navegation controller
@@ -85,10 +101,19 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         self.tabBarController?.tabBar.isHidden = false
     }
     
-    
     @IBAction func tappedExchangeButton(_ sender: UIButton) {
         
         self.performSegue(withIdentifier: "openExchangeFromHome", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let navC = segue.destination as? UINavigationController,
+              let addCoffeeOrderVC = navC.viewControllers.first as? ExchangeValuesViewController else{
+                  fatalError("Error performing segue!")
+              }
+        
+        addCoffeeOrderVC.delegate = self
     }
     
     //Função para o Scroll não ir pro lado
@@ -136,7 +161,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         let leftAxis = mainChart.leftAxis
         leftAxis.axisMinimum = 0.0
         
-        
         var dataEntries: [BarChartDataEntry] = []
         let comparator = maxValueChart < dataPoints.count ? maxValueChart : dataPoints.count
         for i in 0..<comparator{
@@ -157,4 +181,17 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         mainChart.animate(yAxisDuration: 1.5)
     }
     
+    @objc func refresh(_ sender: Any) {
+        //  your code to reload tableView
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
+            self.walletViewModel.fetchWallets()
+        }
+    }
+}
+
+extension HomeViewController: UpdateValuesDelegate {
+    func updateValue() {
+        walletViewModel.fetchWallets()
+        self.simplePopUp(title: "", mensage: "Conversão efetuada com sucesso!")
+    }
 }
