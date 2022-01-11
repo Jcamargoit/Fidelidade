@@ -34,7 +34,11 @@ class ExchangeValuesViewController: UIViewController {
             self.btnCancelExchange.layer.borderColor = UIColor(red: (38/255), green: (47/255), blue: (143/255), alpha: 1.0).cgColor
         }
     }
-    @IBOutlet weak var lbBalanceInCoins: UILabel!
+    @IBOutlet weak var lbBalanceInCoins: UILabel!{
+        didSet{
+            lbBalanceInCoins.attributedText = NSMutableAttributedString(string: " ", attributes: strokeTextAttributes)
+        }
+    }
     
     @IBOutlet weak var tfNumberOfCoins: UITextField!{
         didSet{
@@ -45,8 +49,13 @@ class ExchangeValuesViewController: UIViewController {
     
     private var disposal = Disposal()
     
-   
+    var converterValueToCurrency = ConvertValuesToCurrency()
+    
+    private var walletTotalPoints = 0
 
+    var verificationExchange = Bool()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         observerse()
@@ -57,16 +66,17 @@ class ExchangeValuesViewController: UIViewController {
     
     func observerse(){
         
-        
         walletViewModel.pointsWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
             
             guard let result = result else{
                 return
             }
+            self?.walletTotalPoints = result.data?.amount ?? 0
             
             if !result.isError {
-                self?.lbBalanceInCoins.attributedText = NSMutableAttributedString(string: String(describing: result.data?.amount ?? 0), attributes: self?.strokeTextAttributes)
+                self?.lbBalanceInCoins.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0))
                 
+                //
             }else{
                 self?.simplePopUp(title: "Erro", mensage: result.error)
             }
@@ -91,7 +101,7 @@ class ExchangeValuesViewController: UIViewController {
             
             print("meu texto ", self.tfNumberOfCoins.text ?? "")
             
-            if numberOfCoins > Int(self.lbBalanceInCoins.text ?? "") ?? 0 {
+            if numberOfCoins > Int(self.walletTotalPoints){
                 self.simplePopUp(title: "Atenção", mensage: "Você não pode converter um saldo maior do que está disponível em sua conta")
             }else{
                 let resultConverter = numberOfCoins/100

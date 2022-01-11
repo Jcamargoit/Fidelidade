@@ -44,6 +44,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     var converterValueToCurrency = ConvertValuesToCurrency()
     var imagBase64 = ImagBase64()
     
+    var verificationExchange: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         observerse()
@@ -64,45 +66,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         self.statusBarLightStyle = true
     }
     
-    //Metodo para mudar a cor do relógio
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return self.statusBarLightStyle ? .lightContent : .default
-    }
-    
-    @IBAction func tappedToProfile(_ sender: UIButton) {
-    }
-    
-    func observerse(){
-        walletViewModel.moneyWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
-            guard let result = result else{
-                return
-            }
-            self!.refreshControl.endRefreshing()
-            
-            if !result.isError {
-                self?.lbBalanceMoney.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0))
-            }else{
-                self?.simplePopUp(title: "Erro", mensage: result.error)
-            }
-            
-        }.add(to: &disposal)
-        
-        walletViewModel.pointsWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
-            
-            guard let result = result else{
-                return
-            }
-            
-            if !result.isError {
-                
-                self?.lbBalancePoints.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0))
-                
-            }else{
-                self?.simplePopUp(title: "Erro", mensage: result.error)
-            }
-        }.add(to: &disposal)
-    }
-    
     //remove navegation controller
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -116,18 +79,70 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
             }
         }
     }
-    
+
+    func observerse(){
+        walletViewModel.moneyWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
+            guard let result = result else{
+                return
+            }
+
+            self!.refreshControl.endRefreshing()
+
+            if !result.isError {
+                self?.lbBalanceMoney.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0))
+            }else{
+                self?.simplePopUp(title: "Erro", mensage: result.error)
+            }
+            
+        }.add(to: &disposal)
+        
+        walletViewModel.pointsWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
+            
+            guard let result = result else{
+                return
+            }
+            if !result.isError {
+                self?.lbBalancePoints.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0))
+            }else{
+                self?.simplePopUp(title: "Erro", mensage: result.error)
+            }
+        }.add(to: &disposal)
+    }
+ 
+
     @IBAction func tappedExchangeButton(_ sender: UIButton) {
         
-        self.performSegue(withIdentifier: "openExchangeFromHome", sender: self)
+        self.performSegue(withIdentifier: "openExchangeFromHomeExchange", sender: self)
+        
     }
+    
+    
+    @IBAction func tappedConverterButton(_ sender: UIButton){
+        
+        self.performSegue(withIdentifier: "openExchangeFromHomeConverter", sender: self)
+    }
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "openExchangeFromHome" {
+        if segue.identifier == "openExchangeFromHomeExchange" {
             prepareSegueForExchangeValuesViewController(segue: segue)
         }
+        
+        switch segue.identifier {
+        case "openExchangeFromHomeExchange":
+            let vc = segue.destination as! ExchangeValuesViewController
+            vc.verificationExchange = verificationExchange
+        default:
+            break;
+        }
     }
+    
+    
+ 
+    
     
     private func prepareSegueForExchangeValuesViewController(segue: UIStoryboardSegue) {
         guard let nav = segue.destination as? UINavigationController else {
@@ -137,6 +152,11 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
             fatalError("AddWeatherCityController not found")
         }
         update.delegate = self
+    }
+    
+    //Metodo para mudar a cor do relógio
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return self.statusBarLightStyle ? .lightContent : .default
     }
     
     //Função para o Scroll não ir pro lado

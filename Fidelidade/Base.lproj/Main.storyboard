@@ -2178,12 +2178,13 @@
                         <outlet property="mainChart" destination="OFT-mV-5tb" id="Nb2-8R-Cpi"/>
                         <outlet property="mySv" destination="nuj-EU-Iot" id="eel-Pr-LkC"/>
                         <outlet property="sc" destination="hQg-Hm-rdn" id="nhp-iW-Tl6"/>
-                        <segue destination="ysM-FT-tWF" kind="presentation" identifier="openExchangeFromHome" id="2Oz-FB-2bY"/>
+                        <segue destination="ysM-FT-tWF" kind="presentation" identifier="openExchangeFromHomeExchange" id="2Oz-FB-2bY"/>
+                        <segue destination="ysM-FT-tWF" kind="show" identifier="openExchangeFromHomeConverter" id="vrM-sr-TR0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OII-lU-Ixh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1099" y="962"/>
+            <point key="canvasLocation" x="1044" y="937"/>
         </scene>
         <!--Withdraw View Controller-->
         <scene sceneID="CMS-uH-vPn">
@@ -4342,6 +4343,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ysM-FT-tWF" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="JsA-Sd-OPY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A5E-xG-zKk">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -4353,11 +4355,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7B-mH-wx7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="755.60747663551399" y="1726.781857451404"/>
+            <point key="canvasLocation" x="686" y="1865"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kzs-P6-pce"/>
+        <segue reference="2Oz-FB-2bY"/>
         <segue reference="9gN-Nu-49v"/>
         <segue reference="rFN-bh-c4p"/>
         <segue reference="BTt-jb-ZOu"/>
