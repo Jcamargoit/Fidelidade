@@ -15,7 +15,7 @@ class ProfileViewModel {
     }
     
     func handleLogout() {
-        guard let _ = defaults.string(forKey: UserDefaultsKeys.userKey.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userCpf.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userId.rawValue) else {
+        guard let _ = defaults.string(forKey: UserDefaultsKeys.userKey.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userCpf.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userId.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userImageProfile.rawValue) else {
             sLogoutIsFinished = false
             return
         }
@@ -23,6 +23,7 @@ class ProfileViewModel {
         defaults.removeObject(forKey: UserDefaultsKeys.userKey.rawValue)
         defaults.removeObject(forKey: UserDefaultsKeys.userCpf.rawValue)
         defaults.removeObject(forKey: UserDefaultsKeys.userId.rawValue)
+        defaults.removeObject(forKey: UserDefaultsKeys.userImageProfile.rawValue)
         sLogoutIsFinished = true
     }
     

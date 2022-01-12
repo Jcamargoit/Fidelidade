@@ -986,7 +986,7 @@
         <!--Login View Controller-->
         <scene sceneID="RTO-CN-N9G">
             <objects>
-                <viewController id="HhB-e4-ufS" customClass="LoginViewController" customModule="Fidelidade" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="HhB-e4-ufS" customClass="LoginViewController" customModule="Fidelidade" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ph-TC-1fV">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
