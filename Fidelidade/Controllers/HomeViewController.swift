@@ -109,15 +109,15 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
  
 
     @IBAction func tappedExchangeButton(_ sender: UIButton) {
-        
-        self.performSegue(withIdentifier: "openExchangeFromHomeExchange", sender: self)
+        self.verificationExchange = true
+        self.performSegue(withIdentifier: "openExchangeFromHome", sender: self)
         
     }
     
     
     @IBAction func tappedConverterButton(_ sender: UIButton){
-        
-        self.performSegue(withIdentifier: "openExchangeFromHomeConverter", sender: self)
+        self.verificationExchange = false
+        self.performSegue(withIdentifier: "openExchangeFromHome", sender: self)
     }
     
     
@@ -125,23 +125,12 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "openExchangeFromHomeExchange" {
+        if segue.identifier == "openExchangeFromHome" {
             prepareSegueForExchangeValuesViewController(segue: segue)
         }
-        
-        switch segue.identifier {
-        case "openExchangeFromHomeExchange":
-            let vc = segue.destination as! ExchangeValuesViewController
-            vc.verificationExchange = verificationExchange
-        default:
-            break;
-        }
+
     }
-    
-    
- 
-    
-    
+  
     private func prepareSegueForExchangeValuesViewController(segue: UIStoryboardSegue) {
         guard let nav = segue.destination as? UINavigationController else {
             fatalError("NavigationController not found")
@@ -150,6 +139,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
             fatalError("AddWeatherCityController not found")
         }
         update.delegate = self
+        
+        update.verificationExchange = verificationExchange
     }
     
     //Metodo para mudar a cor do relógio
