@@ -125,6 +125,7 @@ PODS:
   - nanopb/encode (2.30908.0)
   - Observable (2.2.0)
   - PromisesObjC (2.0.0)
+  - SnapshotTesting (1.8.2)
 
 DEPENDENCIES:
   - Charts
@@ -134,6 +135,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - Observable
+  - SnapshotTesting (~> 1.8.1)
 
 SPEC REPOS:
   trunk:
@@ -155,6 +157,7 @@ SPEC REPOS:
     - nanopb
     - Observable
     - PromisesObjC
+    - SnapshotTesting
 
 SPEC CHECKSUMS:
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
@@ -175,7 +178,8 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   Observable: d5369c555eae9d022cb066867786f6b9470de33c
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  SnapshotTesting: 38947050d13960d57a4a9c166fcf51bca7d56970
 
-PODFILE CHECKSUM: 0431d67f37746a4a0b64b7c066e54a241c8e10c7
+PODFILE CHECKSUM: a038e55e785bfb6b0a08a54518ad964f128ec78d
 
 COCOAPODS: 1.11.2

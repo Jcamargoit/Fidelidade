@@ -18,5 +18,6 @@ target 'Fidelidade' do
     inherit! :search_paths
     # Pods for testing
 	pod 'Observable'
+	pod 'SnapshotTesting', '~> 1.8.1'
   end
 end
