@@ -16,19 +16,12 @@ protocol UpdateValuesDelegate{
 
 class ExchangeValuesViewController: UIViewController {
     
-    let strokeTextAttributes = [
-        NSAttributedString.Key.strokeColor : UIColor(red: (189/255), green: (255/255), blue: (0/255), alpha: 1.0),
-        NSAttributedString.Key.strokeWidth : -5.0]
-    as [NSAttributedString.Key : Any]
-    
     @IBOutlet weak var lbTitleExchange: UILabel!
     @IBOutlet weak var ivCoin: UIImageView!
     @IBOutlet weak var ivCoinTwo: UIImageView!
-    @IBOutlet weak var btnExchange: UIButton!
     @IBOutlet weak var lbCoin: UILabel!
     
-    lazy var walletViewModel = WalletViewModel()
-    private var walletTransferViewModel = WalletTransferViewModel()
+    @IBOutlet weak var btnExchange: UIButton!
     @IBOutlet weak var btnCancelExchange: UIButton!{
         didSet{
             self.btnCancelExchange.layer.borderColor = UIColor(red: (38/255), green: (47/255), blue: (143/255), alpha: 1.0).cgColor
@@ -45,6 +38,14 @@ class ExchangeValuesViewController: UIViewController {
         }
     }
     @IBOutlet weak var lbBalanceInReal: UILabel!
+    
+    let strokeTextAttributes = [
+        NSAttributedString.Key.strokeColor : UIColor(red: (189/255), green: (255/255), blue: (0/255), alpha: 1.0),
+        NSAttributedString.Key.strokeWidth : -5.0]
+    as [NSAttributedString.Key : Any]
+    
+    lazy var walletViewModel = WalletViewModel()
+    private var walletTransferViewModel = WalletTransferViewModel()
     private var disposal = Disposal()
     var converterValueToCurrency = ConvertValuesToCurrency()
     var delegate: UpdateValuesDelegate?
@@ -55,9 +56,12 @@ class ExchangeValuesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        observerse()
+        observes()
         walletViewModel.fetchWallets()
-        
+        exchangeValidations()
+    }
+    
+    func exchangeValidations() {
         if self.verificationExchange == false {
             self.lbTitleExchange.text = "A Cada R$1,00, Você Pode Trocar Por 100 Moedas"
             self.lbBalanceInCoins.text = "\(walletTotalReal)"
@@ -69,7 +73,7 @@ class ExchangeValuesViewController: UIViewController {
         }
     }
     
-    func observerse(){
+    func observes(){
         
         if self.verificationExchange == false {
             

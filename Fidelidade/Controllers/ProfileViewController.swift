@@ -5,6 +5,7 @@
 
 import UIKit
 import Observable
+import GoogleUtilities
 
 class ProfileViewController: UIViewController {
     
@@ -32,14 +33,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         observes()
-        if let imagem = UserDefaults.standard.string(forKey: "imagem"){
-            let image = imagBase64.convertBase64ToImage(imageString: imagem)
-            self.ivProfile.image = image
-            self.ivBackground.image = image
-            self.profileViewModel.blurImageView(image: self.ivBackground)
-            self.ivProfile.setRounded()
-        }
-        
+        loadUserImage()
         //True Branco False Preto DidLoad
         self.statusBarLightStyle = true
     }
@@ -47,6 +41,16 @@ class ProfileViewController: UIViewController {
     //Metodo para mudar a cor do relógio - Fora do DidLoad
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return self.statusBarLightStyle ? .lightContent : .default
+    }
+    
+    func loadUserImage() {
+        if let imagem = UserDefaults.standard.string(forKey: UserDefaultsKeys.userImageProfile.rawValue){
+            let image = imagBase64.convertBase64ToImage(imageString: imagem)
+            self.ivProfile.image = image
+            self.ivBackground.image = image
+            self.profileViewModel.blurImageView(image: self.ivBackground)
+            self.ivProfile.setRounded()
+        }
     }
     
     func observes() {
@@ -128,7 +132,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
             self.viewTop.backgroundColor = .white
             self.ivProfile.setRounded()
             
-            UserDefaults.standard.set(imagBase64.convertImageToBase64(image: selectedImage), forKey: "imagem")
+            UserDefaults.standard.set(imagBase64.convertImageToBase64(image: selectedImage), forKey: UserDefaultsKeys.userImageProfile.rawValue)
             
             self.profileViewModel.blurImageView(image: self.ivBackground)
         }

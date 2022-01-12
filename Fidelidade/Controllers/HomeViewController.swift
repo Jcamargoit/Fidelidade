@@ -6,16 +6,27 @@ import Observable
 
 
 class HomeViewController: UIViewController, UIScrollViewDelegate {
-    
     let dataPoints = ["1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez", "1 Dez"]
     let values = [15.0, 25.0, 12.0, 12.0, 25.0, 25.0, 5.0, 27.0, 4.0, 12.0]
     private var maxValueChart = 5
-    
     
     let strokeTextAttributes = [
         NSAttributedString.Key.strokeColor : UIColor(red: (189/255), green: (255/255), blue: (0/255), alpha: 1.0),
         NSAttributedString.Key.strokeWidth : -5.0]
     as [NSAttributedString.Key : Any]
+    lazy var walletViewModel = WalletViewModel()
+    private var disposal = Disposal()
+    var refreshControl: UIRefreshControl!
+    
+    //Metodo para mudar a cor do relógio
+    var statusBarLightStyle = true {
+        didSet(newValue) {
+            setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    var converterValueToCurrency = ConvertValuesToCurrency()
+    var imagBase64 = ImagBase64()
+    var verificationExchange: Bool = true
     
     @IBOutlet weak var mySv: UIScrollView!
     @IBOutlet weak var ivUser: UIImageView!
@@ -31,41 +42,17 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var sc: UISegmentedControl!
     @IBOutlet weak var mainChart: BarChartView!
     
-    lazy var walletViewModel = WalletViewModel()
-    private var disposal = Disposal()
-    var refreshControl: UIRefreshControl!
     
-    //Metodo para mudar a cor do relógio
-    var statusBarLightStyle = true {
-        didSet(newValue) {
-            setNeedsStatusBarAppearanceUpdate()
-        }
-    }
-    
-    var converterValueToCurrency = ConvertValuesToCurrency()
-    var imagBase64 = ImagBase64()
-    
-    var verificationExchange: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         observerse()
-        if let imagem = UserDefaults.standard.string(forKey: "imagem") {
-            self.ivUser.image =  self.imagBase64.convertBase64ToImage(imageString: imagem)
-        }
-        ivUser.setRounded()
         sc.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
-        //Instanciar meu Delegate Scroll
-        mySv.isDirectionalLockEnabled = true
-        mySv.delegate = self
         styleElements()
+        loadUserImage()
         customizeChart(dataPoints: dataPoints, values: values)
         walletViewModel.fetchWallets()
-        //refresh Scrool/ tableView
-        refreshControl = UIRefreshControl()
-        refreshControl.tintColor = UIColor(red: 25/255, green: 25/255, blue: 112/255, alpha: 1.0)
-        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        mySv.addSubview(refreshControl)
+        refreshScrrolView()
         
         //Relógio - True Branco / False Preto
         self.statusBarLightStyle = true
@@ -77,6 +64,24 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         navigationController?.setNavigationBarHidden(true, animated: animated)
         self.tabBarController?.tabBar.isHidden = false
         }
+    
+    func refreshScrrolView() {
+        //Instanciar meu Delegate Scroll
+        mySv.isDirectionalLockEnabled = true
+        mySv.delegate = self
+        //refresh Scrool/ tableView
+        refreshControl = UIRefreshControl()
+        refreshControl.tintColor = UIColor(red: 25/255, green: 25/255, blue: 112/255, alpha: 1.0)
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        mySv.addSubview(refreshControl)
+    }
+    
+    func loadUserImage() {
+        if let imagem = UserDefaults.standard.string(forKey: UserDefaultsKeys.userImageProfile.rawValue) {
+            self.ivUser.image =  self.imagBase64.convertBase64ToImage(imageString: imagem)
+        }
+        ivUser.setRounded()
+    }
 
     func observerse(){
         walletViewModel.moneyWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in

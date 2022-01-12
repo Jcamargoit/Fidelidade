@@ -12,4 +12,5 @@ enum UserDefaultsKeys: String {
     case userKey = "UserKey"
     case userCpf = "UserCpf"
     case userId = "userId"
+    case userImageProfile = "imagem"
 }

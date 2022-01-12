@@ -22,8 +22,12 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // observerse()
 
+        addOptionsOnMenu()
+  
+    }
+    
+    func addOptionsOnMenu() {
         account.append("Perfil")
         account.append("Notificações")
         account.append("Sacar")
@@ -33,10 +37,9 @@ class MyAccountViewController: UIViewController,UITableViewDelegate,UITableViewD
         image.append("notification")
         image.append("withdraw")
         image.append("settings")
-  
     }
     
-    //remove navegation controller
+    //remove navigation controller
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
