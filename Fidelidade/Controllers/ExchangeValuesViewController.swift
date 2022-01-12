@@ -18,6 +18,8 @@ class ExchangeValuesViewController: UIViewController {
     
     var delegate: UpdateValuesDelegate?
     
+    @IBOutlet weak var lbTitleExchange: UILabel!
+    @IBOutlet weak var ivCoin: UIImageView!
     @IBOutlet weak var btnExchange: UIButton!
     
     let strokeTextAttributes = [
@@ -60,6 +62,17 @@ class ExchangeValuesViewController: UIViewController {
         super.viewDidLoad()
         observerse()
         walletViewModel.fetchWalletsById(walletType: WalletType.Points)
+         print("Minha verificação", verificationExchange)
+        
+        
+        
+        if verificationExchange == false {
+            
+            self.lbTitleExchange.text = "A Cada R$1,00, Você Pode Trocar Por 100 Moedas"
+            self.ivCoin.isHidden = true
+            
+        }
+        
         
     }
     

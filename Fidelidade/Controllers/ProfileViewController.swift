@@ -29,18 +29,6 @@ class ProfileViewController: UIViewController {
     }
     var imagBase64 = ImagBase64()
     
-    override func loadView() {
-        super.loadView()
-        DispatchQueue.main.async {
-            if let imagem = UserDefaults.standard.string(forKey: "imagem"){
-                self.ivProfile.image = self.imagBase64.convertBase64ToImage(imageString: imagem)
-                self.ivBackground.image = self.imagBase64.convertBase64ToImage(imageString: imagem)
-                self.profileViewModel.blurImageView(image: self.ivBackground)
-                self.ivProfile.setRounded()
-            }
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         observes()
