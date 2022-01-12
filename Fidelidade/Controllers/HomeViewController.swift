@@ -105,7 +105,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
                 return
             }
             if !result.isError {
-                self?.lbBalancePoints.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0))
+                self?.lbBalancePoints.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0)).replacingOccurrences(of: "R$", with: "")
             }else{
                 self?.simplePopUp(title: "Erro", mensage: result.error)
             }

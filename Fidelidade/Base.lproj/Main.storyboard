@@ -3868,18 +3868,18 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="QgP-YV-CHn">
-                                                <rect key="frame" x="69.666666666666657" y="51.333333333333307" width="139" height="30.666666666666664"/>
+                                                <rect key="frame" x="69.666666666666657" y="51.333333333333314" width="139" height="39.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                 <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="WkM-HT-mrf">
-                                                <rect key="frame" x="34.666666666666671" y="54.333333333333307" width="30" height="30.666666666666664"/>
+                                                <rect key="frame" x="34.666666666666671" y="58.666666666666622" width="30" height="30.666666666666664"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="QgP-YV-CHn" firstAttribute="height" secondItem="iWy-yA-cTR" secondAttribute="height" multiplier="0.234375" id="1Sv-Fk-NcE"/>
+                                            <constraint firstItem="QgP-YV-CHn" firstAttribute="height" secondItem="iWy-yA-cTR" secondAttribute="height" multiplier="0.3" id="1Sv-Fk-NcE"/>
                                             <constraint firstItem="QgP-YV-CHn" firstAttribute="top" secondItem="PTk-L5-cHm" secondAttribute="bottom" constant="15" id="8vQ-et-fvu"/>
                                             <constraint firstItem="WkM-HT-mrf" firstAttribute="width" secondItem="iWy-yA-cTR" secondAttribute="width" multiplier="0.107914" id="A19-jY-2f7"/>
                                             <constraint firstItem="QgP-YV-CHn" firstAttribute="leading" secondItem="WkM-HT-mrf" secondAttribute="trailing" constant="5" id="DTB-du-lAB"/>
@@ -3921,25 +3921,25 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hh7-aq-hCJ">
                                         <rect key="frame" x="55" y="515" width="278" height="85.333333333333371"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="ya2-Wp-qra">
-                                                <rect key="frame" x="48.666666666666671" y="12.999999999999996" width="180.66666666666663" height="59.666666666666657"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ya2-Wp-qra">
+                                                <rect key="frame" x="69.666666666666657" y="23.000000000000004" width="139" height="39.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                 <color key="textColor" red="0.74117647060000003" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="yox-fS-LOH">
-                                                <rect key="frame" x="13.666666666666671" y="27.333333333333371" width="30" height="30.666666666666671"/>
+                                                <rect key="frame" x="34.666666666666671" y="29.333333333333371" width="30" height="30.666666666666671"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.23921568627450979" green="0.34901960784313724" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="ya2-Wp-qra" firstAttribute="centerY" secondItem="Hh7-aq-hCJ" secondAttribute="centerY" id="0mp-Gd-JKc"/>
                                             <constraint firstItem="yox-fS-LOH" firstAttribute="width" secondItem="Hh7-aq-hCJ" secondAttribute="width" multiplier="0.107914" id="5HI-Wh-Cch"/>
-                                            <constraint firstItem="yox-fS-LOH" firstAttribute="centerY" secondItem="ya2-Wp-qra" secondAttribute="centerY" id="AUe-F6-Af6"/>
-                                            <constraint firstItem="ya2-Wp-qra" firstAttribute="height" secondItem="Hh7-aq-hCJ" secondAttribute="height" multiplier="0.7" id="Kjt-yQ-vZY"/>
+                                            <constraint firstItem="yox-fS-LOH" firstAttribute="centerY" secondItem="ya2-Wp-qra" secondAttribute="centerY" constant="2" id="AUe-F6-Af6"/>
+                                            <constraint firstItem="ya2-Wp-qra" firstAttribute="height" secondItem="Hh7-aq-hCJ" secondAttribute="height" multiplier="0.46" id="Kjt-yQ-vZY"/>
                                             <constraint firstItem="ya2-Wp-qra" firstAttribute="centerX" secondItem="Hh7-aq-hCJ" secondAttribute="centerX" id="PBg-yP-GGS"/>
                                             <constraint firstItem="ya2-Wp-qra" firstAttribute="leading" secondItem="yox-fS-LOH" secondAttribute="trailing" constant="5" id="cVE-1R-IJd"/>
-                                            <constraint firstItem="ya2-Wp-qra" firstAttribute="width" secondItem="Hh7-aq-hCJ" secondAttribute="width" multiplier="0.65" id="nXZ-dt-8vt"/>
+                                            <constraint firstItem="ya2-Wp-qra" firstAttribute="width" secondItem="Hh7-aq-hCJ" secondAttribute="width" multiplier="0.5" id="nXZ-dt-8vt"/>
                                             <constraint firstItem="yox-fS-LOH" firstAttribute="height" secondItem="Hh7-aq-hCJ" secondAttribute="height" multiplier="0.359375" id="oG9-Qp-2kn"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>

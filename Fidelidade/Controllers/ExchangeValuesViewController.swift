@@ -1,18 +1,13 @@
-//
 //  ExchangeValuesViewController.swift
 //  Fidelidade
-//
 //  Created by Juninho on 27/12/21.
-//
 
 import UIKit
 import Observable
 
-
 protocol UpdateValuesDelegate{
     func updateValue()
 }
-
 
 class ExchangeValuesViewController: UIViewController {
     
@@ -64,10 +59,12 @@ class ExchangeValuesViewController: UIViewController {
     func exchangeValidations() {
         if self.verificationExchange == false {
             self.lbTitleExchange.text = "A Cada R$1,00, Você Pode Trocar Por 100 Moedas"
-            self.lbBalanceInCoins.text = "\(walletTotalReal)"
+            let totalInReal = "\(walletTotalReal)"
+            self.lbBalanceInCoins.text = totalInReal.replacingOccurrences(of: "R$", with: "")
             self.lbCoin.text = "Dinheiro"
             self.tfNumberOfCoins.attributedPlaceholder = NSAttributedString(string: "Entre com a quantidade em reais",
                                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+            ivCoin.isHidden = true
         }else{
             
         }
@@ -122,10 +119,10 @@ class ExchangeValuesViewController: UIViewController {
     }
     
     func converterPointsToReal(){
-
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             let numberOfCoins = Int(self.tfNumberOfCoins.text ?? "") ?? 0
- 
+            
             if numberOfCoins > Int(self.walletTotalPoints){
                 self.simplePopUp(title: "Atenção", mensage: "Você não pode converter um saldo maior do que está disponível em sua conta")
             }else{
@@ -138,9 +135,8 @@ class ExchangeValuesViewController: UIViewController {
         }
     }
     
-    
     func converterRealToPoints(){
-
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             
             let numberOfReal = Int(self.tfNumberOfCoins.text ?? "") ?? 0
@@ -156,41 +152,61 @@ class ExchangeValuesViewController: UIViewController {
             }
         }
     }
-    
-    
-    
-    
-    
+
     @IBAction func back(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func toExchange(_ sender: UIButton) {
-        print("Modelo")
         
-        let walletTransferModel = WalletTransferModel(walletOriginId: WalletType.Points.rawValue, walletTargetId: WalletType.Money.rawValue, quantity: Int(tfNumberOfCoins.text ?? "") ?? 0)
-        walletTransferViewModel.transferWallets(walletTransfer: walletTransferModel)
-        
-        walletTransferViewModel.transferWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
+        if self.verificationExchange == false {
+
+            let walletTransferModel = WalletTransferModel(walletOriginId: WalletType.Money.rawValue, walletTargetId: WalletType.Points.rawValue, quantity: Int(tfNumberOfCoins.text ?? "") ?? 0)
+            walletTransferViewModel.transferWallets(walletTransfer: walletTransferModel)
             
-            guard let result = result else{
-                return
-            }
-            
-            if !result.isError {
-                if let delegate = self?.delegate {
-                    delegate.updateValue()
-                    self?.dismiss(animated: true, completion: nil)
+            walletTransferViewModel.transferWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
+                
+                guard let result = result else{
+                    return
                 }
                 
-            }else{
-                self?.simplePopUp(title: "Atenção", mensage: "Não foi possível fazer sua conversão, tente novamente")
-            }
-        }.add(to: &disposal)
+                if !result.isError {
+                    if let delegate = self?.delegate {
+                        delegate.updateValue()
+                        self?.dismiss(animated: true, completion: nil)
+                    }
+                    
+                }else{
+                    self?.simplePopUp(title: "Atenção", mensage: "Não foi possível fazer sua conversão, tente novamente")
+                }
+            }.add(to: &disposal)
+            
+        }else{
+            
+            let walletTransferModel = WalletTransferModel(walletOriginId: WalletType.Points.rawValue, walletTargetId: WalletType.Money.rawValue, quantity: Int(tfNumberOfCoins.text ?? "") ?? 0)
+            walletTransferViewModel.transferWallets(walletTransfer: walletTransferModel)
+            
+            walletTransferViewModel.transferWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in
+                
+                guard let result = result else{
+                    return
+                }
+                
+                if !result.isError {
+                    if let delegate = self?.delegate {
+                        delegate.updateValue()
+                        self?.dismiss(animated: true, completion: nil)
+                    }
+                    
+                }else{
+                    self?.simplePopUp(title: "Atenção", mensage: "Não foi possível fazer sua conversão, tente novamente")
+                }
+            }.add(to: &disposal)
+            
+        }
         
     }
-    
     
     @IBAction func cancelExchange(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -205,16 +221,16 @@ extension ExchangeValuesViewController: UITextFieldDelegate {
         if newLength <= 0 {
             btnExchange.isUserInteractionEnabled = false
             btnExchange.backgroundColor = UIColor(red: (231/255), green: (232/255), blue: (243/255), alpha: 1.0)
+            lbBalanceInReal.text = ""
+            ivCoinTwo.isHidden = true
+            
         }else{
-
             if self.verificationExchange == false {
                 converterRealToPoints()
-               
+                
             }else{
                 converterPointsToReal()
             }
-            
-        
         }
         return true
     }

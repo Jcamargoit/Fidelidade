@@ -62,9 +62,9 @@
             filePath = "Fidelidade/Controllers/ExchangeValuesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "observerse()"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "observes()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -78,9 +78,9 @@
             filePath = "Fidelidade/Controllers/ExchangeValuesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "observerse()"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "observes()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,9 +94,9 @@
             filePath = "Fidelidade/Controllers/ExchangeValuesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "observerse()"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "observes()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -110,9 +110,9 @@
             filePath = "Fidelidade/Controllers/ExchangeValuesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "observerse()"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "observes()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
