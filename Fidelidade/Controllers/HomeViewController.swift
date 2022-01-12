@@ -11,6 +11,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     let values = [15.0, 25.0, 12.0, 12.0, 25.0, 25.0, 5.0, 27.0, 4.0, 12.0]
     private var maxValueChart = 5
     
+    
     let strokeTextAttributes = [
         NSAttributedString.Key.strokeColor : UIColor(red: (189/255), green: (255/255), blue: (0/255), alpha: 1.0),
         NSAttributedString.Key.strokeWidth : -5.0]
@@ -49,6 +50,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         observerse()
+        if let imagem = UserDefaults.standard.string(forKey: "imagem") {
+            self.ivUser.image =  self.imagBase64.convertBase64ToImage(imageString: imagem)
+        }
+        ivUser.setRounded()
         sc.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
         //Instanciar meu Delegate Scroll
         mySv.isDirectionalLockEnabled = true
@@ -71,14 +76,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         self.tabBarController?.tabBar.isHidden = false
-        
-        DispatchQueue.main.async {
-            if let imagem = UserDefaults.standard.string(forKey: "imagem"){
-                self.ivUser.image =  self.imagBase64.convertBase64ToImage(imageString: imagem)
-                self.ivUser.setRounded()
-            }
         }
-    }
 
     func observerse(){
         walletViewModel.moneyWallet.observe(DispatchQueue.main) { [weak self] result, oldValue in

@@ -7,9 +7,6 @@ import Observable
 
 class WalletTransferViewModel {
     
-    
-
-    
     //Enviar para api
     @MutableObservable private var sTransferWallet: ResultModel<WalletTransferModel>?
     var transferWallet: Observable<ResultModel<WalletTransferModel>?>{
