@@ -40,6 +40,9 @@ class LoginViewModel {
     
     //handleLogin Lidar com alguma coisa
     func  handleLogin (loginModel: LoginModel){
+        if let key = defaults.string(forKey: UserDefaultsKeys.userKey.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userCpf.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userId.rawValue), let _ = defaults.string(forKey: UserDefaultsKeys.userImageProfile.rawValue) {
+            sIsLogged = ResultModel<String>(data: key)
+        } else {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {
                 return
@@ -57,6 +60,7 @@ class LoginViewModel {
                     self?.sIsLogged = ResultModel<String>(error: error.description)
                 }
             }
+        }
         }
     }
 }

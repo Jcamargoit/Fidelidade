@@ -45,7 +45,6 @@ class LoginViewController: UIViewController {
             return
         }
         
-        showLoading()
         let loginModel = LoginModel(cpf: cpf, password: password)
         loginViewModel.handleLogin(loginModel: loginModel)
     }
@@ -60,7 +59,6 @@ class LoginViewController: UIViewController {
             guard let result = result else{
                 return
             }
-            self?.showLoading(enable: false)
             if !result.isError {
                 self?.performSegue(withIdentifier: "openHome", sender: self)
             }else{
@@ -72,6 +70,8 @@ class LoginViewController: UIViewController {
 
 
 extension UIViewController {
+    
+    
     func simplePopUp(title:String, mensage:String) {
         let alert = UIAlertController(title: title, message: mensage, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
@@ -99,4 +99,5 @@ extension UIViewController {
             self.dismiss(animated: true, completion: nil)
         }
     }
+    
 }
