@@ -71,12 +71,12 @@ class ProfileViewController: UIViewController {
     }
     
     
-    @IBAction func back(_ sender: UIButton) {
+    @IBAction func tappedBack(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func edit(_ sender: UIButton) {
+    @IBAction func tappedEdit(_ sender: UIButton) {
     }
     
     @IBAction func tappedLogout(_ sender: UIButton) {

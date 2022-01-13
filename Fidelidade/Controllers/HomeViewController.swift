@@ -28,6 +28,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     var imagBase64 = ImagBase64()
     var verificationExchange: Bool = true
     
+    @IBOutlet weak var viewBanner: UIView!
     @IBOutlet weak var mySv: UIScrollView!
     @IBOutlet weak var ivUser: UIImageView!
     @IBOutlet weak var lbName: UILabel!
@@ -126,6 +127,9 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
+    @IBAction func tappedCloseBanner(_ sender: UIButton) {
+        self.viewBanner.isHidden = true
+    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

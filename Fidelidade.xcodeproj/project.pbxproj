@@ -260,16 +260,15 @@
 			isa = PBXGroup;
 			children = (
 				F21A911B277C8D7F00C1A695 /* Fidelidade.entitlements */,
-				F20084B8277DE54000438022 /* File */,
-				F2E3CC7227739F3F00FE59F7 /* Utils */,
-				F2FB7AA32770F55400C3E4C9 /* UseCase */,
 				F276E56E276A21D400D6A458 /* APIService */,
-				F2B1175C2770C3D60024ECEC /* Controllers */,
-				F2B1175F2770C43C0024ECEC /* Views */,
+				F2C8B5282790646600CF9D32 /* Delegates */,
+				F20084B8277DE54000438022 /* File */,
+				F2FB7AA32770F55400C3E4C9 /* UseCase */,
+				F2E3CC7227739F3F00FE59F7 /* Utils */,
 				F2B1175E2770C4200024ECEC /* Model */,
+				F2B1175F2770C43C0024ECEC /* Views */,
+				F2B1175C2770C3D60024ECEC /* Controllers */,
 				F2B1175D2770C4130024ECEC /* ViewModel */,
-				F29A96F82768D9D1002E9C73 /* AppDelegate.swift */,
-				F29A96FA2768D9D1002E9C73 /* SceneDelegate.swift */,
 				F29A96FE2768D9D1002E9C73 /* Main.storyboard */,
 				F29A97012768D9D3002E9C73 /* Assets.xcassets */,
 				F29A97032768D9D3002E9C73 /* LaunchScreen.storyboard */,
@@ -349,6 +348,15 @@
 				F29481222774B6F700A551C5 /* WithdrawPixCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F2C8B5282790646600CF9D32 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F29A96F82768D9D1002E9C73 /* AppDelegate.swift */,
+				F29A96FA2768D9D1002E9C73 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		F2E3CC7227739F3F00FE59F7 /* Utils */ = {

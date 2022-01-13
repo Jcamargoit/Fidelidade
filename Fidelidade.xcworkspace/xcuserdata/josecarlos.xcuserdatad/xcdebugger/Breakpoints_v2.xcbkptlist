@@ -32,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
             endingLineNumber = "62"
-            landmarkName = "handleLogin(loginModel:)"
-            landmarkType = "7">
+            landmarkName = "LoginViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -114,6 +114,129 @@
             endingLineNumber = "104"
             landmarkName = "observes()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E3CB932-01E7-4CFA-9255-95E0E717FBAD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FidelidadeTests/ViewModel/LoginViewModelSnapshotTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "LoginViewModelSnapshotTest"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7E3CB932-01E7-4CFA-9255-95E0E717FBAD - 920c507a1b4649f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FidelidadeTests.LoginViewModelSnapshotTest.__allocating_init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; FidelidadeTests.LoginViewModelSnapshotTest"
+                  moduleName = "FidelidadeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josecarlos/Downloads/Fidelidade/FidelidadeTests/ViewModel/LoginViewModelSnapshotTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "7E3CB932-01E7-4CFA-9255-95E0E717FBAD - 4d5588fb33265a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FidelidadeTests.LoginViewModelSnapshotTest.init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; FidelidadeTests.LoginViewModelSnapshotTest"
+                  moduleName = "FidelidadeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josecarlos/Downloads/Fidelidade/FidelidadeTests/ViewModel/LoginViewModelSnapshotTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "7E3CB932-01E7-4CFA-9255-95E0E717FBAD - ca0495edf9c45f34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FidelidadeTests.LoginViewModelSnapshotTest.__allocating_init(selector: ObjectiveC.Selector) -&gt; FidelidadeTests.LoginViewModelSnapshotTest"
+                  moduleName = "FidelidadeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josecarlos/Downloads/Fidelidade/FidelidadeTests/ViewModel/LoginViewModelSnapshotTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "7E3CB932-01E7-4CFA-9255-95E0E717FBAD - 30834c704c160382"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FidelidadeTests.LoginViewModelSnapshotTest.init(selector: ObjectiveC.Selector) -&gt; FidelidadeTests.LoginViewModelSnapshotTest"
+                  moduleName = "FidelidadeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josecarlos/Downloads/Fidelidade/FidelidadeTests/ViewModel/LoginViewModelSnapshotTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "7E3CB932-01E7-4CFA-9255-95E0E717FBAD - 6d93a94da853c318"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FidelidadeTests.LoginViewModelSnapshotTest.__allocating_init() -&gt; FidelidadeTests.LoginViewModelSnapshotTest"
+                  moduleName = "FidelidadeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josecarlos/Downloads/Fidelidade/FidelidadeTests/ViewModel/LoginViewModelSnapshotTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "7">
+               </Location>
+               <Location
+                  uuid = "7E3CB932-01E7-4CFA-9255-95E0E717FBAD - 61f897af357405bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FidelidadeTests.LoginViewModelSnapshotTest.init() -&gt; FidelidadeTests.LoginViewModelSnapshotTest"
+                  moduleName = "FidelidadeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josecarlos/Downloads/Fidelidade/FidelidadeTests/ViewModel/LoginViewModelSnapshotTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "43">
+               </Location>
+               <Location
+                  uuid = "7E3CB932-01E7-4CFA-9255-95E0E717FBAD - 92d8b58ce949baad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FidelidadeTests.LoginViewModelSnapshotTest.__deallocating_deinit"
+                  moduleName = "FidelidadeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josecarlos/Downloads/Fidelidade/FidelidadeTests/ViewModel/LoginViewModelSnapshotTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
