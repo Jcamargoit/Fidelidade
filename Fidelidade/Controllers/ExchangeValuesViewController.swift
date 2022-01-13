@@ -59,8 +59,8 @@ class ExchangeValuesViewController: UIViewController {
     func exchangeValidations() {
         if self.verificationExchange == false {
             self.lbTitleExchange.text = "A Cada R$1,00, Você Pode Trocar Por 100 Moedas"
-            let totalInReal = "\(walletTotalReal)"
-            self.lbBalanceInCoins.text = totalInReal.replacingOccurrences(of: "R$", with: "")
+            var totalInReal = walletTotalReal
+            self.lbBalanceInCoins.text = "\(walletTotalReal)"
             self.lbCoin.text = "Dinheiro"
             self.tfNumberOfCoins.attributedPlaceholder = NSAttributedString(string: "Entre com a quantidade em reais",
                                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
@@ -100,7 +100,7 @@ class ExchangeValuesViewController: UIViewController {
                 self?.walletTotalPoints = result.data?.amount ?? 0
                 
                 if !result.isError {
-                    self?.lbBalanceInCoins.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0))
+                    self?.lbBalanceInCoins.text = self?.converterValueToCurrency.convertValuesToCurrency(value: Double(result.data?.amount ?? 0)).replacingOccurrences(of: "R$", with: "")
                     
                     //
                 }else{

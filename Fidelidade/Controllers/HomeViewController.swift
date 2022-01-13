@@ -49,7 +49,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         observerse()
         sc.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
         styleElements()
-        loadUserImage()
         customizeChart(dataPoints: dataPoints, values: values)
         walletViewModel.fetchWallets()
         refreshScrrolView()
@@ -61,6 +60,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     //remove navegation controller
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadUserImage()
         navigationController?.setNavigationBarHidden(true, animated: animated)
         self.tabBarController?.tabBar.isHidden = false
         }
