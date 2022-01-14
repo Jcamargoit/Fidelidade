@@ -53,7 +53,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         customizeChart(dataPoints: dataPoints, values: values)
         walletViewModel.fetchWallets()
         refreshScrrolView()
-        
         //Relógio - True Branco / False Preto
         self.statusBarLightStyle = true
     }
@@ -65,6 +64,12 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         navigationController?.setNavigationBarHidden(true, animated: animated)
         self.tabBarController?.tabBar.isHidden = false
         }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+      
+    }
     
     func refreshScrrolView() {
         //Instanciar meu Delegate Scroll

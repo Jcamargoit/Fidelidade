@@ -12,9 +12,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var viewTop: UIView!
     @IBOutlet weak var ivBackground: UIImageView!
     @IBOutlet weak var ivProfile: UIImageView!
-    @IBOutlet weak var btnNewBank: UIButton!{
+    @IBOutlet weak var viewNewBank: UIView!{
         didSet{
-            self.btnNewBank.layer.borderColor = UIColor(red: (38/255), green: (47/255), blue: (143/255), alpha: 1.0).cgColor
+            self.viewNewBank.layer.borderColor = UIColor(red: (38/255), green: (47/255), blue: (143/255), alpha: 1.0).cgColor
         }
     }
     
@@ -75,6 +75,7 @@ class ProfileViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
+    
     
     @IBAction func tappedEdit(_ sender: UIButton) {
     }

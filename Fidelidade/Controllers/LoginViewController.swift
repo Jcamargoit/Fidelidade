@@ -25,6 +25,9 @@ class LoginViewController: UIViewController {
         
     }
     
+
+
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
@@ -44,6 +47,7 @@ class LoginViewController: UIViewController {
             simplePopUp(title: "Erro", mensage: "O campo Senha é obrigatório")
             return
         }
+    
         
         let loginModel = LoginModel(cpf: cpf, password: password)
         loginViewModel.handleLogin(loginModel: loginModel)
@@ -66,8 +70,8 @@ class LoginViewController: UIViewController {
             }
         }.add(to: &disposal)
     }
-}
 
+}
 
 extension UIViewController {
     
@@ -101,3 +105,5 @@ extension UIViewController {
     }
     
 }
+
+
