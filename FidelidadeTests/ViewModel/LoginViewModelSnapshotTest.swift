@@ -9,6 +9,7 @@ import XCTest
 @testable import Fidelidade
 import SnapshotTesting
 
+
 class LoginViewModelSnapshotTest: XCTestCase {
     
     var devices: [String: ViewImageConfig]? = ["iPhoneX": .iPhoneX,
@@ -26,7 +27,6 @@ class LoginViewModelSnapshotTest: XCTestCase {
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let sut = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as UIViewController
-
             sut.beginAppearanceTransition(true, animated: false)
             sut.endAppearanceTransition()
         

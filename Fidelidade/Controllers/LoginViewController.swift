@@ -1,13 +1,9 @@
-//
 //  LoginViewController.swift
 //  Fidelidade
-//
 //  Created by Juninho on 15/12/21.
-//
 
 import UIKit
 import Observable
-
 
 class LoginViewController: UIViewController {
     
@@ -18,16 +14,12 @@ class LoginViewController: UIViewController {
     
     var loginViewModel = LoginViewModel()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         observerse()
         
     }
     
-
-
-
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
@@ -54,8 +46,6 @@ class LoginViewController: UIViewController {
     }
     
     
-    
-    
     func observerse (){
         
         loginViewModel.isLogged.observe(DispatchQueue.main) { [weak self] result, oldValue in
@@ -75,7 +65,6 @@ class LoginViewController: UIViewController {
 
 extension UIViewController {
     
-    
     func simplePopUp(title:String, mensage:String) {
         let alert = UIAlertController(title: title, message: mensage, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
@@ -85,7 +74,6 @@ extension UIViewController {
             self.present(alert, animated: true)
         })
     }
-    
     
     func showLoading(enable: Bool = true){
         let loadingVC = LoadingViewController()
@@ -103,7 +91,4 @@ extension UIViewController {
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
 }
-
-

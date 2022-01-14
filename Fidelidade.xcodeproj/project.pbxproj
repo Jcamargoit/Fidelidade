@@ -32,6 +32,9 @@
 		F22DB3B3278C6090001D34A9 /* WalletTransferUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22DB3B2278C6090001D34A9 /* WalletTransferUseCase.swift */; };
 		F2455191276D12CC00953DCC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455190276D12CC00953DCC /* ProfileViewController.swift */; };
 		F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455194276D14DD00953DCC /* SettingsViewController.swift */; };
+		F267EF422791A41B00461809 /* RecoverPasswordViewControllerSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267EF412791A41B00461809 /* RecoverPasswordViewControllerSnapshotTest.swift */; };
+		F267EF442791AEBB00461809 /* NewUserViewControllerSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267EF432791AEBB00461809 /* NewUserViewControllerSnapshotTest.swift */; };
+		F267EF462791BD8700461809 /* NewUserTwoViewControllerSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267EF452791BD8700461809 /* NewUserTwoViewControllerSnapshotTest.swift */; };
 		F26E8D902784CD91005B5156 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E8D8F2784CD91005B5156 /* ProfileViewModel.swift */; };
 		F26E8D922784CE44005B5156 /* UIImageView+setRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E8D912784CE44005B5156 /* UIImageView+setRounded.swift */; };
 		F276E574276A21D400D6A458 /* AlbunsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */; };
@@ -113,6 +116,9 @@
 		F22DB3B2278C6090001D34A9 /* WalletTransferUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTransferUseCase.swift; sourceTree = "<group>"; };
 		F2455190276D12CC00953DCC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F2455194276D14DD00953DCC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F267EF412791A41B00461809 /* RecoverPasswordViewControllerSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewControllerSnapshotTest.swift; sourceTree = "<group>"; };
+		F267EF432791AEBB00461809 /* NewUserViewControllerSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewControllerSnapshotTest.swift; sourceTree = "<group>"; };
+		F267EF452791BD8700461809 /* NewUserTwoViewControllerSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserTwoViewControllerSnapshotTest.swift; sourceTree = "<group>"; };
 		F26E8D8F2784CD91005B5156 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		F26E8D912784CE44005B5156 /* UIImageView+setRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setRounded.swift"; sourceTree = "<group>"; };
 		F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsViewModel.swift; sourceTree = "<group>"; };
@@ -176,6 +182,7 @@
 		25AAD958277F3E5F00B4770F /* FidelidadeTests */ = {
 			isa = PBXGroup;
 			children = (
+				F267EF402791A3DD00461809 /* Controller */,
 				25AAD963277F3F2A00B4770F /* ViewModel */,
 				25AAD960277F3E9800B4770F /* Mock */,
 			);
@@ -229,6 +236,16 @@
 				F20084B9277DE55200438022 /* GoogleService-Info.plist */,
 			);
 			path = File;
+			sourceTree = "<group>";
+		};
+		F267EF402791A3DD00461809 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F267EF432791AEBB00461809 /* NewUserViewControllerSnapshotTest.swift */,
+				F267EF452791BD8700461809 /* NewUserTwoViewControllerSnapshotTest.swift */,
+				F267EF412791A41B00461809 /* RecoverPasswordViewControllerSnapshotTest.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F276E56E276A21D400D6A458 /* APIService */ = {
@@ -575,8 +592,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				255980D5278F5BFE004FF790 /* LoginViewModelSnapshotTest.swift in Sources */,
+				F267EF442791AEBB00461809 /* NewUserViewControllerSnapshotTest.swift in Sources */,
 				25AAD965277F3F4200B4770F /* LoginViewModelTest.swift in Sources */,
+
 				258E2A762791AE4500C093A6 /* WalletUseCaseMock.swift in Sources */,
+
+				F267EF422791A41B00461809 /* RecoverPasswordViewControllerSnapshotTest.swift in Sources */,
+				F267EF462791BD8700461809 /* NewUserTwoViewControllerSnapshotTest.swift in Sources */,
+
 				25AAD962277F3EAB00B4770F /* LoginUseCaseMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
