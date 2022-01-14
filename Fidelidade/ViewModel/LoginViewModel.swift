@@ -4,7 +4,6 @@
 import UIKit
 import Observable
 
-
 struct ResultModel<T: Any> {
     var error: String = ""
     var isError: Bool = false

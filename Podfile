@@ -13,6 +13,8 @@ target 'Fidelidade' do
 	pod 'Firebase/Auth'
 	pod 'Firebase/Database'
 	pod 'Firebase/Storage'
+	platform :osx, '10.14'
+	pod 'MockoloFramework', '~>1.1.2' 
 
   target 'FidelidadeTests' do
     inherit! :search_paths

@@ -12,6 +12,7 @@
 		2503777A277F273300A347EE /* AddNewBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037776277F273300A347EE /* AddNewBankViewController.swift */; };
 		2503777B277F273300A347EE /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25037777277F273300A347EE /* ChoiceViewController.swift */; };
 		255980D5278F5BFE004FF790 /* LoginViewModelSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255980D4278F5BFE004FF790 /* LoginViewModelSnapshotTest.swift */; };
+		258E2A762791AE4500C093A6 /* WalletUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258E2A752791AE4500C093A6 /* WalletUseCaseMock.swift */; };
 		25AAD962277F3EAB00B4770F /* LoginUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AAD961277F3EAB00B4770F /* LoginUseCaseMock.swift */; };
 		25AAD965277F3F4200B4770F /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AAD964277F3F4200B4770F /* LoginViewModelTest.swift */; };
 		25FCDB33277A313900913E57 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCDB32277A313900913E57 /* UserDefaultsKeys.swift */; };
@@ -89,6 +90,7 @@
 		255980CC278C9D1D004FF790 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		255980CF278C9D23004FF790 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		255980D4278F5BFE004FF790 /* LoginViewModelSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelSnapshotTest.swift; sourceTree = "<group>"; };
+		258E2A752791AE4500C093A6 /* WalletUseCaseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletUseCaseMock.swift; path = Fidelidade/UseCase/WalletUseCaseMock.swift; sourceTree = SOURCE_ROOT; };
 		25AAD957277F3E5F00B4770F /* FidelidadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FidelidadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AAD961277F3EAB00B4770F /* LoginUseCaseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUseCaseMock.swift; sourceTree = "<group>"; };
 		25AAD964277F3F4200B4770F /* LoginViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		25AAD960277F3E9800B4770F /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				258E2A752791AE4500C093A6 /* WalletUseCaseMock.swift */,
 				25AAD961277F3EAB00B4770F /* LoginUseCaseMock.swift */,
 			);
 			path = Mock;
@@ -573,6 +576,7 @@
 			files = (
 				255980D5278F5BFE004FF790 /* LoginViewModelSnapshotTest.swift in Sources */,
 				25AAD965277F3F4200B4770F /* LoginViewModelTest.swift in Sources */,
+				258E2A762791AE4500C093A6 /* WalletUseCaseMock.swift in Sources */,
 				25AAD962277F3EAB00B4770F /* LoginUseCaseMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
