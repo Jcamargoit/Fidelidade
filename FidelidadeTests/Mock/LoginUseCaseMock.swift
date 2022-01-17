@@ -31,7 +31,6 @@ class LoginUseCaseProtocolMock: LoginUseCaseProtocol {
         if let handleLoginHandler = handleLoginHandler {
             handleLoginHandler(loginModel, completion)
         }
-        
+
     }
 }
-

@@ -80,7 +80,4 @@ class WalletViewModel {
             }
         }
     }
-    
-    
 }
-

@@ -32,9 +32,9 @@
 		F22DB3B3278C6090001D34A9 /* WalletTransferUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22DB3B2278C6090001D34A9 /* WalletTransferUseCase.swift */; };
 		F2455191276D12CC00953DCC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455190276D12CC00953DCC /* ProfileViewController.swift */; };
 		F2455195276D14DD00953DCC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455194276D14DD00953DCC /* SettingsViewController.swift */; };
-		F267EF422791A41B00461809 /* RecoverPasswordViewControllerSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267EF412791A41B00461809 /* RecoverPasswordViewControllerSnapshotTest.swift */; };
-		F267EF442791AEBB00461809 /* NewUserViewControllerSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267EF432791AEBB00461809 /* NewUserViewControllerSnapshotTest.swift */; };
-		F267EF462791BD8700461809 /* NewUserTwoViewControllerSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267EF452791BD8700461809 /* NewUserTwoViewControllerSnapshotTest.swift */; };
+		F267EF422791A41B00461809 /* RecoverPasswordViewModelSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267EF412791A41B00461809 /* RecoverPasswordViewModelSnapshotTest.swift */; };
+		F267EF442791AEBB00461809 /* NewUserViewModelSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267EF432791AEBB00461809 /* NewUserViewModelSnapshotTest.swift */; };
+		F267EF462791BD8700461809 /* NewUserTwoViewModelSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267EF452791BD8700461809 /* NewUserTwoViewModelSnapshotTest.swift */; };
 		F26E8D902784CD91005B5156 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E8D8F2784CD91005B5156 /* ProfileViewModel.swift */; };
 		F26E8D922784CE44005B5156 /* UIImageView+setRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E8D912784CE44005B5156 /* UIImageView+setRounded.swift */; };
 		F276E574276A21D400D6A458 /* AlbunsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */; };
@@ -54,6 +54,7 @@
 		F29481232774B6F800A551C5 /* WithdrawPixCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29481222774B6F700A551C5 /* WithdrawPixCell.swift */; };
 		F29481252774BC6B00A551C5 /* MyAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29481242774BC6B00A551C5 /* MyAccountCell.swift */; };
 		F29481272774CA6700A551C5 /* WithdrawPixResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29481262774CA6700A551C5 /* WithdrawPixResultViewController.swift */; };
+		F29851A727920D4A0067CC20 /* WalletViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29851A627920D4A0067CC20 /* WalletViewModelTest.swift */; };
 		F29A96F92768D9D1002E9C73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A96F82768D9D1002E9C73 /* AppDelegate.swift */; };
 		F29A96FB2768D9D1002E9C73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A96FA2768D9D1002E9C73 /* SceneDelegate.swift */; };
 		F29A97002768D9D1002E9C73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29A96FE2768D9D1002E9C73 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		F29A9729276922F0002E9C73 /* LauncheScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */; };
 		F29DF348278DB1C3004DA2EE /* ConvertValuesToCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29DF347278DB1C3004DA2EE /* ConvertValuesToCurrency.swift */; };
 		F29DF34A278DD29C004DA2EE /* ImagBase64.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29DF349278DD29C004DA2EE /* ImagBase64.swift */; };
+		F2A9B6632795A2AF0076CE05 /* ChoiceViewModelSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9B6622795A2AF0076CE05 /* ChoiceViewModelSnapshotTest.swift */; };
 		F2AC7FE1276BC50D0018BC48 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */; };
 		F2B117622770C5400024ECEC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B117612770C5400024ECEC /* LoginModel.swift */; };
 		F2B117642770C68E0024ECEC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B117632770C68E0024ECEC /* LoginViewModel.swift */; };
@@ -116,9 +118,9 @@
 		F22DB3B2278C6090001D34A9 /* WalletTransferUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTransferUseCase.swift; sourceTree = "<group>"; };
 		F2455190276D12CC00953DCC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F2455194276D14DD00953DCC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		F267EF412791A41B00461809 /* RecoverPasswordViewControllerSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewControllerSnapshotTest.swift; sourceTree = "<group>"; };
-		F267EF432791AEBB00461809 /* NewUserViewControllerSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewControllerSnapshotTest.swift; sourceTree = "<group>"; };
-		F267EF452791BD8700461809 /* NewUserTwoViewControllerSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserTwoViewControllerSnapshotTest.swift; sourceTree = "<group>"; };
+		F267EF412791A41B00461809 /* RecoverPasswordViewModelSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewModelSnapshotTest.swift; sourceTree = "<group>"; };
+		F267EF432791AEBB00461809 /* NewUserViewModelSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewModelSnapshotTest.swift; sourceTree = "<group>"; };
+		F267EF452791BD8700461809 /* NewUserTwoViewModelSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserTwoViewModelSnapshotTest.swift; sourceTree = "<group>"; };
 		F26E8D8F2784CD91005B5156 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		F26E8D912784CE44005B5156 /* UIImageView+setRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setRounded.swift"; sourceTree = "<group>"; };
 		F276E55E276A21D400D6A458 /* AlbunsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbunsViewModel.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		F29481222774B6F700A551C5 /* WithdrawPixCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawPixCell.swift; sourceTree = "<group>"; };
 		F29481242774BC6B00A551C5 /* MyAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountCell.swift; sourceTree = "<group>"; };
 		F29481262774CA6700A551C5 /* WithdrawPixResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawPixResultViewController.swift; sourceTree = "<group>"; };
+		F29851A627920D4A0067CC20 /* WalletViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModelTest.swift; sourceTree = "<group>"; };
 		F29A96F52768D9D1002E9C73 /* Fidelidade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fidelidade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29A96F82768D9D1002E9C73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F29A96FA2768D9D1002E9C73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 		F29A9728276922F0002E9C73 /* LauncheScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheScreenViewController.swift; sourceTree = "<group>"; };
 		F29DF347278DB1C3004DA2EE /* ConvertValuesToCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertValuesToCurrency.swift; sourceTree = "<group>"; };
 		F29DF349278DD29C004DA2EE /* ImagBase64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagBase64.swift; sourceTree = "<group>"; };
+		F2A9B6622795A2AF0076CE05 /* ChoiceViewModelSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewModelSnapshotTest.swift; sourceTree = "<group>"; };
 		F2AC7FE0276BC50D0018BC48 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		F2B117612770C5400024ECEC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		F2B117632770C68E0024ECEC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -182,7 +186,6 @@
 		25AAD958277F3E5F00B4770F /* FidelidadeTests */ = {
 			isa = PBXGroup;
 			children = (
-				F267EF402791A3DD00461809 /* Controller */,
 				25AAD963277F3F2A00B4770F /* ViewModel */,
 				25AAD960277F3E9800B4770F /* Mock */,
 			);
@@ -201,8 +204,13 @@
 		25AAD963277F3F2A00B4770F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				25AAD964277F3F4200B4770F /* LoginViewModelTest.swift */,
+				F2A9B6622795A2AF0076CE05 /* ChoiceViewModelSnapshotTest.swift */,
 				255980D4278F5BFE004FF790 /* LoginViewModelSnapshotTest.swift */,
+				25AAD964277F3F4200B4770F /* LoginViewModelTest.swift */,
+				F267EF452791BD8700461809 /* NewUserTwoViewModelSnapshotTest.swift */,
+				F267EF432791AEBB00461809 /* NewUserViewModelSnapshotTest.swift */,
+				F267EF412791A41B00461809 /* RecoverPasswordViewModelSnapshotTest.swift */,
+				F29851A627920D4A0067CC20 /* WalletViewModelTest.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -236,16 +244,6 @@
 				F20084B9277DE55200438022 /* GoogleService-Info.plist */,
 			);
 			path = File;
-			sourceTree = "<group>";
-		};
-		F267EF402791A3DD00461809 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F267EF432791AEBB00461809 /* NewUserViewControllerSnapshotTest.swift */,
-				F267EF452791BD8700461809 /* NewUserTwoViewControllerSnapshotTest.swift */,
-				F267EF412791A41B00461809 /* RecoverPasswordViewControllerSnapshotTest.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		F276E56E276A21D400D6A458 /* APIService */ = {
@@ -592,14 +590,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				255980D5278F5BFE004FF790 /* LoginViewModelSnapshotTest.swift in Sources */,
-				F267EF442791AEBB00461809 /* NewUserViewControllerSnapshotTest.swift in Sources */,
+				F29851A727920D4A0067CC20 /* WalletViewModelTest.swift in Sources */,
+				F267EF442791AEBB00461809 /* NewUserViewModelSnapshotTest.swift in Sources */,
 				25AAD965277F3F4200B4770F /* LoginViewModelTest.swift in Sources */,
-
+				F2A9B6632795A2AF0076CE05 /* ChoiceViewModelSnapshotTest.swift in Sources */,
 				258E2A762791AE4500C093A6 /* WalletUseCaseMock.swift in Sources */,
-
-				F267EF422791A41B00461809 /* RecoverPasswordViewControllerSnapshotTest.swift in Sources */,
-				F267EF462791BD8700461809 /* NewUserTwoViewControllerSnapshotTest.swift in Sources */,
-
+				F267EF422791A41B00461809 /* RecoverPasswordViewModelSnapshotTest.swift in Sources */,
+				F267EF462791BD8700461809 /* NewUserTwoViewModelSnapshotTest.swift in Sources */,
 				25AAD962277F3EAB00B4770F /* LoginUseCaseMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

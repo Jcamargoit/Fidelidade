@@ -34,8 +34,11 @@ class LoginViewModelTest: XCTestCase {
     
     
     func testLoginSuccessful() {
+        //expec - verifica se o processo finalizou ou não
         let expec = expectation(description: "wait the login flow finish success")
         expec.expectedFulfillmentCount = 2
+        
+        
         loginUseCaseMock.handleLoginHandler = { _, completion in
             expec.fulfill()
             return completion(.success("Key-success"))
